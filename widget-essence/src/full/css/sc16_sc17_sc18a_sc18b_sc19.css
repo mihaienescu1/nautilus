@@ -1,0 +1,450 @@
+#budget_modules
+{
+	display:none;	
+}
+.budget_clear
+{
+	clear:both; 
+}
+/*SC17 start*/
+#budget_email
+{
+	width: 616px;
+	height: 335px;
+	position: relative;
+	z-index: 1;
+	background-image: url("./images/budget_email_bg.png");
+	display: none;
+}
+.budget_email_content
+{
+	width: 616px;
+	height: 260px;
+	text-align: center;
+}
+.budget_email_text
+{
+	padding-top: 32px;
+	font: normal normal 30px "Gill Sans PSA", arial, helvetica, verdana, sans-serif;
+	color:#e6e5e5;
+	padding-left:15px;
+	padding-right:15px;
+}
+.budget_email_input_text_bg
+{
+	margin-left: 23px;
+	margin-top:27px;
+	width: 567px;
+	height: 55px;
+	background-image: url("./images/search_input_text_bg.png");
+}
+.budget_email_input_text_bg input
+{
+	margin-top:11px;	
+	width: 535px;
+	height: 33px;
+	color:#000000;
+	border:0;
+	font: normal normal 26px "Gill Sans PSA", arial, helvetica, verdana, sans-serif;
+}
+.budget_email_buttons
+{
+	margin-top: 3px;
+	width: 325px;
+	float: right;
+	font: normal normal 26px "Gill Sans PSA", arial, helvetica, verdana, sans-serif;
+	color:#fff;	
+}
+.budget_email_ok_off
+{
+	margin-top: 16px;
+	background-image:url('./images/search_btn_ok.png');
+	background-position:bottom;
+	width:171px;
+	height:56px;
+	float:left;	
+	text-align:center;	
+}
+.budget_email_ok_on
+{
+	margin-top: 16px;
+	background-image:url('./images/search_btn_ok.png');
+	background-position: top;
+	width:171px;
+	height:56px;
+	float:left;		
+	text-align:center;
+}
+.budget_email_cancel_off
+{
+	background-image:url('./images/search_btn_cancel.png');
+	background-position:bottom;
+	width:151px;
+	height:72px;
+	float:right;
+	text-align:center;
+	margin-left:3px;
+}
+.budget_email_cancel_on
+{
+	background-image:url('./images/search_btn_cancel.png');
+	background-position: top;
+	width:151px;
+	height:72px;
+	float:right;
+	text-align:center;
+	margin-left:3px;
+}
+#budget_email_ok_text
+{
+	margin-top:14px;
+	margin-left:20px;
+	text-align:center;
+}
+#budget_email_cancel_text
+{
+	margin-top: 30px;
+}
+/*SC17 end*/
+
+/* SC18  start*/
+#budget_history
+{
+	width: 616px;
+	height: 335px;	
+	display: none;
+}
+.budget_history_list_off
+{
+	float:left;
+	width:146px;
+	height:61px;	
+	text-align:left;
+	background: url('./images/content_list_btn_distance.png') no-repeat bottom;
+	margin:7px 0px 0px 7px;
+}
+.budget_history_list_on
+{
+	float:left;
+	width:146px;
+	height:61px;	
+	text-align:left;
+	background: url('./images/content_list_btn_distance.png') no-repeat top;
+	margin:7px 0px 0px 7px;
+}
+.budget_history_list_title
+{
+	margin: 10px 0px 0px 52px;
+}
+.budget_history_graph_off
+{
+	float:left;	
+	width:167px;
+	height:61px;	
+	background: url('./images/content_list_btn_price.png') no-repeat bottom;
+	margin:7px 0px 0px 0px;
+	text-align:left;
+}
+.budget_history_graph_on
+{
+	float:left;	
+	width:167px;
+	height:61px;	
+	background: url('./images/content_list_btn_price.png') no-repeat top;
+	margin:7px 0px 0px 0px;
+	text-align:left;
+}
+.budget_history_graph_title
+{
+	margin: 12px 0px 0px 43px;
+}
+.budget_history_graph_full_tank_add_off
+{
+	float: right;
+	width:286px;
+	height:54px;
+	margin:2px 9px 0px 0px;
+	background: url('./images/full_tank_button.png') no-repeat top;
+}
+.budget_history_graph_full_tank_add_on
+{
+	float: right;
+	width:286px;
+	height:54px;
+	margin:2px 9px 0px 0px;
+	background: url('./images/full_tank_button.png') no-repeat bottom;
+}
+#budget_history_list_content
+{
+	width:616px;
+	height:260px;
+	display: none;
+}
+#budget_history_graph_content
+{
+	width:616px;
+	height:260px;
+	display: none;
+}
+/* SC18  end*/
+
+/* SC18a start*/
+.budget_history_list_scroller
+{
+	float:left;
+	width:63px;
+	height:260px;
+	background: url('./images/content_list_scroller_right_margin.png') no-repeat right;
+}
+#budget_history_list_list
+{
+	float:left;
+	width:537px;
+	height:260px;
+	font: normal normal 26px "Gill Sans PSA", arial, helvetica, verdana, sans-serif;
+	color:#ffffff;
+}
+.budget_history_list_date
+{
+	float:left;
+	margin-left: 27px;
+	padding-top: 26px;
+	width:210px;
+}
+.budget_history_list_price
+{
+	float:left;
+	padding-top: 26px;
+	width:90px;
+}
+.budget_history_list_type
+{
+	float:left;
+	padding-top: 26px;
+	width:161px;
+	text-transform: capitalize;
+}
+.budget_history_list_delete_logo
+{
+	width: 33px;
+	margin-top: 26px;	
+	float:left;
+	width: 33px;
+	height: 34px;
+	background: url('./images/budget_list_delete_button.png') no-repeat top;
+}
+.budget_history_list_delete_logo_off
+{
+	width: 33px;
+	margin-top: 26px;	
+	float:left;
+	width: 33px;
+	height: 34px;
+	background: url('./images/budget_list_delete_button.png') no-repeat top;
+}
+.budget_history_list_delete_logo_on
+{
+	width: 33px;
+	margin-top: 26px;	
+	float:left;
+	width: 33px;
+	height: 34px;
+	background: url('./images/budget_list_delete_button.png') no-repeat bottom;
+}
+/* SC18a end*/
+
+/* SC18b start */
+.budget_history_graph_picture
+{
+	width: 563px;
+	height: 236px;
+	margin-left: 30px;
+	margin-top: 20px;
+	background: url('./images/coordinates.png') no-repeat;
+}
+
+#budget_history_graph_empty
+{
+	width:100%;
+	height:100%;
+}
+
+.budget_history_graph_column_1_top
+{
+	width: 33px;
+	background: url('./images/budget_graph_color1_top.png') no-repeat;
+	position: absolute;
+}
+
+.budget_history_graph_column_1
+{
+	width: 33px;
+	background: url('./images/budget_graph_color1_middle.png') repeat-y;
+	position: absolute;
+	
+}
+
+.budget_history_graph_column_1_bottom
+{
+	width: 33px;
+	background: url('./images/budget_graph_color1_bottom.png') no-repeat;
+	position: absolute;
+}
+
+.budget_history_graph_column_2_top
+{
+	width: 33px;
+	background: url('./images/budget_graph_color2_top.png') no-repeat;
+	position: absolute;
+}
+
+.budget_history_graph_column_2
+{
+	width: 33px;
+	background: url('./images/budget_graph_color2_middle.png') repeat-y;
+	position: absolute;
+}
+
+.budget_history_graph_column_2_bottom
+{
+	width: 33px;
+	background: url('./images/budget_graph_color2_bottom.png') no-repeat;
+	position: absolute;
+}
+
+.budget_history_graph_column_3_top
+{
+	width: 33px;
+	background: url('./images/budget_graph_color3_top.png') no-repeat;
+	position: absolute;
+}
+
+.budget_history_graph_column_3
+{
+	width: 33px;
+	background: url('./images/budget_graph_color3_middle.png') repeat-y;
+	position: absolute;
+}
+
+.budget_history_graph_column_3_bottom
+{
+	width: 33px;
+	background: url('./images/budget_graph_color3_bottom.png') no-repeat;
+	position: absolute;
+}
+
+.budget_history_graph_column_4_top
+{
+	width: 33px;
+	background: url('./images/budget_graph_color4_top.png') no-repeat;
+	position: absolute;
+}
+
+.budget_history_graph_column_4
+{
+	width: 33px;
+	background: url('./images/budget_graph_color4_middle.png') repeat-y;
+	position: absolute;
+}
+
+.budget_history_graph_column_4_bottom
+{
+	width: 33px;
+	background: url('./images/budget_graph_color4_bottom.png') no-repeat;
+	position: absolute;
+}
+
+.budget_history_graph_step
+{
+	width: 68px;
+	height:auto;
+	position: absolute;
+	color: #B7B7B7;
+	text-align: center;
+	font-size: 22px;
+	font-weight: normal;
+	vertical-align: middle;
+	margin-left:-25px;
+	
+}
+.budget_history_graph_legend_text
+{
+	position: absolute;
+	color: #B7B7B7;
+	text-align: right;
+	font-size: 22px;
+	font-weight: normal;
+	vertical-align: middle;
+	text-transform: capitalize;
+}
+
+/* SC18b end */
+
+/* SC19 start */
+#budget_full_tank
+{
+	width: 616px;
+	height: 335px;
+	background-image: url("./images/budget_email_bg.png");
+	display: none;	
+}
+.budget_full_tank_date_content
+{
+	padding-top: 15px;
+}
+.budget_full_tank_type_content
+{
+	padding-top: 6px;
+}
+.budget_full_tank_date_text
+{
+	float:left;
+	width: 270px;
+	font: normal normal 26px "Gill Sans PSA", arial, helvetica, verdana, sans-serif;
+	color:#bab9b9;
+	text-align: right;
+	margin-top: 12px; 
+}
+.budget_full_tank_date_input
+{
+	float:left;		
+	width: 330px;
+	height: 58px;
+	margin-left: 2px;
+	margin-top:12px;
+	text-align:left;
+}
+.budget_full_tank_price_input
+{
+	float:left;		
+	width: 105px;
+	height: 57px;
+	background-image: url("./images/full_tank_price_bg.png");
+	margin-left: 2px;
+}
+.budget_full_tank_price_input input
+{
+	margin-top:12px;
+	width: 73px;
+	height: 33px;
+	color:#000000;
+	border:0;
+	font: normal normal 26px "Gill Sans PSA", arial, helvetica, verdana, sans-serif;	
+}
+.budget_full_tank_price_logo
+{
+	float: left;
+	width: 30px;
+	height: 22px;
+	background-image: url("./images/budget_full_tank_price.png");
+	background-repeat:no-repeat;
+	margin-top: 17px;
+	margin-left: 8px; 	
+}
+.budget_full_tank_space
+{
+	clear:both;
+	height: 11px;
+}
+
+/* SC19 end */

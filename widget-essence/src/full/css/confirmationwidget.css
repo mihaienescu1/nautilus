@@ -1,0 +1,89 @@
+/*confirmation cover start*/
+.confirmation_clear
+{
+	clear: both;
+}
+.confirmation_cover
+{
+	width: 616px;
+	height: 335px;	
+	background-color: #000;
+	background-repeat: repeat;	
+	position: absolute;
+	z-index: 2;
+	display: none;	
+	text-align: center;	
+}
+.confirmation_center_content
+{		
+	width: 616px; 
+	height: 335px;	
+	background-image: url("./images/widget_confirmation_bg.png");
+	background-repeat: no-repeat;
+	text-align:center;
+}
+.confirmation_text
+{		
+	height: 260px;			
+	text-align:center;	
+	font: normal normal 30px "Gill Sans PSA", arial, helvetica, verdana, sans-serif;
+	color:#ffffff;
+}
+.confirmation_text_content
+{
+	padding: 70px 10px 0px 10px;
+}
+.confirmation_buttons
+{
+	margin-top: 2px;
+	float:right;
+	font: normal normal 26px "Gill Sans PSA", arial, helvetica, verdana, sans-serif;
+	color:#fff;
+}
+.confirmation_ok_text
+{
+	margin-left: 15px;
+	margin-top:14px;
+}
+.confirmation_cancel_text
+{
+	margin-top: 30px;	
+}
+.confirmation_ok_button_off
+{
+	background:url('./images/widget_confirmation_ok_button.png') no-repeat bottom;	
+	width:171px;
+	height:56px;
+	margin-top: 16px;		
+	text-align:center;
+	float: left;
+}
+.confirmation_ok_button_on
+{
+	background:url('./images/widget_confirmation_ok_button.png') no-repeat top;	
+	width:171px;
+	height:56px;
+	margin-top: 16px;	
+	text-align:center;
+	float: left;
+}
+
+.confirmation_cancel_button_off
+{
+	background:url('./images/widget_confirmation_cancel_button.png') no-repeat bottom;	
+	width:151px;
+	height:72px;
+	margin-left:3px;		
+	text-align:center;
+	float: right;
+}
+.confirmation_cancel_button_on
+{
+	background:url('./images/widget_confirmation_cancel_button.png') no-repeat top;	
+	width:151px;
+	height:72px;
+	margin-left:3px;	
+	text-align:center;
+	float: right;
+}
+/*confirmation cover end*/

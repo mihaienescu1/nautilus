@@ -1,0 +1,691 @@
+<html lang="${lang.code}">
+<head>
+	<meta charset="utf-8"/>
+	<title>${widget.name}</title>
+</head>
+<body>
+
+<!-- Header Section -->
+<header>
+	<h1><span id="application_icon">${widget.name}</span></h1>
+</header>
+<!-- End Header Section -->
+
+
+<!-- Main Section -->
+<section id="main">
+
+	<!-- SSL START -->
+	<div id="intro_page" style="display:none;"></div>
+	<!-- SSL END -->
+
+	<!-- CONTENT LIST MODULE START -->
+	<div id="content_list_module">
+		<!-- SC1 START -->
+		<div id="content_list">
+			<div class="content_list_header">
+				<div id="content_list_btn_distance" class="content_list_sort_button"><div class="background"></div><div class="label policy_sort_buttons"><div>${sc1_distance}</div></div></div>
+				<div id="content_list_btn_price" class="content_list_sort_button"><div class="background"></div><div class="label policy_sort_buttons"><div>${sc1_price}</div></div></div>
+				<div id="content_list_btn_favorites" class="content_list_btn_favorites_off"></div>
+				<div id="content_list_btn_search" class="content_list_btn_search_off"></div>
+			</div>
+			<div class="content_list_middle_container">
+				<div class="content_list_left_margin"></div>
+				<div class="content_list_middle">
+					<div id="content_list_scroller"></div>
+					<div id="content_list_list"></div>
+				</div>
+				<div class="content_list_right_margin"></div>
+			</div>
+			<div class="content_list_bottom"></div>
+		</div>
+		<!-- SC1 END -->
+	</div>
+	<!-- CONTENT LIST MODULE END -->
+	
+	<!-- FAVORITE LIST MODULE START -->
+	<!-- SC2 START -->
+	<div id="favoritelist_modules">
+		<div id="favoritelist_choose_favorites">
+			<div class="settings_choose_zone_left_corner"></div>
+			<div class="settings_choose_zone_center_content">
+				<div class="module_title_content">
+					<div class="module_title_text policy_screen_title" id="module_title_stations">${sc2_favorite_stations}</div>
+				</div>			
+				<div class="settings_vertical_scroll" id="favorite_list_scroller"></div>
+				<div id="favoritelist_choose_favorits_stations"></div>
+				<div class="favoritelist_clear"></div>
+			</div>		
+			<div class="settings_choose_zone_right_corner"></div>	
+		</div>
+	</div>
+	<!-- SC2 END -->
+	<!-- FAVORITE LIST MODULE END -->
+	
+	<!-- STATION DETAIL MODULE START -->
+	<div id="stationdetail_modules">
+		<!-- SC3 START -->
+		<div id="stationdetail_all_content">
+			<div id="stationdetail_top" class="pressed_properties">
+				<div id="stationdetail_station_properties_button" class="stationdetail_all_buttons" action="stationdetail_properties">
+					<img id="stationdetail_station_logo" src=""/>				
+				</div>
+				<div id="stationdetail_station_info_button" class="stationdetail_all_buttons" action="stationdetail_info">
+					<img src="./images/stationdetail_logo_info.png"/>				
+				</div>
+				<div id="stationdetail_station_prices_button" class="stationdetail_all_buttons" action="stationdetail_prices">
+					<img id="stationdetail_price_logo" src="./images/stationdetail_logo_prices.png"/>				
+				</div>
+			</div>		
+			<div id="stationdetail_left_corner"></div>
+			<div id="stationdetail_center_content">
+				<!-- SC3A START -->
+				<div id="stationdetail_station_properties_content">				
+					<div id="stationdetail_station_properties_title">
+						<div id="stationdetail_station_name"></div>
+						<div class="stationdetail_station_properties_favorit"></div>
+					</div>				
+					<div id="stationdetail_station_properties_content_buttons">
+						<div id="stationdetail_station_gpsgo">
+							<div id="stationdetail_station_gpsgo_distance"></div>
+							<div id="stationdetail_station_gpsgo_logo">
+								<img src="./images/stationdetail_logo_gps.png" />
+							</div>
+							<div id="stationdetail_station_gpsgo_title"><div>${sc3_directions}</div></div>
+						</div>
+						<div id="stationdetail_station_call">
+							<div id="stationdetail_station_call_logo">
+								<img src="./images/stationdetail_logo_call.png" />
+							</div>
+							<div id="stationdetail_station_call_title"><div>${sc3_call}</div></div>
+						</div>
+						<div id="stationdetail_station_gasinfo">
+							<div id="stationdetail_station_gasinfo_days">
+								<span id="stationdetail_station_gasinfo_gasname"></span> 
+								<span id="stationdetail_station_gasinfo_nrdays"></span>
+								<br clear="all" />
+							</div>
+							<div id="stationdetail_station_gpsgo_logo">
+								<img src="./images/stationdetail_logo_gasinfo.png" />
+							</div>
+							<div id="stationdetail_station_gasinfo_price">
+							</div>
+						</div>
+					</div>
+					<div class="stationdetail_clear"></div>
+					<div id="stationdetail_station_properties_services">						
+						<div class="stationdetail_station_properties_services_icons car_repair"></div>					
+				    	<div class="stationdetail_station_properties_services_icons tyre_pressure"></div>						   	
+						<div class="stationdetail_station_properties_services_icons washing_station"></div>					
+					    <div class="stationdetail_station_properties_services_icons camping_car_area"></div>				
+					    <div class="stationdetail_station_properties_services_icons baby_room"></div>				    	
+					    <div class="stationdetail_station_properties_services_icons atm"></div>
+					    <div class="stationdetail_station_properties_services_icons open_7"></div>				    	
+					    <div class="stationdetail_station_properties_services_icons open_24"></div>							
+					</div>
+				</div>
+				<!-- SC3A END -->
+				
+				<!-- SC3B START -->
+				<div id="stationdetail_station_info_content">
+					<div id="stationdetail_station_info_title">
+						<span id="stationdetail_station_name"></span>
+						<div class="stationdetail_station_properties_favorit"></div>
+					</div>
+					<div id="stationdetail_station_info_address">
+					</div>
+					<div class="stationdetail_station_address_infos">
+						<div id="stationdetail_station_info_phonenumber">
+						</div>
+						<div id="stationdetail_station_info_schedule">
+							<img src="./images/stationdetail_logo_schedule.png" />
+							<div id="stationdetail_station_info_schedule_openinghours"></div>
+						</div>
+					</div>
+				</div>
+				<!-- SC3B END -->
+				
+				<!-- SC3C START -->
+				<div id="stationdetail_station_prices_content">
+					<div id="stationdetail_station_price_vertical_scroll"></div>
+					<div id="stationdetail_station_prices_title" class="price_header">
+						<span id="stationdetail_station_name"></span>
+						<div class="stationdetail_station_properties_favorit"></div>
+					</div>
+					
+					<div id="stationdetail_station_prices_info" class="stationdetail_station_prices_info"></div>
+				</div>
+			</div>
+			<div id="stationdetail_right_corner"></div>
+			<!-- SC3C END -->
+		</div>
+		
+		<!-- SC3A BIS START -->
+		<div id="stationinfo_call_content">
+			<div id="stationinfo_call_left_corner"></div>
+			
+			<div id="stationinfo_call_center_content">
+				<div class="stationinfo_call_back" id="stationinfo_call_back_btn"></div>	
+				<div class="stationinfo_call_telephone"></div>	
+				
+				<div class="stationinfo_call_container_text">
+					<div class="stationinfo_call_all_call_title">${sc3abis_call_station_text}</div>
+					<div id="stationinfo_call_all_call_phone" class="stationinfo_call_all_call_phone"></div>
+				</div>
+			</div>
+			
+			<div id="stationinfo_call_right_corner"></div>
+			
+			<div class="stationdetail_clear"></div>
+			
+			<div id="stationinfo_call_buttom_buttons">
+				<div class="stationinfo_call_ok_cancel_buttons">
+					<div id="stationinfo_call_ok_button" class="stationinfo_call_ok_button_off">
+						<div class="stationinfo_call_ok_button_title">${sc3abis_ok_button_text}</div>
+					</div>					
+				</div>
+			</div>
+		</div>
+		<!-- SC3A BIS END -->
+		
+		<!-- SC3D START -->
+		<div id="stationdetail_gas_price_modification">				
+			<div id="stationdetail_gas_price_modification_left_corner"></div>
+			<div id="stationdetail_gas_price_modification_center_content">
+				<div class="stationdetail_gas_price_modification_center_content_title">
+					${sc3d_modify_price}
+				</div>
+				<div id="stationdetail_gas_price_modification_title_info">
+					${sc3d_modify_price_for}
+				</div>
+				<div id="stationdetail_gas_price_modification_all_buttons">
+					<div id="stationdetail_gas_price_modification_decrease_button">
+						<div id="stationdetail_logo_decrease"></div>
+					</div>
+					<div id="stationdetail_gas_price_modification_price_value"></div>
+					<div id="stationdetail_gas_price_modification_increase_button">
+						<div id="stationdetail_logo_increase"></div>
+					</div>
+				</div>			
+			</div>
+			<div id="stationdetail_gas_price_modification_right_corner"></div>
+			<div class="stationdetail_clear"></div>		
+			<div id="stationdetail_gas_price_modification_buttom_buttons">					
+				<div class="stationdetail_gas_price_modification_ok_cancel_buttons">
+					<div id="stationdetail_gas_price_modification_ok_button" class="stationdetail_gas_price_modification_ok_button_off">
+						<div class="stationdetail_gas_price_modification_ok_button_title">
+							${sc3d_ok}
+						</div>
+					</div>
+					<div id="stationdetail_gas_price_modification_cancel_button" class="stationdetail_gas_price_modification_cancel_button_off">
+						<div class="stationdetail_gas_price_modification_cancel_button_title">
+							${sc3d_cancel}
+						</div>
+					</div>	
+				</div>
+			</div>		
+		</div>
+		<!-- SC3D END -->
+		<!-- SC3 END -->
+	</div>
+	<!-- STATION DETAIL MODULE END -->
+	
+	<!-- SEARCH MODULE START -->
+	<div id="search_module">				
+		<!-- SC4 START -->
+		<div id="search_menu_panel">	
+			<div class="module_title_content">
+				<div class="module_title_text policy_screen_title" id="module_title_search_menu">${sc4_title}</div>
+			</div>
+			<div id="search_menu_panel_bg">
+				<div id="search_menu_choice_buttons">
+					<div id="search_choice_address" class="search_big_btns">
+						<div class="search_choice_buttons_text policy_action_buttons">
+							${sc4_search_by_address}
+							<div class="search_select_selected"></div>
+						</div>
+						
+					</div>
+					<div class="search_choice_btns_space"></div>
+					<div id="search_choice_criteria" class="search_big_btns">
+						<div class="search_choice_buttons_text policy_action_buttons">${sc4_more_criteria}</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- SC4 END -->
+		
+		<!-- SC5 START -->
+		<div id="search_byaddress_content">
+			<div id="search_byaddress_center_content">
+				<div id="search_byaddress_search_text_bg">			
+					<input type="text" value="${sc5_search_text_holder}" name="search_byaddres_search_text" id="search_byaddres_search_text" class="policy_geocoding_text" />
+				</div>			
+				<div id="search_byaddress_all_buttons">
+					<div id="search_byaddress_history_button" class="search_byaddress_choose_button">
+						<div class="search_byaddress_button_title policy_action_buttons">${sc5_history}</div>
+					</div>					
+				</div>
+				<div class="search_byaddress_ok_button">
+					<div class="search_byaddress_ok_button_off" id="search_byaddress_ok_button">
+						<div class="search_byaddress_ok_text policy_choice_buttons">${ok}</div>
+					</div>				
+				</div>			
+			</div>			
+		</div>
+		<!-- SC5 END -->
+		
+		<!-- SC5b START -->
+		<div id="search_services_gps_address">
+			<div class="search_services_gps_address_left_corner"></div>
+			<div class="search_services_gps_address_center_content">
+				<div class="search_services_gps_address_all_buttons">
+					<div class="search_services_gps_address_all_buttons_margin"></div>
+					<div id="search_choice_gps_address_gps" class="search_big_btns">
+						<div class="search_choice_buttons_text policy_action_buttons">${sc5b_around_me}</div>
+					</div>
+					<div class="search_services_gps_address_all_buttons_margin"></div>
+					<div id="search_choice_gps_address_address" class="search_big_btns">
+						<div class="search_choice_buttons_text policy_action_buttons">${sc5b_address}</div>
+					</div>
+				</div>
+			</div>
+			<div class="search_services_gps_address_right_corner"></div>			
+		</div>
+		<!-- SC5b END -->
+		
+		<!-- SC7 START -->
+		<div id="search_byaddress_history_content" class="screen">
+			<div id="search_byaddress_history_left_corner"></div>
+			<div id="search_byaddress_history_center_content">
+				<div class="module_title_content">
+					<div class="module_title_text policy_screen_title" id="module_title_favorites_destination">${sc7_title}</div>
+				</div>
+				
+				<div class="search_history_scroller_content">
+					<div id="search_history_scroller" class="settings_vertical_scroll_short"></div>
+					<div class="short_bottom_scroll_line"></div>
+				</div>								
+				<div id="search_byaddress_history_all_history"></div>
+				<div class="settings_clear"></div>
+				<div id="search_byaddress_history_delete_all">
+					<div class="delete_all_button_off" id="search_byaddress_history_delete_all_button">
+						<div class="search_byaddress_history_delete_all_button_title policy_choice_buttons">${sc7_delete_all}</div>					
+					</div>
+				</div>
+			</div>
+			<div id="search_byaddress_history_right_corner"></div>
+		</div>
+		<!-- SC7 END -->
+		
+		
+		
+		<!-- SC8 START -->
+		<div id="search_services_panel">		
+			<div id="search_services_left_corner"></div>
+			<div id="search_services_center_content">
+				<div class="module_title_content">
+					<div class="module_title_text policy_screen_title" id="module_title_search_services">${sc5b_services}</div>
+				</div>
+				<div class="search_services_srooll_content">
+					<div id="search_services_scroller" class="settings_vertical_scroll_short"></div>
+					<div class="short_bottom_scroll_line"></div>
+				</div>							
+				<div id="search_services_main_content"></div>						
+			</div>
+			<div id="search_services_right_corner"></div>
+			
+			<div class="settings_clear"></div>
+			<div id="search_services_buttom_buttons">
+				<div id="search_services_select_all_button">
+					<div class="settings_services_search_select_all_title policy_choice_buttons" id="settings_choose_make_select_all_title_services">${sc8_select_all}</div>
+				</div>
+				<div class="search_services_ok_cancel_buttons">
+					<div id="search_services_ok_button" class="search_services_only_ok_button_off">
+						<div class="settings_choose_make_ok_button_title policy_choice_buttons">${sc8_ok}</div>
+					</div>						
+				</div>
+			</div>
+		</div>
+		<!-- SC8 END -->
+		
+		<!-- SC9 START -->
+		<div id="search_punctual_list_search">
+			<div class="content_list_header">
+				<div id="search_punctual_list_btn_distance" class="search_punctual_list_sort_button">
+					<div class="background"></div>
+					<div class="label policy_sort_buttons"><div>${sc9_distance}</div></div>
+				</div>
+				<div id="search_punctual_list_btn_price" class="search_punctual_list_sort_button">
+					<div class="background"></div>
+					<div class="label policy_sort_buttons"><div>${sc9_price}</div></div>
+				</div>
+				<div id="search_punctual_list_btn_exit" class="search_punctual_list_btn_exit_off">
+					<div class="search_punctual_list_btn_exit_text policy_sort_buttons">${sc9_exit}</div>
+				</div>
+			</div>
+			<div class="content_list_middle_container">
+				<div class="content_list_left_margin"></div>
+				<div class="content_list_middle">
+					<div id="search_punctual_list_scroller"></div>
+					<div id="search_punctual_list"></div>
+				</div>
+				<div class="content_list_right_margin"></div>
+			</div>
+			<div class="content_list_bottom"></div>
+			
+			<div id="footer_search_details">				
+				<div id="footer_search_details_address"></div>				
+			</div>
+		</div>
+		<!-- SC9 END -->		
+		
+		
+	</div>
+	<!-- SEARCH MODULE END -->
+	
+	<!-- SETTINGS MODULE START -->
+	<div id="settings_modules">
+	
+		<!-- SC10 START -->
+		<div id="settings_choose_settings_content" class="screen">
+			<div id="settings_choose_settings_left_corner"></div>
+			<div id="settings_choose_settings_center_content">
+				<div id="settings_choose_settings_all_buttons">
+					<div id="settings_choose_settings_button1" class="settings_choose_settings_button">
+						<div class="settings_choose_settings_button_title policy_action_buttons">${sc10_preferences}</div>
+					</div>
+					<div class="settings_choose_settings_margin_buttons"></div>
+					<div id="settings_choose_settings_button2" class="settings_choose_settings_button">
+						<div class="settings_choose_settings_button_title policy_action_buttons">${sc10_my_budget}</div>
+					</div>
+					<div class="settings_choose_settings_margin_buttons"></div>
+					<div id="settings_choose_settings_button4" class="settings_choose_settings_button">
+						<div class="settings_choose_settings_button_title policy_action_buttons">${sc10_autorize_gps}</div>
+					</div>
+					<div class="settings_choose_settings_margin_buttons"></div>
+					<div id="settings_choose_settings_button3" class="settings_choose_settings_button">
+						<div class="settings_choose_settings_button_title policy_action_buttons">${sc10_help}</div>
+					</div>
+				</div>	
+			</div>
+			<div id="settings_choose_settings_right_corner"></div>
+		</div>
+		<!-- SC10 END -->
+		
+		<!-- SC11 START -->
+		<div id="settings_choose_preference_content">
+			<div id="settings_choose_preference_left_corner"></div>
+			<div id="settings_choose_preference_center_content">
+				<div id="settings_choose_preference_all_buttons">
+					<div id="settings_choose_preference_button1" class="settings_choose_preference_button">
+						<table cellpadding="0" cellspacing="0" border="0">
+							<tr>
+								<td>
+									<div class="settings_choose_preference_button_title policy_action_buttons">${sc11_fuel}</div>
+									<div id="settings_choose_preference_title_carburant_selected" class="policy_action_buttons"></div>
+								</td>
+							</tr>
+							
+						</table>									
+					</div>
+					<div id="settings_choose_preference_button2" class="settings_choose_preference_button">					
+						<table cellpadding="0" cellspacing="0" border="0">
+							<tr>
+								<td>								
+									<div class="settings_choose_preference_button_title policy_action_buttons">${sc11_brand}</div>								
+								</td>
+							</tr>
+							
+						</table>
+					</div>
+					<div class="settings_choose_preference_button_spacer"></div>
+					<div id="settings_choose_preference_button3" class="settings_choose_preference_button">
+						<table cellpadding="0" cellspacing="0" border="0">
+							<tr>
+								<td>								
+									<div class="settings_choose_preference_button_title policy_action_buttons">${sc11_search_area}</div>
+									<div id="settings_choose_preference_title_km_selected" class="policy_action_buttons"></div>								
+								</td>
+							</tr>
+							
+						</table>
+					</div>
+					<div id="settings_choose_preference_button4" class="settings_choose_preference_button">
+						<table cellpadding="0" cellspacing="0" border="0">
+							<tr>
+								<td>								
+									<div class="settings_choose_preference_button_title policy_action_buttons">${sc11_fuel_language}</div>
+									<div id="settings_choose_preference_title_language_selected" class="policy_action_buttons"></div>								
+								</td>
+							</tr>
+							
+						</table>					
+					</div>
+				</div>	
+			</div>
+			<div id="settings_choose_preference_right_corner"></div>
+		</div>
+		<!-- SC11 END -->	
+		
+		<!-- SC12 START -->
+		<div id="settings_choose_carburants_content" class="screen">
+			<div id="settings_choose_carburants_left_corner"></div>
+			<div id="settings_choose_carburants_center_content">
+				<div class="module_title_content">
+					<div class="module_title_text policy_screen_title" id="module_title_carburant">${sc12_title}</div>
+				</div>
+				<div id="settings_choose_carburants_scroller" class="settings_vertical_scroll"></div>
+				<div id="settings_choose_carburants_all_carburants"></div>
+			</div>
+			<div id="settings_choose_carburants_right_corner"></div>
+		</div>
+		<!-- SC12 END -->
+		
+		<!-- SC13 START -->
+		<div id="settings_choose_make_content">
+			<div id="settings_choose_make_left_corner"></div>
+			<div id="settings_choose_make_center_content">
+				<div id="settings_choose_make_vertical_scroll">
+					<div class="settings_choose_make_vertical_srooll_content">
+						<div id="settings_choose_make_scroller"></div>
+						<div class="settings_bottom_scroll_line"></div>
+					</div>
+				</div>			
+				<div id="settings_choose_make_all_makes"></div>						
+			</div>
+			<div id="settings_choose_make_right_corner"></div>
+			<div class="settings_clear"></div>
+			<div id="settigns_choose_make_buttom_buttons">
+				<div id="settings_choose_make_select_all_button" class="settings_choose_make_select_all_off">
+					<div class="settings_choose_make_select_all_title policy_choice_buttons" id="settings_choose_make_select_all_title_make">${sc13_select_all}</div>
+				</div>
+				<div class="settings_choose_make_ok_cancel_buttons">
+					<div id="settings_choose_make_ok_button"  class="search_services_ok_button_off">
+						<div class="settings_choose_make_ok_button_title policy_choice_buttons" >${sc13_ok}</div>
+					</div>
+					<div id="settings_choose_make_cancel_button"  class="search_services_cancel_button_off">
+						<div class="settings_choose_make_cancel_button_title policy_choice_buttons">${sc13_cancel}</div>
+					</div>	
+				</div>
+			</div>		
+		</div>
+		<!-- SC13 END -->
+		
+		
+		<!-- SC14 START -->
+		<div id="settings_choose_zone_content" class="screen">
+			<div class="settings_choose_zone_left_corner"></div>
+			<div class="settings_choose_zone_center_content">
+				<div class="module_title_content">
+					<div class="module_title_text policy_screen_title" id="module_title_carburant">${sc14_title}</div>
+				</div>
+				<div id="settings_choose_range_scroller" class="settings_vertical_scroll"></div>
+				<div id="settings_choose_range_all_ranges"></div>
+			</div>
+			<div class="settings_choose_zone_right_corner"></div>
+		</div>
+		<!-- SC14 END -->
+		
+		
+		<!-- SC15 START -->
+		<div id="settings_choose_language_content" class="screen">
+			<div id="settings_choose_language_left_corner"></div>
+			<div id="settings_choose_language_center_content">
+				<div class="module_title_content">
+					<div class="module_title_text policy_screen_title" id="module_title_carburant">${sc15_title}</div>
+				</div>
+				<div id="settings_choose_language_scroller" class="settings_vertical_scroll"></div>
+				<div id="settings_choose_language_all_languages"></div>
+			</div>
+			<div id="settings_choose_language_right_corner"></div>
+		</div>
+		<!-- SC15 END -->
+		
+		<!--SC22 START-->
+		<div id="help_menu_panel">	
+			<div class="module_title_content">
+				<div class="module_title_text policy_screen_title" id="module_title_help_menu">${sc20_title}</div>
+			</div>
+			<div id="help_menu_panel_bg">
+				<div id="help_menu_choice_buttons">
+					<div id="help_choice_legende" class="search_big_btns">
+						<div class="search_choice_buttons_text policy_action_buttons">${sc20_title_legende}</div>						
+					</div>
+					<div class="search_choice_btns_space"></div>
+					<div id="help_choice_notice" class="search_big_btns">
+						<div class="search_choice_buttons_text policy_action_buttons">${sc20_title_notice}</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- SC22 END -->
+		
+		<!-- SC22a START -->
+		<div id="legende_smeg_content">
+			<div class="settings_choose_zone_left_corner"></div>
+			<div class="settings_choose_zone_center_content">
+					<div class="module_title_content">
+						<div class="module_title_text policy_screen_title" id="module_title_carburant">${sc20_title_legende}</div>
+					</div>
+					<div id="legende_scroller" class="settings_vertical_scroll"></div>
+					<div id="legende_list_container"></div>	
+			</div>
+			<div class="settings_choose_zone_right_corner"></div>
+		</div>
+		<!-- SC22a END -->
+		
+		<!-- SC22b START -->
+		<div id="legende_notice_content">
+			<div class="settings_choose_zone_left_corner"></div>
+			<div class="settings_choose_zone_center_content">
+					<div class="module_title_content">
+						<div class="module_title_text policy_screen_title" id="module_title_notice_menu">${sc20_title_notice}</div>
+					</div>
+					<div id="notice_scroller" class="settings_vertical_scroll"></div>
+					<div id="notice_list_container"></div>	
+			</div>
+			<div class="settings_choose_zone_right_corner"></div>
+		</div>
+		<!-- SC22b END -->
+		
+	</div>
+	<!-- SETTINGS MODULE END -->
+	
+	<!-- BUDGET MODULE START -->	
+	<div id="budget_moduls">
+		<!--  SC17 start  -->
+		<div id="budget_email">
+			<div class="budget_email_content">
+				<div class="budget_email_text policy_notification">${sc17_message}</div>
+				<div class="budget_email_input_text_bg">			
+					<input type="text" value="" name="budget_email_input_text" id="budget_email_input_text" />
+				</div>
+			</div>			
+			<div class="budget_email_buttons">
+				<div class="budget_email_ok_off" id="budget_email_ok">
+					<div id="budget_email_ok_text" class="policy_choice_buttons">${sc17_ok}</div>
+				</div>
+				<div class="budget_email_cancel_off" id="budget_email_cancel">
+					<div id="budget_email_cancel_text" class="policy_choice_buttons">${sc17_later}</div>
+				</div>	
+			</div>
+		</div>
+		<!--  SC17 end  -->
+		
+		<!--  SC18 start  -->
+		<div id="budget_history">
+			<div class="content_list_header">				
+				<div id="budget_history_list" class="budget_history_list_off">
+					<div class="budget_history_list_title"><img src="./images/history_list_icon.png"/></div>
+				</div>
+				<div id="budget_history_graph" class="budget_history_graph_off">
+					<div class="budget_history_graph_title"><img src="./images/history_graph_icon.png"/></div>
+				</div>
+				<div id="budget_history_graph_full_tank_add" class="budget_history_graph_full_tank_add_off"></div>				
+			</div>
+			
+			<div id="budget_history_graph_content">
+				<div class="content_list_left_margin"></div>
+				<div class="content_list_middle">
+					<div class="budget_history_graph_picture" id="xoy"></div>
+					<div id="budget_history_graph_empty"></div>					
+				</div>
+				<div class="content_list_right_margin"></div>
+			</div>
+			
+			<div id="budget_history_list_content">
+				<div class="content_list_left_margin"></div>
+				<div class="content_list_middle">
+					<div id="budget_history_list_scroller" class="budget_history_list_scroller"></div>
+					<div id="budget_history_list_list"></div>
+				</div>
+				<div class="content_list_right_margin"></div>
+			</div>
+			<div class="content_list_bottom"></div>	
+		</div>
+		<!--  SC18 end  -->
+		
+		<!--  SC19 start  -->		
+		<div id="budget_full_tank">
+			<div class="budget_email_content">
+				<div class="budget_full_tank_date_content">
+					<div class="budget_full_tank_date_text policy_action_buttons">${sc19_date} :</div>
+					<div class="budget_full_tank_date_input policy_action_buttons" id="budget_full_tank_date_input_text"></div>
+				</div>
+				<div class="budget_full_tank_space"></div> 
+				<div class="budget_full_tank_type_content">
+					<div class="budget_full_tank_date_text policy_action_buttons">${sc19_fuel_type} :</div>
+					<div class="budget_full_tank_date_input policy_action_buttons" id="budget_full_tank_type_input_text"></div>
+				</div>
+				<div class="budget_full_tank_space"></div>
+				<div class="budget_full_tank_type_content">
+					<div class="budget_full_tank_date_text policy_action_buttons">${sc19_total} :</div>
+					<div class="budget_full_tank_price_input">			
+						<input type="text" value="" name="budget_full_tank_price_input_text" id="budget_full_tank_price_input_text" maxlength="4" />												
+					</div>
+					<div id="budget_full_tank_price_logo" class="budget_full_tank_price_logo"></div>
+				</div>
+			</div>			
+			<div class="budget_email_buttons">
+				<div class="budget_email_ok_off" id="budget_full_tank_ok">
+					<div id="budget_email_ok_text" class="policy_choice_buttons">${sc19_ok}</div>
+				</div>
+				<div class="budget_email_cancel_off" id="budget_full_tank_cancel">
+					<div id="budget_email_cancel_text" class="policy_choice_buttons">${sc19_cancel}</div>
+				</div>	
+			</div>	
+		</div>
+		<!--  SC19 end  -->
+		
+	</div>
+	<!-- BUDGET MODULE END -->
+</section>
+<!-- End Main Section -->
+
+<!-- Footer Section -->
+<footer>		
+</footer>
+<!-- End Footer Section -->
+</body>
+</html>

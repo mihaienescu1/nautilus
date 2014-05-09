@@ -1,0 +1,10 @@
+body {
+    margin: 0;
+    padding: 0;
+    font: normal normal 12px GillSansPSA-Regular, arial, helvetica, verdana, sans-serif;
+    cursor: pointer;
+}
+
+.divers-icon {
+	background: url(./images/icon.png) center center no-repeat;
+}

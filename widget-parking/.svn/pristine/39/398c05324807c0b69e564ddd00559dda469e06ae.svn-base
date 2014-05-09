@@ -1,0 +1,6 @@
+name=${widget.name}
+driving=true
+offline=true
+dbg-version	= 649
+svn-version	= 649
+version		= 1.2.8

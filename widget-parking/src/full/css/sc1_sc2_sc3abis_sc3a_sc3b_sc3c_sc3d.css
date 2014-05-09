@@ -1,0 +1,1405 @@
+#parking_info_module
+{
+	display:none;	
+}
+.parking_clear
+{
+	clear:both;
+}
+/*SC1 start*/
+#list_content
+{
+	width:616px;
+	height: 335px;
+	display: none;
+}
+.list_header
+{
+	width:616px;
+	height:68px;
+	background: url('./images/content_list_header.png');
+}
+
+.list_middle_container
+{
+	width:616px;
+	height:260px;	
+}
+
+.list_left_margin
+{
+	float:left;
+	width:7px;
+	height:260px;
+	background: url('./images/content_list_left_margin.png');
+}
+
+.list_middle
+{
+	float:left;
+	width:600px;
+	height:260px;
+	background: url('./images/content_list_middle_background.png') repeat-x;	
+}
+
+.list_right_margin
+{
+	float:left;
+	width:9px;
+	height:260px;
+	background: url('./images/content_list_right_margin.png');
+}
+
+.list_bottom
+{
+	width:616px;
+	height:7px;
+	background: url('./images/content_list_bottom.png');
+}
+
+.list_btn_distance_off
+{
+	float:left;
+	width:146px;
+	height:61px;	
+	text-align:left;
+	background: url('./images/content_list_btn_distance.png') no-repeat bottom;
+	margin:7px 0px 0px 7px;
+	
+}
+.list_btn_distance_on
+{
+	float:left;
+	width:146px;
+	height:61px;	
+	text-align:left;
+	background: url('./images/content_list_btn_distance.png') no-repeat top;
+	margin:7px 0px 0px 7px;
+}
+.list_btn_distance_title
+{
+	font-size:26px;
+	color:#ffffff;
+	margin-top:12px;
+	text-align:center;
+}
+.list_btn_status_off
+{
+	float:left;	
+	width:167px;
+	height:61px;	
+	background: url('./images/content_list_btn_price.png') no-repeat bottom;
+	margin:7px 0px 0px 0px;
+	text-align:left;
+}
+.list_btn_status_on
+{
+	float:left;	
+	width:167px;
+	height:61px;	
+	background: url('./images/content_list_btn_price.png') no-repeat top;
+	margin:7px 0px 0px 0px;
+	text-align:left;
+}
+.list_btn_status_title
+{
+	font-size:26px;
+	color:#ffffff;
+	margin-top:12px;
+	width:150px;
+	text-align: center;
+}
+.list_btn_search_off
+{
+	float:left;
+	width:150px;
+	height:62px;
+	margin:2px 0px 0px 2px;
+	background: url('./images/content_list_btn_search.png') no-repeat bottom;
+}
+.list_btn_search_on
+{
+	float:left;
+	width:150px;
+	height:62px;
+	margin:2px 0px 0px 2px;
+	background: url('./images/content_list_btn_search.png') no-repeat top;
+}
+
+.list_btn_favorites_off
+{
+	float:left;
+	width:151px;
+	height:62px;
+	margin:2px 0px 0px -10px;	
+	background: url('./images/content_list_btn_favorites.png') no-repeat bottom;
+}
+.list_btn_favorites_on
+{
+	float:left;
+	width:151px;
+	height:62px;
+	margin:2px 0px 0px -10px;
+	background: url('./images/content_list_btn_favorites.png') no-repeat top;
+}
+
+#list_vertical_scroll
+{	
+	float:left;
+	width:63px;
+	height:260px;
+	text-align: center;
+	background: url('./images/content_list_scroller_right_margin.png') no-repeat right;
+}
+
+#list_all_park_makes
+{
+	float:left;
+	width:537px;
+	height:265px;	
+}
+.list_choose_park_single
+{
+	width: 537px;
+	height: 85px;
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0.14, #ffffff), color-stop(1.00, #9f9e9c));   	
+	border-bottom: 1px solid #6b6d6b;
+	color:#262626;
+	
+}
+.list_choose_park_single_title
+{
+	float:left;
+	width:330px;
+	padding-top:6px;	
+	text-align:left;
+	font-size: 26px;
+	font-weight:bold;
+	font-family: "Gill Sans PSA", arial, helvetica, verdana, sans-serif;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.list_choose_park_single_title_address_city
+{	
+	float:left;
+	width:180px;
+	padding-top:18px;
+	margin-left:10px;
+	
+}
+.list_choose_park_single_title_address
+{
+	width:446px;
+	font: normal normal 22px "Gill Sans PSA", arial, helvetica, verdana, sans-serif;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	position:absolute;
+	margin-top:50px;
+	margin-left:52px;
+}
+.list_choose_park_single_title_city
+{
+	width:180px;	
+	font: normal normal 22px "Gill Sans PSA", arial, helvetica, verdana, sans-serif;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+
+}
+.list_choose_park_single_title_distance
+{
+	margin-left:5px;
+	margin-top : 18px;
+	width: 95px;
+	float:left;
+	text-align:right;
+	font: normal normal 22px "Gill Sans PSA", arial, helvetica, verdana, sans-serif;
+	position:absolute;
+	right:49;
+}
+.list_choose_park_single_title_bullet
+{
+	float:right;
+	margin-top:30px;
+	margin-right:5px;	
+	margin-left:5px;	
+}
+.list_bullet_green
+{
+	width: 29px;
+	height: 29px;
+	background-image: url("./images/search_bullet_green.png");
+	background-repeat: no-repeat;
+}
+.list_bullet_orange
+{
+	width: 29px;
+	height: 29px;
+	background-image: url("./images/search_bullet_orange.png");
+	background-repeat: no-repeat;
+}
+.list_bullet_red
+{
+	width: 29px;
+	height: 29px;
+	background-image: url("./images/search_bullet_red.png");
+	background-repeat: no-repeat;
+}
+.list_bullet_gray
+{
+	width: 29px;
+	height: 29px;
+	background-image: url("./images/search_bullet_gray.png");
+	background-repeat: no-repeat;
+}
+
+.list_choose_park_single_line
+{
+	width: 539px;
+	height: 1px;
+	background-color: #6b6d6b;		
+}
+
+.list_choose_park_single_logo
+{
+	float:left;
+	width:42px;
+	height:85px;	
+	text-align:left;
+	margin-left:5px;
+	margin-right:5px;	
+}
+
+.list_choose_park_single_logo table
+{	
+	width: 42px;
+	height: 85px;
+}
+
+.list_warning
+{
+	font-family: "Gill Sans PSA", arial, helvetica, verdana, sans-serif;
+	font-size:26px;
+	color:#ccc;
+	padding-left:5px;
+	padding-right:5px;
+}
+.focused_parking
+{
+	width:537px;
+	height:85px;
+	background-color: #000;
+	display: none;
+	position: absolute;
+	z-index: 3;
+	opacity:0.2;
+}
+/* SC1 end */
+
+/* SC2 start */
+#favorite_list_content
+{
+	width:616px;
+	height: 335px;
+	display:none;		
+}
+#favorite_list_left_corner
+{
+	float:left;
+	width: 6px;
+	height: 335px;
+	background-image: url("./images/settings_choose_carburants_left_corner.png");
+}
+#favorite_list_center_content
+{
+	float:left;
+	width: 604px; 
+	height: 335px;
+	background-image: url("./images/settings_choose_carburants_center_bg.png");
+	background-repeat: repeat-x;
+	text-align:center;	
+	position:relative;
+}
+
+
+#favorite_list_center_head
+{
+	width:602px;
+	height:58px;
+	position:absolute;
+	top:7;
+	left:1;
+	text-align: center;
+	background-image: url("./images/context_header_shape_dark.png");
+	background-position:center;
+}
+
+#favorite_list_center_bottom
+{
+	width:602px;
+	height:260px;
+	position:absolute;
+	bottom:9;
+}
+
+#favorite_list_right_corner
+{
+	float:right;
+	width: 6px;
+	height: 335px;
+	background-image: url("./images/settings_choose_carburants_right_corner.png");
+}
+
+#favorite_list_all_destinations
+{	
+	width:537px;
+	height:265px;
+	float:left;
+	margin-top:1px;
+}
+
+#favorite_list_scroll
+{
+	padding-top:2px;
+	float:left;
+	width:65px;
+	height:260px;
+	text-align: center;
+	background: url('./images/content_list_scroller_right_margin.png') repeat-y right;	
+}
+
+.favorite_list_single_line
+{
+	width: 539px;
+	height: 1px;
+	background-color: #6b6d6b;
+}
+
+.favorite_list_single
+{
+	width: 537px;
+	height: 85px;	
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0.14, #ffffff), color-stop(1.00, #9f9e9c));
+	border-top: 1px solid #6b6d6b;
+	color:#262626;
+}
+
+.favorite_list_single_logo
+{
+	float:left;
+	width:42px;
+	height:85px;	
+	text-align:left;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+.favorite_list_single_logo table
+{	
+	width: 42px;
+	height: 85px;
+}
+
+.favorite_list_single_title
+{
+	width:340px;
+	padding-top:5px;	
+	text-align:left;
+	font-size: 26px;
+	font-family: "Gill Sans PSA", arial, helvetica, verdana, sans-serif;
+	font-weight:bold;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	float:left;
+}
+
+.favorite_list_single_address_city
+{
+	float:left;
+}
+
+.favorite_list_single_title_address
+{
+	width:435px;	
+	height:30px;
+	font: normal normal 22px "Gill Sans PSA", arial, helvetica, verdana, sans-serif;
+	text-align:left;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin-top:0px;
+}
+.favorite_list_single_title_city
+{
+	width:185px;	
+	font: normal normal 22px "Gill Sans PSA", arial, helvetica, verdana, sans-serif;
+	text-align:left;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	
+}
+.favorite_list_single_title_distance
+{
+	float:left;
+	margin-left:5px;
+	margin-top:20px;
+	width: 90px;
+	text-align:right;
+	font: normal normal 22px "Gill Sans PSA", arial, helvetica, verdana, sans-serif;
+}
+
+.favorite_list_single_title_bullet
+{
+	float:left;
+	margin-left:10px;
+	margin-top:0px;
+}
+.favorite_list_choose_favorits_star
+{
+	margin-top:-70px;
+	margin-right:5px;
+	width:42px;
+	height:41px;
+	position:relative;
+	background-image:url('./images/logo_favorite.png');
+	float:right;
+	z-index:10;
+}
+.favorite_list_choose_favorits_star.on
+{
+	background-position:bottom;
+}
+.favorite_list_choose_favorits_star.off
+{
+	background-position:top;
+}
+/* SC2 end */
+
+/* SC3 panels start*/
+#parkinginfo_content_panels
+{
+	width: 616px;
+	height: 335px;	
+	display: none;			
+}
+.parkinginfo_details_left_corner
+{
+	float:left;
+	width:6px;
+	height:248px;
+	background-image: url("./images/parkinginfo_details_left_corner.png");
+	margin-top:-1px;	
+}
+.parkinginfo_details_center_content
+{
+	float:left;
+	margin-top:-1px;
+	width:603px;
+	height: 248px;
+	background-image: url("./images/parkinginfo_details_center_bg.png");
+	background-repeat: repeat-x;
+	
+}
+.parkinginfo_details_right_corner
+{
+	float:right;
+	width:7px;
+	height:248px;
+	background-image: url("./images/parkinginfo_details_right_corner.png");
+	margin-top:-1px;	
+}
+#parkinginfo_content_panels.details
+{
+	width: 616px;
+	height: 335px;	
+	display: block;		
+
+}
+
+#parkinginfo_content_panels.address
+{
+	width: 616px;
+	height: 335px;	
+	display: block;
+	
+}
+
+#parkinginfo_content_panels.info
+{
+	width: 616px;
+	height: 335px;	
+	display: block;
+
+}
+
+#parkinginfo_content_panels.euro
+{
+	width: 616px;
+	height: 335px;	
+	display: block;
+
+}
+
+/* MENU */
+#parkinginfo_header_buttons
+{
+	display: none;
+	width: 616px;
+	height: 87px;	
+	background: url("./images/parkinginfo_details_bg.png") no-repeat;	
+	background-position:0 0;	
+}
+#parkinginfo_header_buttons.pressed_properties
+{
+	width: 616px;
+	height: 87px;	
+	background: url("./images/parkinginfo_details_bg.png") no-repeat;	
+	background-position:0 0;	
+
+}
+#parkinginfo_header_buttons.pressed_address
+{	
+	width: 616px;
+	height: 87px;
+	float:left;	
+	background: url("./images/parkinginfo_details_bg.png") no-repeat;
+	background-position: 0 -92px; 	
+}
+#parkinginfo_header_buttons.pressed_info
+{	
+	width: 616px;
+	height: 87px;
+	float:left;	
+	background: url("./images/parkinginfo_details_bg.png") no-repeat;
+	background-position: 0 -184px; 	
+}
+#parkinginfo_header_buttons.pressed_prices
+{	
+	width: 616px;
+	height: 87px;
+	float:left;	
+	background: url("./images/parkinginfo_details_bg.png") no-repeat;
+	background-position: 0 -276px; 	
+}
+.icons 
+{
+	float:left;
+}
+.parkinginfo_menu_button_details 
+{
+	background-image:url('./images/parkinginfo_btn_one.png');
+	background-position:top;
+	width:172px;
+	height:67px;
+	display:table-cell;
+	text-align:center;
+}
+
+.parking_logo_info_page
+{
+	margin-left:-10px;
+	margin-right:auto;
+	margin-top: 15px;
+	margin-bottom: auto;	
+}
+
+.parkinginfo_menu_button_details.open 
+{
+	background-image:url('./images/parkinginfo_btn_one.png');
+	background-position:top;
+	width:172px;
+	height:67px;
+}
+.parkinginfo_menu_button_details.closed
+{
+	background-image:url('./images/parkinginfo_btn_one.png');
+	background-position:bottom;
+	width:172px;
+	height:67px;
+}
+
+.parkinginfo_menu_button_address 
+{
+	width:136px;
+	height:67px;	
+	text-align: center;
+}
+.parkinginfo_menu_button_content_euro
+{
+	width: 170px;
+}
+.parkinginfo_detail_price_logo
+{
+	margin-left:10px;
+	margin-top: 18px;
+}
+
+.parkinginfo_menu_button_info
+{
+	width:136px;
+	height:67px;
+}
+
+.parkinginfo_menu_button_euro
+{
+	width:154px;
+	height:67px;
+}
+#parkinginfo_header_3_buttons_info
+{
+	display: none;
+	width: 616px;
+	height: 87px;	
+	background: url("./images/parkinginfo_3_details_bg.png") no-repeat;	
+	background-position:0 0;	
+}
+#parkinginfo_header_3_buttons_info.pressed_properties
+{
+	width: 616px;
+	height: 87px;	
+	background: url("./images/parkinginfo_3_details_bg.png") no-repeat;	
+	background-position:0 0;	
+
+}
+#parkinginfo_header_3_buttons_info.pressed_address
+{	
+	width: 616px;
+	height: 87px;
+	float:left;	
+	background: url("./images/parkinginfo_3_details_bg.png") no-repeat;
+	background-position: 0 -87px; 	
+}
+#parkinginfo_header_3_buttons_info.pressed_info
+{	
+	width: 616px;
+	height: 87px;
+	float:left;	
+	background: url("./images/parkinginfo_3_details_bg.png") no-repeat;
+	background-position: 0 -174px; 	
+}
+
+#parkinginfo_header_3_buttons_price
+{
+	display: none;
+	width: 616px;
+	height: 87px;	
+	background: url("./images/parkinginfo_3_details_bg.png") no-repeat;	
+	background-position:0 0;	
+}
+#parkinginfo_header_3_buttons_price.pressed_properties
+{
+	width: 616px;
+	height: 87px;	
+	background: url("./images/parkinginfo_3_details_bg.png") no-repeat;	
+	background-position:0 0;	
+
+}
+#parkinginfo_header_3_buttons_price.pressed_address
+{	
+	width: 616px;
+	height: 87px;
+	float:left;	
+	background: url("./images/parkinginfo_3_details_bg.png") no-repeat;
+	background-position: 0 -87px; 	
+}
+#parkinginfo_header_3_buttons_price.pressed_prices
+{	
+	width: 616px;
+	height: 87px;
+	float:left;	
+	background: url("./images/parkinginfo_3_details_bg.png") no-repeat;
+	background-position: 0 -174px; 	
+}
+
+#parkinginfo_header_2_buttons
+{
+	display: none;
+	width: 616px;
+	height: 87px;	
+	background: url("./images/parkinginfo_2_details_bg.png") no-repeat;	
+	background-position:0 0;	
+}
+#parkinginfo_header_2_buttons.pressed_properties
+{
+	width: 616px;
+	height: 87px;	
+	background: url("./images/parkinginfo_2_details_bg.png") no-repeat;	
+	background-position:0 0;	
+
+}
+#parkinginfo_header_2_buttons.pressed_address
+{	
+	width: 616px;
+	height: 87px;
+	float:left;	
+	background: url("./images/parkinginfo_2_details_bg.png") no-repeat;
+	background-position: 0 -87px; 	
+}
+#parkinginfo_info_vertical_scroll
+{	
+	float:left;
+	width:60px;
+	height:260px;
+	margin-top:-5px;
+	background: url('./images/content_list_scroller_right_margin.png') no-repeat right;
+	z-index:1;
+	position: relative;
+}
+.parkinginfo_location_text_with_scroller
+{
+	width:auto;
+	height:30px;
+	float:left;
+	margin-left: 22px;
+	margin-top: 0px;	
+}
+/* SC3 panels end*/
+
+/* SC3a start */
+.content_panels
+{
+	width:616px;
+	height:267px;	
+	display:none;
+}
+
+#parkinginfo_icons
+{
+	width:585px;
+	height:65px;	
+	margin-top:4px;
+	margin-left:14px;
+}
+
+.parkinginfo_service_icon
+{
+	width:65px;
+	height:64px;
+	float:left;
+	background-repeat:no-repeat;
+	display : none;
+	padding-left: 8px;
+}
+
+.parkinginfo_icon_space
+{
+	width:10px;
+	height:64px;
+	float:left;
+}
+
+.electric
+{
+	background-image:url('./images/srv_electric_recharge.png');
+}
+
+.nogpl
+{
+	background-image:url('./images/srv_no_Acc_GPL.png');
+}
+
+.invalides
+{
+	background-image:url('./images/srv_disabled_person_assistance.png');
+}
+
+.elevator
+{
+	background-image:url('./images/srv_elevator.png');
+}
+
+.camera
+{
+	background-image:url('./images/srv_video_surveillance.png');
+}
+
+.carwash
+{
+	background-image:url('./images/srv_car_wash.png');
+}
+
+.toilet
+{
+	background-image:url('./images/srv_wc.png');
+}
+
+.motor
+{
+	background-image:url('./images/srv_motorcycle_parking.png');
+}
+/* Appeller and Aller Buttons */
+
+#parkinginfo_panel_requests
+{
+	width:616px;
+	float:left;	
+	margin-left:5px;
+}
+
+.panel_buttons
+{
+	width:292px;
+	height:135px;
+	float:left;
+	position:relative;
+}
+
+#parkinginfo_aller_btn
+{
+	background-image:url('./images/parkinginfo_aller_btn.png');
+	background-repeat:no-repeat;
+	overflow:hidden;
+}
+
+#parkinginfo_apeller_btn
+{
+	background-image:url('./images/parkinginfo_appeler_btn.png');
+	background-repeat:no-repeat;
+	margin-left:9px;
+	overflow:hidden;
+}
+
+#parkininfo_aller_btntext
+{
+	margin-top:30px;
+	height:64px;
+	display:table;
+}
+
+#parkininfo_aller_btntext div
+{
+	display:table-cell;
+	vertical-align: middle;	
+}
+
+#parkinginfo_apeller_btntext
+{
+	margin-top:67px;
+	height:64px;
+	display:table;
+}
+
+#parkinginfo_apeller_btntext div
+{
+	display:table-cell;
+	vertical-align: middle;
+}
+
+.small_texts
+{
+	text-align:left;
+	font: normal normal 22px "Gill Sans PSA", arial, helvetica, verdana, sans-serif;
+	color:#cdcccc;
+	margin-top:12px;
+	margin-left:11px;
+}
+.big_texts
+{
+	font-family:"Gill Sans PSA", arial, helvetica, verdana, sans-serif;
+	font-weight:500;
+	color:#CCC;
+	font-size:26px;
+	float:left;
+	text-shadow: 2px 2px 2px #000;
+	width:270px;
+	margin-left:10px;
+	text-align: center;
+}
+
+#parkinginfo_aller_distinance
+{
+	color:#ffffff;
+}
+
+#parkininfo_aller_btntext
+{
+	color:#ffffff;
+}
+
+#parkinginfo_apeller_btntext
+{
+	color:#ffffff;
+}
+
+.parkinginfo_details_title_favorite
+{
+	margin-top: -14px;
+	width:616px;
+	height:48px;
+	position:relative;
+}
+
+.parkinginfo_location_text
+{
+	width:auto;
+	height:30px;
+	float:left;
+	margin-left: 9px;
+	margin-top: 0px;	
+}
+.parkinginfo_location_text_scroller
+{
+	width:auto;
+	height:30px;
+	float:left;
+	margin-left: 22px;
+	margin-top: 0px;	
+}
+
+.parkinginfo_location_text_span
+{
+	font-family:"Gill Sans PSA", arial, helvetica, verdana, sans-serif;
+	font-size:26px;
+	font-weight:400;
+	color:#fff;
+	text-shadow:2px 2px 2px #000;	
+	overflow:hidden;
+	text-align:left;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	width: 520px;		
+	float:left;	
+}
+#parkinginfo_text_title_info
+{
+	font-family:GillSansPSA-Regular, arial, helvetica, verdana, sans-serif;
+	font-size:26px;
+	font-weight:400;
+	color:#fff;
+	text-shadow:2px 2px 2px #000;	
+	overflow:hidden;
+	text-align:left;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	width: 449px;		
+	float:left;
+}
+
+.parkinginfo_favorite_button
+{
+	width:42px;
+	height:41px;	
+	margin-right:25px;
+	margin-top:0px;
+	float:right;
+	background-image: url('./images/logo_favorite.png');
+}
+
+.parkinginfo_favorite_button.on
+{
+	background-position:bottom;
+}
+.parkinginfo_favorite_button.off
+{
+	background-position: top;
+}
+/* SC3a end */
+
+/* SC3b start*/
+#parkinginfo_phone_no_text
+{
+	float:left;
+	width:100%;
+	text-align: center;
+}
+
+#parkinginfo_opening_wrapper
+{
+	position:relative;
+	width:100%;
+}
+
+.parkinginfo_clock_icon
+{
+	width:20px;
+	height:20px;
+	background-image:url('./images/parkinginfo_clock.png');
+	background-repeat:no-repeat;
+	float:left;
+	margin-top:2px;
+}
+
+#parkinginfo_horarires_text
+{
+	margin-left:6px;
+	float:left;
+	display:inline;
+	width:190px;
+	overflow:hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	text-align:center;
+}
+
+
+.parkinginfo_info_texts
+{
+	font-family:"Gill Sans PSA", arial, helvetica, verdana, sans-serif;
+	color:#fff;
+	font-size:22px;
+}
+
+.parkinginfo_infobox
+{
+	width:616px;
+	height:220px;
+	text-align:center;
+	margin-top:-15px;
+}
+#parkinginfo_infobox_list_infos
+{
+	float:left;	
+	width:510px;
+	height:195px;
+	text-align:center;
+	margin-top: 15px;
+	margin-left: 23px;
+}
+.info_table_content
+{
+	text-align: left;
+	width: 490px;
+	margin-bottom: 20px;
+}
+.info_table_label_callback
+{
+	float:left;
+	text-align:left;
+	font-family: "Gill Sans PSA", arial, helvetica, verdana, sans-serif;
+	font-size:22px;
+	color:#ccc;
+}
+.info_table_value_callback
+{	
+	text-align:left;
+	font-family: "Gill Sans PSA", arial, helvetica, verdana, sans-serif;
+	font-size:22px;
+	color:#fff;
+	text-align:left;
+	overflow:hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.inner_boxes
+{
+	width:inherit;
+}
+
+#parkinginfo_box_down_address
+{
+	font-family:"Gill Sans PSA", arial, helvetica, verdana, sans-serif;
+	color:#fff;
+	font-size:26px;
+	line-height:200%;
+	margin-top:20px;
+	width:556px;
+	margin-left:30px;	
+	margin-right:30px;
+}
+
+#parkinginfo_webpage_text
+{
+   margin-top:40px;
+   word-wrap: break-word; 
+   width:580px;
+   height: 65px;
+   font-size:22px;
+   margin-left:23px;
+}
+
+#parkinginfo_address_text
+{
+	width:320px;
+	text-align: center;
+	float:right;
+	font-size:22px;	
+	overflow:hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+#parkinginfo_phone_text
+{
+	font-size:22px;
+	float:left;
+	width:220px;
+	text-align: center;	
+}
+
+/* SC3b end */
+
+/* SC3c start */
+tr.parkinginfo_info_row td span
+{
+	font-family: "Gill Sans PSA", arial, helvetica, verdana, sans-serif;	
+}
+
+.p_item
+{
+	color:#ccc;
+	font-size: 22px;
+}
+
+.p_value
+{
+	color:#fff;
+	font-size: 22px;
+}
+
+.info_row
+{
+	height:53px;
+}
+
+table
+{
+	width:280px;
+	table-layout: fixed;
+}
+
+#parkinginfo_box_info_left_three
+{
+	float:left;
+	text-align:left;
+	margin-left: 20px;
+	margin-top: 16px;
+}
+
+#parkinginfo_box_info_right_three
+{	
+	float:right;	
+	text-align:left;
+	margin-right:20px;
+	margin-top: 16px;
+}
+
+#parkinginfo_box_info_left_four
+{
+	float:left;
+	text-align:left;
+	margin-left: 20px;
+	margin-top: 16px;
+}
+
+#parkinginfo_box_info_right_four
+{	
+	float:right;	
+	text-align:left;
+	margin-right:20px;
+	margin-top: 16px;
+}
+
+.infoListTables
+{
+	width:280px;
+}
+
+.infoListTables td
+{
+	width:280px;
+	height:50px;
+}
+
+.info_table_label
+{
+	float:left;
+	text-align:left;
+	font-family: "Gill Sans PSA", arial, helvetica, verdana, sans-serif;
+	font-size:22px;
+	color:#ccc;
+}
+.info_table_value
+{
+	float:left;
+	font-family: "Gill Sans PSA", arial, helvetica, verdana, sans-serif;
+	font-size:22px;
+	color:#fff;
+	text-align:left;
+	overflow:hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+/* SC3c end */
+
+/* SC3d start */
+#parkinginfo_tarrifs_table
+{
+	width:570px;
+	margin-top:18px;
+	margin-left:25px;	
+}
+
+#parkinginfo_tarrifs_table td span
+{
+	font-family: "Gill Sans PSA", arial, helvetica, verdana, sans-serif;
+	font-size:26px;
+	color:#ccc;
+}
+
+.parkinginfo_rate_value
+{
+	float:left;
+	width:120px;
+	text-align:left;
+	font-family: "Gill Sans PSA", arial, helvetica, verdana, sans-serif;
+	font-size:22px;
+	color:#ffffff;
+}
+.parkinginfo_rate_label
+{
+	float:left;
+	width:95px;
+	text-align:right;
+	font-family: "Gill Sans PSA", arial, helvetica, verdana, sans-serif;
+	font-size:22px;
+	color:#ccc;	
+}
+.parkinginfo_rate_label2
+{
+	float:left;
+	width:160px;
+	text-align:right;	
+	font-family: "Gill Sans PSA", arial, helvetica, verdana, sans-serif;
+	font-size:22px;
+	color:#ccc;
+}
+/* SC3d end*/
+
+
+/* SC3a bis start*/
+#call_content
+{
+	width:616px;
+	height: 335px;
+	display: none;
+}
+
+.call_parkinginfo_telephone
+{
+	float:left;
+	width:73px;
+	height:48px;
+	background-image: url("./images/parkinginfo_telephone.png");
+	background-repeat:no-repeat;
+	background-position: center;
+	position: absolute;
+	top:37;
+	left:271;
+}
+
+.call_container_text
+{
+	margin-top: 125px;
+	width: 600px;
+	text-align: center;
+}
+
+.call_parkinginfo_back
+{
+	float:left;
+	width:52px;
+	height:53px;
+	background-image: url("./images/back_button.png");
+	background-repeat:no-repeat;
+	background-position: center;
+	position: absolute;
+	top:20;
+	left:13;
+}
+
+#call_left_corner
+{
+	float:left;
+	width: 8px;
+	height: 267px;
+	background-image: url("./images/settings_choose_make_left_corner.png");
+}
+
+#call_center_content
+{
+	float:left;
+	width: 600px; 
+	height: 267px;
+	background-image: url("./images/settings_choose_make_center_bg.png");
+	background-repeat: repeat-x;
+	text-align:center;
+	position:relative;		
+}
+#call_right_corner
+{
+	float:right;
+	width: 8px;
+	height: 267px;
+	background-image: url("./images/settings_choose_make_right_corner.png");
+}
+#call_all_call
+{
+	float:right;
+	margin-top:120px;
+	width: 600px;
+	height: 320px;
+	text-align:center;
+}
+.call_all_call_title
+{
+	font-family: "Gill Sans PSA", arial, helvetica, verdana, sans-serif;
+	font-size:36px;
+	color:#e6e5e5;	
+}
+.call_all_call_phone
+{
+	margin-top:12px;
+	font-family: "Gill Sans PSA", arial, helvetica, verdana, sans-serif;
+	font-size:26px;
+	color:#e6e5e5;	
+}
+#call_buttom_buttons
+{
+	width:616px;
+	height: 67px;
+	background-image: url("./images/back_only_ok.png");
+	background-repeat: no-repeat;
+	color:#FFFFFF;
+}
+.call_ok_cancel_buttons
+{
+	float:right;
+	margin-top:5px;	
+}
+.call_ok_button_off
+{
+	margin-right:0px;
+	float:left;
+	margin-top:6px;	
+	width:171px;
+	height: 56px;
+	background: url("./images/search_select_ok_button_bg.png") no-repeat top;
+}
+.call_ok_button_on
+{
+	margin-right:0px;
+	float:left;
+	margin-top:6px;	
+	width:171px;
+	height: 56px;
+	background: url("./images/search_select_ok_button_bg.png") no-repeat bottom;	
+}
+.call_ok_button_title
+{
+	padding-top:15px;
+	padding-left:80px;
+	text-align:left;	
+	font: normal normal 22px "Gill Sans PSA", arial, helvetica, verdana, sans-serif;
+	color:#fff;
+}
+.call_cancel_button_title
+{
+	padding-top:15px;	
+	text-align:center;	
+	font: normal normal 22px "Gill Sans PSA", arial, helvetica, verdana, sans-serif;
+	color:#fff;
+}
+/*SC3a bis end*/

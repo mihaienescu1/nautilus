@@ -1,0 +1,773 @@
+/*css for settings*/
+#settings_modules
+{
+	display:none;	
+}
+
+.settings_clear
+{
+	clear:both; 
+}
+#settings_choose_settings_content
+{
+	width:616px;
+	height: 335px;
+	display: none;
+}
+#settings_choose_settings_left_corner
+{
+	float:left;
+	width: 29px;
+	height: 335px;
+	background-image: url("./images/settings_left_corner.png");
+}
+#settings_choose_settings_center_content
+{
+	float:left;
+	width: 558px; 
+	height: 335px;
+	background-image: url("./images/settings_center_bg.png");
+	background-repeat: repeat-x;
+	text-align:center;	
+}
+#settings_choose_settings_right_corner
+{
+	float:right;
+	width: 29px;
+	height: 335px;
+	background-image: url("./images/settings_right_corner.png");
+}
+#settings_choose_settings_all_buttons
+{
+	text-align:center;	
+	margin-top: 15px;
+	font: normal normal 36px "Gill Sans PSA", arial, helvetica, verdana, sans-serif;
+	color:#fff;
+}
+.settings_choose_settings_button
+{
+	text-align:center;
+	width:542px;
+	height:73px;
+	margin-left: 8px;	
+	background: url("./images/settings_button_bg.png") no-repeat;	
+	background-position:0 0;
+	color:#fff;
+}
+
+#settings_choose_settings_button1.pressed
+{	
+	width:542px;
+	height:73px;
+	margin-left: 8px;
+	background: url("./images/settings_button_bg.png") no-repeat;
+	background-position: 0 -78px; 	
+}
+
+#settings_choose_settings_button2.pressed
+{	
+	width:542px;
+	height:73px;
+	margin-left: 8px;
+	background: url("./images/settings_button_bg.png") no-repeat;
+	background-position: 0 -78px; 	
+}
+#settings_choose_settings_button2.disabled
+{	
+	width:542px;
+	height:73px;
+	margin-left: 8px;
+	background: url("./images/settings_button_bg.png") no-repeat;
+	background-position: 0 -151px; 	
+}
+
+#settings_choose_settings_button3.pressed
+{	
+	width:542px;
+	height:73px;
+	margin-left: 8px;
+	background: url("./images/settings_button_bg.png") no-repeat;
+	background-position: 0 -78px; 	
+}
+
+#settings_choose_settings_button4.pressed
+{	
+	width:542px;
+	height:73px;
+	margin-left: 8px;
+	background: url("./images/settings_button_bg.png") no-repeat;
+	background-position: 0 -78px; 	
+}
+
+.settings_choose_settings_margin_buttons
+{
+	margin-top:5px;
+}
+.settings_choose_settings_button_title
+{
+	padding-top:16px;
+	color:#fff;
+}
+
+/*css for preference choose*/
+#settings_choose_preference_content
+{
+	width:616px;
+	height: 335px;
+	display: none;
+}
+#settings_choose_preference_left_corner
+{
+	float:left;
+	width: 29px;
+	height: 335px;
+	background-image: url("./images/settings_left_corner.png");
+}
+#settings_choose_preference_center_content
+{
+	float:left;
+	width: 558px; 
+	height: 335px;
+	background-image: url("./images/settings_center_bg.png");
+	background-repeat: repeat-x;
+	text-align:center;	
+}
+#settings_choose_preference_right_corner
+{
+	float:right;
+	width: 29px;
+	height: 335px;
+	background-image: url("./images/settings_right_corner.png");
+}
+#settings_choose_preference_all_buttons
+{
+	position: absolute;
+	margin-top:16px;
+	margin-left:-10px;	
+	width: 581px;
+	height: 300px;
+	text-align:center;
+	color:#9a9a9a;
+}
+#settings_choose_preference_all_buttons table
+{
+	width: 280px;
+	height: 142px;
+	text-align: center;	
+}
+#settings_choose_preference_button1
+{
+	width: 280px;
+	height: 142px;
+	float:left;
+	background: url("./images/settings_choose_preference_button1_bg.png") no-repeat;	
+	background-position:0 0;
+}
+#settings_choose_preference_button1.pressed
+{	
+	width: 280px;
+	height: 142px;
+	float:left;	
+	background: url("./images/settings_choose_preference_button1_bg.png") no-repeat;
+	background-position: 0 -147px; 	
+}
+#settings_choose_preference_button2
+{
+	width: 280px;
+	height: 142px;
+	float:right;
+	background-image: url("./images/settings_choose_preference_button2_bg.png");
+	background-position:0 0;	
+}
+#settings_choose_preference_button2.pressed
+{	
+	width: 280px;
+	height: 142px;
+	float:right;	
+	background: url("./images/settings_choose_preference_button2_bg.png") no-repeat;
+	background-position: 0 -147px; 	
+}
+#settings_choose_preference_button3
+{
+	width: 280px;
+	height: 142px;
+	float:left;
+	background-image: url("./images/settings_choose_preference_button3_bg.png");	
+}
+#settings_choose_preference_button3.pressed
+{	
+	width: 280px;
+	height: 142px;
+	float:left;	
+	background: url("./images/settings_choose_preference_button3_bg.png") no-repeat;
+	background-position: 0 -147px; 	
+}
+#settings_choose_preference_button4
+{
+	width: 280px;
+	height: 142px;
+	float:right;
+	background-image: url("./images/settings_choose_preference_button4_bg.png");	
+}
+#settings_choose_preference_button4.pressed
+{	
+	width: 280px;
+	height: 142px;
+	float:right;	
+	background: url("./images/settings_choose_preference_button4_bg.png") no-repeat;
+	background-position: 0 -147px; 	
+}
+.settings_choose_preference_button_spacer
+{
+	clear:both;
+	height:16px;
+}
+.settings_choose_preference_button_title
+{
+	font: normal normal 36px "Gill Sans PSA", arial, helvetica, verdana, sans-serif;		
+	color:#fff;
+	width: 270px;
+	text-align: center;
+}
+#settings_choose_preference_title_carburant_selected
+{
+	margin-top:10px;
+	font: normal normal 30px "Gill Sans PSA", arial, helvetica, verdana, sans-serif;
+	color:#dadada;
+	text-transform: capitalize;
+}
+#settings_choose_preference_title_km_selected
+{
+	margin-top:10px;
+	font: normal normal 30px "Gill Sans PSA", arial, helvetica, verdana, sans-serif;
+	color:#dadada;
+}
+#settings_choose_preference_title_language_selected
+{
+	margin-top:10px;
+	font: normal normal 30px "Gill Sans PSA", arial, helvetica, verdana, sans-serif;
+	color:#dadada;
+}
+/*css for choose_carburants*/
+#settings_choose_carburants_content
+{
+	width:616px;
+	height: 335px;
+	display:none;
+}
+#settings_choose_carburants_left_corner
+{
+	float:left;
+	width: 6px;
+	height: 335px;
+	background-image: url("./images/settings_choose_carburants_left_corner.png");
+}
+#settings_choose_carburants_center_content
+{
+	float:left;
+	width: 604px; 
+	height: 335px;
+	background-image: url("./images/settings_choose_carburants_center_bg.png");
+	background-repeat: repeat-x;
+	text-align:center;	
+}
+#settings_choose_carburants_right_corner
+{
+	float:right;
+	width: 6px;
+	height: 335px;
+	background-image: url("./images/settings_choose_carburants_right_corner.png");
+}
+.settings_vertical_scroll
+{
+	float:left;
+	width: 63px;
+	height: 268px;
+	text-align: center;
+	background: url('./images/content_list_scroller_right_margin.png') no-repeat right;
+}
+.settings_vertical_scroll_short
+{
+	float:left;
+	width: 63px;
+	height: 204px;
+	text-align: center;
+	background: url('./images/content_list_scroller_right_margin.png') no-repeat right;
+}
+
+#settings_choose_carburants_all_carburants
+{
+	float:left;
+	width: 540px;
+	height: 320px;
+}
+.settings_choose_carburants_single
+{
+	float:left;
+	width: 539px;
+	height: 63px;
+	background-image: url("./images/settings_choose_carburants_carburant_bg.png");
+	background-repeat: repeat-x;
+	border-bottom:1px solid #000000;
+}
+.settings_choose_carburants_single_title
+{
+	float:left;
+	padding-top:16px;
+	padding-left: 22px;
+	text-align:left;
+	font: normal normal 36px "Gill Sans PSA", arial, helvetica, verdana, sans-serif;
+	color:#ffffff;
+	text-transform: capitalize;	
+}
+.settings_choose_carburants_single_line
+{
+	width: 539px;
+	height: 1px;
+	background-color: #000000;		
+}
+.settings_choose_carburants_selected
+{
+	margin-right:11px;
+	margin-top:5px;
+	float:right;
+	width:52px;
+	height:52px;
+	background-repeat: no-repeat;
+}
+.settings_choose_carburants_selected.on
+{
+	background-image: url("./images/selected_unselected.png");
+	background-position: top;
+}
+.settings_choose_carburants_selected.off
+{
+	background-image: url("./images/selected_unselected.png");
+	background-position: bottom;
+}
+
+/*css for choose_language*/
+#settings_choose_language_content
+{
+	width:616px;
+	height: 335px;
+	display:none;
+}
+#settings_choose_language_left_corner
+{
+	float:left;
+	width: 6px;
+	height: 335px;
+	background-image: url("./images/settings_choose_carburants_left_corner.png");
+}
+#settings_choose_language_center_content
+{
+	float:left;
+	width: 604px; 
+	height: 335px;
+	background-image: url("./images/settings_choose_carburants_center_bg.png");
+	background-repeat: repeat-x;
+	text-align:center;	
+}
+#settings_choose_language_right_corner
+{
+	float:right;
+	width: 6px;
+	height: 335px;
+	background-image: url("./images/settings_choose_carburants_right_corner.png");
+}
+#settings_choose_language_vertical_scroll
+{
+	float:left;
+	margin-top:6px;
+	width: 82px;
+	height: 322px;
+	text-align: center;
+	position:absolute;	
+}
+.settings_choose_language_vertical_srooll_content
+{
+	float:left;
+	width:72px;
+	height:322px;
+	text-align: center;	
+}
+.settings_choose_language_vertical_scroll_right_line
+{
+	float:right;
+	width:10px;
+	height: 321px;
+	background-image: url("./images/settings_choose_carburants_vertical_line.png");
+	background-repeat: repeat-y;
+}
+#settings_choose_language_top_scroll
+{
+	margin-top:11px;
+	margin-left:20px;	
+	width:31px;
+	height:21px;
+	background-image: url("./images/settings_choose_carburants_top_arrow.png");
+	background-repeat: no-repeat;
+}
+#settings_choose_language_pager
+{
+	vertical-align: middle;
+	margin-left:28px;
+	width: 15px;
+	height:257px;		
+}
+#settings_choose_language_bottom_scroll
+{
+	margin-left:20px;
+	width:31px;
+	height:21px;
+	background-image: url("./images/settings_choose_carburants_bottom_arrow.png");
+	background-repeat: no-repeat;	
+}
+.settings_chose_language_pager_bullet_spacer
+{
+	height:10px;
+}
+#settings_choose_language_all_languages
+{
+	float:left;
+	width: 540px;
+}
+.settings_choose_language_single_title
+{
+	float:left;
+	padding-top:15px;
+	padding-left: 22px;
+	text-align:left;
+	font: normal normal 36px "Gill Sans PSA", arial, helvetica, verdana, sans-serif;
+	color:#ffffff;
+}
+.settings_choose_language_single_line
+{
+	width: 539px;
+	height: 1px;
+	background-color: #000000;		
+}
+.settings_choose_language_selected
+{
+	margin-right:11px;
+	margin-top:5px;
+	float:right;
+	width:52px;
+	height:53px;
+	background-image: url("./images/settings_choose_make_selected");
+	background-repeat: no-repeat;
+}
+
+/*css for choose_make*/
+#settings_choose_make_content
+{
+	width:616px;
+	height: 335px;
+	display:none;
+}
+#settings_choose_make_left_corner
+{
+	float:left;
+	width: 8px;
+	height: 267px;
+	background-image: url("./images/settings_choose_make_left_corner.png");
+}
+#settings_choose_make_center_content
+{
+	float:left;
+	width: 600px; 
+	height: 267px;
+	background-image: url("./images/settings_choose_make_center_bg.png");
+	background-repeat: repeat-x;
+	text-align:center;
+		
+}
+#settings_choose_make_right_corner
+{
+	float:right;
+	width: 8px;
+	height: 267px;
+	background-image: url("./images/settings_choose_make_right_corner.png");
+}
+#settings_choose_make_vertical_scroll
+{
+	float:left;
+	margin-top:6px;
+	width: 70px;
+	height: 259px;
+	text-align: center;
+	position:absolute;	
+	background-image: url("./images/settings_choose_carburants_vertical_line.png");
+	background-repeat: repeat-y;
+	background-position:right;
+}
+.settings_choose_make_vertical_srooll_content
+{
+	float:left;
+	width:60px;
+	height:270px;
+	text-align: center;
+}
+.settings_choose_make_vertical_scroll_right_line
+{
+	float:right;
+	width:10px;
+	height: 259px;
+	background-image: url("./images/settings_choose_carburants_vertical_line.png");
+	background-repeat: repeat-y;
+}
+#settings_choose_make_top_scroll
+{
+	margin-top:11px;
+	margin-left:14px;	
+	width:31px;
+	height:21px;
+	background-image: url("./images/settings_choose_carburants_top_arrow.png");
+	background-repeat: no-repeat;
+}
+#settings_choose_make_scroller
+{
+	width:63px;
+	height:259px;	
+}
+.settings_bottom_scroll_line
+{
+	width:68px;
+	height:11px;
+	margin-left:-1px;
+	background-image: url("./images/settings_bottom_scroll_line.png");
+	background-repeat: no-repeat;	
+}
+#settings_choose_make_all_makes
+{
+	float:right;
+	margin-top:10px;
+	width: 539px;
+	height: 320px;
+}
+.settings_choose_make_single
+{
+	width: 539px;
+	height: 85px;
+	background-image: url('./images/settings_choose_carburants_carburant_bg.png');
+	border-bottom:1px solid #000000;
+}
+.settings_choose_make_single_title
+{
+	float:left;
+	padding-top:26px;
+	padding-left: 22px;
+	text-align:left;
+	font: normal normal 36px "Gill Sans PSA", arial, helvetica, verdana, sans-serif;
+	color:#ffffff;
+}
+.settings_choose_make_selected
+{
+	margin-right:11px;
+	margin-top:16px;
+	float:right;
+	width:52px;
+	height:52px;	
+}
+.settings_choose_make_selected.on
+{
+	background-image:url('./images/selected_unselected.png');
+	background-position: top;
+	background-repeat: no-repeat;
+}
+.settings_choose_make_selected.off
+{
+	background-image:url('./images/selected_unselected.png');
+	background-position: bottom;
+	background-repeat: no-repeat;
+}
+#settigns_choose_make_buttom_buttons
+{
+	width:616px;
+	height: 67px;
+	background-image: url("./images/settings_choose_markue_bottom_bg.png");
+	background-repeat: no-repeat;
+}
+.settings_choose_make_single_logo
+{
+	float:left;
+	padding-top:23px;
+	padding-left: 20px;
+	text-align:left;
+}
+.settings_choose_make_select_all_off
+{
+	float:left;
+	background-image:url('./images/select_all_bg.png');
+	background-position:bottom;
+	height:57px;
+	width:314px;	
+	text-align:center;
+	margin-top: 5px;
+	margin-left: 5px;
+	position: absolute;
+}
+.settings_choose_make_select_all_on
+{
+	float:left;
+	background-image:url('./images/select_all_bg.png');
+	background-position: top;
+	height:57px;
+	width:314px;	
+	text-align:center;
+	margin-top: 5px;
+	margin-left: 5px;
+	position: absolute;
+}
+.settings_choose_make_select_all_title
+{
+	width:280px;
+	padding-top:15px;
+	padding-left:15px;
+	text-align:center;
+	font: normal normal 22px "Gill Sans PSA", arial, helvetica, verdana, sans-serif;
+	color:#fff;	
+}
+.settings_choose_make_ok_cancel_buttons
+{
+	float:right;
+	margin-top:4px;	
+	margin-rithg:2px;
+}
+
+.settings_choose_make_ok_button_title
+{
+	padding-top:14px;
+	margin-left:20px;
+	text-align:center;
+	font: normal normal 22px "Gill Sans PSA", arial, helvetica, verdana, sans-serif;
+	color:#fff;
+}
+.settings_choose_make_cancel_button_title
+{
+	padding-top:15px;	
+	text-align:center;	
+	font: normal normal 22px "Gill Sans PSA", arial, helvetica, verdana, sans-serif;
+	color:#fff;
+}
+
+/*css for choose_zone*/
+#settings_choose_zone_content
+{
+	width:616px;
+	height: 335px;
+	display:none;
+}
+.settings_choose_zone_left_corner
+{
+	float:left;
+	width: 6px;
+	height: 335px;
+	background-image: url("./images/settings_choose_carburants_left_corner.png");
+}
+.settings_choose_zone_center_content
+{
+	float:left;
+	width: 604px; 
+	height: 335px;
+	background-image: url("./images/settings_choose_carburants_center_bg.png");
+	background-repeat: repeat-x;
+	text-align:center;	
+}
+.settings_choose_zone_right_corner
+{
+	float:right;
+	width: 6px;
+	height: 335px;
+	background-image: url("./images/settings_choose_carburants_right_corner.png");
+}
+#settings_choose_zone_vertical_scroll
+{
+	float:left;
+	margin-top:6px;
+	width: 82px;
+	height: 322px;
+	text-align: center;
+	position:absolute;	
+}
+.settings_choose_zone_vertical_srooll_content
+{
+	float:left;
+	width:72px;
+	height:322px;
+	text-align: center;	
+}
+.settings_choose_zone_vertical_scroll_right_line
+{
+	float:right;
+	width:10px;
+	height: 321px;
+	background-image: url("./images/settings_choose_carburants_vertical_line.png");
+	background-repeat: repeat-y;
+}
+#settings_choose_zone_top_scroll
+{
+	margin-top:11px;
+	margin-left:20px;	
+	width:31px;
+	height:21px;
+	background-image: url("./images/settings_choose_carburants_top_arrow.png");
+	background-repeat: no-repeat;
+}
+#settings_choose_zone_pager
+{
+	vertical-align: middle;
+	margin-left:28px;
+	width: 15px;
+	height:257px;		
+}
+#settings_choose_zone_bottom_scroll
+{
+	margin-left:20px;
+	width:31px;
+	height:21px;
+	background-image: url("./images/settings_choose_carburants_bottom_arrow.png");
+	background-repeat: no-repeat;	
+}
+.settings_chose_zone_pager_bullet_spacer
+{
+	height:10px;
+}
+#settings_choose_range_all_ranges
+{
+	float:left;	
+	width: 540px;
+}
+.settings_choose_zone_single
+{
+	width: 540px;
+	height: 88px;
+	background-image: url('./images/settings_choose_carburants_carburant_bg.png');
+	border-bottom:1px solid #000000;
+}
+.settings_choose_zone_single_title
+{
+	float:left;
+	padding-top:15px;
+	padding-left: 22px;
+	text-align:left;
+	font: normal normal 36px "Gill Sans PSA", arial, helvetica, verdana, sans-serif;
+	color:#ffffff;
+}
+.settings_choose_zone_single_line
+{
+	height:1px;
+	width: 539px;
+	background-color: #000000;		
+}
+.settings_choose_zone_selected
+{
+	margin-right:11px;
+	margin-top:5px;
+	float:right;
+	width:52px;
+	height:53px;
+	background-image: url("./images/search_list_item_checkbox.png");
+	background-repeat: no-repeat;
+}

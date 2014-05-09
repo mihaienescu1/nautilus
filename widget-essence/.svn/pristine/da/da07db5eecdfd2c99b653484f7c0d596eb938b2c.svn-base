@@ -1,0 +1,1317 @@
+/* SC 1 */
+
+#content_list_module
+{
+	display:none;	
+}
+
+.img_logo
+{
+	width:42px;
+	height:42px;
+}
+
+#content_list
+{
+	display:none;
+	position: relative;
+	z-index: 1;	
+}
+
+.content_list_header
+{
+	width:616px;
+	height:68px;
+	background: url('./images/content_list_header.png');
+}
+
+.content_list_middle_container
+{
+	width:616px;
+	height:260px;
+}
+
+.content_list_left_margin
+{
+	float:left;
+	width:7px;
+	height:260px;
+	background: url('./images/content_list_left_margin.png');
+}
+
+.content_list_middle
+{
+	float:left;
+	width:600px;
+	height:260px;
+	background: url('./images/content_list_middle_background.png') repeat-x;
+}
+
+.content_list_right_margin
+{
+	float:left;
+	width:9px;
+	height:260px;
+	background: url('./images/content_list_right_margin.png');
+}
+
+.content_list_bottom
+{
+	width:616px;
+	height:7px;
+	background: url('./images/content_list_bottom.png');
+}
+
+
+#content_list_btn_distance
+{
+	float:left;
+	margin:7px 0px 0px 7px;
+	width:146px;
+	height:61px;
+}
+#content_list_btn_distance .background
+{
+	width:146px;
+	height:61px;
+	background: url('./images/content_list_btn_distance.png') no-repeat bottom;
+}
+
+#content_list_btn_distance .label
+{
+	float:left;
+	width:146px;
+	height:61px;
+	margin:-61px 0px 0px 0px;
+	z-index:2;
+	display:table;
+	font-size:26px;
+	color:#ffffff;
+	text-align:center;	
+}
+
+#content_list_btn_distance .label div
+{
+	display:table-cell;
+	vertical-align:middle;
+}
+
+#content_list_btn_distance.pressed .background
+{
+	width:146px;
+	height:61px;
+	background: url('./images/content_list_btn_distance.png') no-repeat top;
+}
+
+#content_list_btn_price
+{
+	float:left;
+	margin:7px 0px 0px 0px;
+	width:144px;
+	height:61px;
+	overflow-x:visible;
+}
+
+#content_list_btn_price .background
+{
+	width:167px;
+	height:61px;
+	background: url('./images/content_list_btn_price.png') no-repeat bottom;
+}
+
+#content_list_btn_price.pressed .background
+{
+	width:167px;
+	height:61px;
+	background: url('./images/content_list_btn_price.png') no-repeat top;
+}
+
+#content_list_btn_price .label
+{
+	float:left;
+	width:146px;
+	height:61px;
+	margin:-61px 0px 0px 0px;
+	z-index:2;
+	display:table;
+	font-size:26px;
+	color:#ffffff;
+	text-align:center;	
+}
+
+#content_list_btn_price .label div
+{
+	display:table-cell;
+	vertical-align:middle;
+}
+
+.content_list_btn_favorites_off
+{
+	float:left;
+	width:150px;
+	height:62px;
+	margin:2px 0px 0px 14px;
+	background: url('./images/content_list_btn_favorites.png') no-repeat bottom;
+}
+
+.content_list_btn_favorites_on
+{
+	float:left;
+	width:150px;
+	height:62px;
+	margin:2px 0px 0px 14px;
+	background: url('./images/content_list_btn_favorites.png') no-repeat top;
+}
+.content_list_btn_search_off
+{
+	float:left;
+	width:151px;
+	height:62px;
+	margin:2px 0px 0px 2px;
+	background: url('./images/content_list_btn_search.png') no-repeat bottom;
+}
+
+.content_list_btn_search_on
+{
+	float:left;
+	width:151px;
+	height:62px;
+	margin:2px 0px 0px 2px;
+	background: url('./images/content_list_btn_search.png') no-repeat top;
+}
+
+#content_list_scroller
+{
+	float:left;
+	width:63px;
+	height:260px;
+	background: url('./images/content_list_scroller_right_margin.png') no-repeat right;
+}
+
+#content_list_list
+{
+	float:left;
+	width:537px;
+	height:260px;
+}
+
+.content_list_item
+{
+	float:left;
+	width:537px;
+	height:85px;
+	border-bottom:1px solid #000000;
+			
+}
+.content_list_item_station_content
+{
+	position: relative;
+	z-index: 2;	
+}
+
+.focused_station
+{
+	width:540px;
+	height:88px;
+	background-color: #000;
+	display: none;
+	position: relative;
+	z-index: 1;
+	opacity:0.4;
+}
+
+.content_list_item.orange
+{
+	background: url('./images/row_back_orange.png') no-repeat;
+}
+
+.content_list_item.green
+{
+	background: url('./images/row_back_green.png') no-repeat;
+}
+
+.content_list_item.red
+{
+	background: url('./images/row_back_red.png') no-repeat;
+}
+
+.content_list_item.gray
+{
+	background: url('./images/row_back_gray.png') no-repeat;
+}
+
+.content_list_item_logo_container
+{
+	float:left;
+	width:52px;
+	height:64px;	
+}
+
+.content_list_item_info_container
+{
+	float:left;
+	height:64px;
+	width:190px;	
+	margin: 5px 5px 0px 19px;
+}
+
+.content_list_item_distance_container
+{
+	float:left;
+	width:90px;
+	height:64px;
+	margin: 4px 10px 0px 10px;
+}
+
+.content_list_item_price_container
+{
+	float:left;
+	width:161px;
+	height:64px;
+	margin-top:0px;
+}
+
+.content_list_item_logo
+{
+	float:left;
+	margin:20px 0px 0px 10px;
+	width:42px;
+	height:42px;
+}
+
+.content_list_item_name
+{
+	float:left;
+	font-size:36px;
+	color:#ffffff;
+	width:195px;
+	height:45px;
+	overflow:hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	margin-left:-10px;
+}
+
+.content_list_item_address
+{
+	float:left;
+	clear:left;
+	margin-top:5px;
+	font-size:22px;
+	color:#ffffff;
+	width:380px;
+	height:26px;
+	overflow:hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	margin-left:-10px;
+}
+
+.content_list_item_distance
+{
+	float:right;
+	margin-top:14px;
+	width:90px;
+	font-size:22px;
+	color:#ffffff;
+	text-align:right;
+	padding-right:2px;
+
+}
+
+.content_list_item_price_value
+{
+	float:right;
+	margin-top:5px;
+	margin-right: 10px;
+	font-size:36px;
+	color:#ffffff;
+	height:37px;
+	overflow:hidden;
+	text-align:right;
+}
+
+.content_list_item_price_age
+{
+	float:right;
+	clear:right;
+	margin-top:13px;
+	margin-right: 10px;	
+	font-size:22px;
+	color:#ffffff;
+	height:26px;
+	overflow:hidden;
+	text-align:right;
+	width: 50px;
+}
+
+.list_warning
+{
+	font-family: "Gill Sans PSA", arial, helvetica, verdana, sans-serif;
+	font-size:26px;
+	color:#ccc;
+	padding:5px;
+}
+
+/* SC 2 */
+#favoritelist_modules
+{
+	display:none;
+}
+#favoritelist_choose_favorites
+{
+	width:616px;
+	height: 335px;
+	display:none;
+}
+.favoritelist_clear
+{
+	clear:both;
+}
+.module_title_content
+{
+	margin-top: 7px;	
+	height: 54px;
+	background-color: #000000;
+	text-align:center;	
+}
+.module_title_text
+{	
+	font: normal normal 26px "Gill Sans PSA", arial, helvetica, verdana, sans-serif;
+	color:#ffffff;
+	padding-top: 10px;	
+}
+#favoritelist_choose_favorits_stations
+{
+	float:left;
+	width: 539px;
+	height: 320px;
+	
+}
+.favoritelist_choose_favorits_stations_text
+{
+	padding-top:7px;
+	
+}
+.favoritelist_choose_favorits_station_name
+{
+	text-align:left;
+	float:left;
+	width:145px;
+	font: normal normal 36px "Gill Sans PSA", arial, helvetica, verdana, sans-serif;
+	color:#ffffff;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin-top:6px;
+}
+.favoritelist_choose_favorits_station_distance
+{
+	text-align:right;	
+	width:90px;
+	float:left;
+	font: normal normal 22px "Gill Sans PSA", arial, helvetica, verdana, sans-serif;
+	color:#ffffff;
+	margin-top: 19px;
+	margin-left: 22px;
+}
+.favoritelist_choose_favorits_station_price
+{
+	margin-top: 6px;
+	text-align:right;
+	width:160px;
+	float:right;
+	font: normal normal 36px "Gill Sans PSA", arial, helvetica, verdana, sans-serif;
+	color:#ffffff;	
+	margin-right:61px;
+}
+.favoritelist_choose_favorits_star
+{
+	float:right;
+	margin-top:-25px;
+	margin-right:10px;
+	width:42px;
+	height:41px;
+	background-image:url('./images/logo_favorite.png');
+	position: relative;
+	z-index: 2;
+}
+.favoritelist_choose_favorits_star.on
+{
+	background-position:bottom;
+}
+.favoritelist_choose_favorits_star.off
+{
+	background-position:top;
+}
+
+.favoritelist_choose_favorits_station_address
+{
+	text-align: left;
+	width: 325px;	
+	padding-right:20px;
+	margin-top:9px;
+	font: normal normal 22px "Gill Sans PSA", arial, helvetica, verdana, sans-serif;
+	color:#ffffff;
+	float:left;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.favoritelist_choose_favorits_station_days
+{
+	width:50px;
+	text-align: right;
+	margin-top: 9px;
+	float:left;
+	font: normal normal 22px "Gill Sans PSA", arial, helvetica, verdana, sans-serif;
+	color:#ffffff;
+	margin-left: 21px;
+}
+
+.settings_choose_make_single_logo
+{
+	margin-left:-10px;
+	padding-right:9px;
+}
+
+.favoritelist_choose_single
+{
+	width: 540px;
+	height: 88px;
+	background-image: url('./images/row_back_fav.png');
+	border-bottom:1px solid #000000;
+}
+
+.favoritelist_choose_favorits_details
+{
+	position: relative;
+	z-index: 2;
+}
+
+/* SC3 */
+#stationdetail_all_content
+{
+	width:616px;
+	height: 335px;
+	display: none;
+}
+.stationdetail_clear
+{
+	clear:both;
+}
+#stationdetail_top
+{
+	width: 616px;
+	height: 87px;	
+	background: url("./images/stationdetail_top_button_bg.png") no-repeat;	
+	background-position:0 0;	
+}
+
+#stationdetail_top.pressed_properties
+{
+	width: 616px;
+	height: 87px;	
+	background: url("./images/stationdetail_top_button_bg.png") no-repeat;	
+	background-position:0 0;	
+}
+#stationdetail_top.pressed_info
+{	
+	width: 616px;
+	height: 87px;
+	float:left;	
+	background: url("./images/stationdetail_top_button_bg.png") no-repeat;
+	background-position: 0 -93px; 	
+}
+#stationdetail_top.pressed_prices
+{	
+	width: 616px;
+	height: 87px;
+	float:left;	
+	background: url("./images/stationdetail_top_button_bg.png") no-repeat;
+	background-position: 0 -185px; 	
+}
+
+#stationdetail_left_corner
+{
+	float:left;
+	width:6px;
+	height:248px;
+	background-image: url("./images/stationdetail_left_corner.png");
+	margin-top:-1px;	
+}
+#stationdetail_center_content
+{
+	float:left;
+	margin-top:-1px;
+	width:603px;
+	height: 248px;
+	background-image: url("./images/stationdetail_center_bg.png");
+}
+#stationdetail_right_corner
+{
+	float:right;
+	width:7px;
+	height:248px;
+	background-image: url("./images/stationdetail_right_corner.png");
+	margin-top:-1px;	
+}
+#stationdetail_station_properties_button
+{
+	width:151px;
+	height:60px;
+	float:left;	
+}
+#stationdetail_station_properties_button img
+{
+	margin-top:13px;
+	margin-left:56px;
+	width: 42px;
+	height: 42px;	
+}
+#stationdetail_station_info_button
+{
+	width:145px;
+	height:60px;
+	float:left;	
+}
+#stationdetail_station_info_button img
+{
+	margin-top:14px;
+	margin-left:55px;	
+}
+
+#stationdetail_station_prices_button
+{
+	width:151px;
+	height:60px;
+	float:left;	
+}
+#stationdetail_station_prices_button img
+{
+	margin-top:18px;
+	margin-left:55px;	
+}
+#stationdetail_station_properties_title
+{
+	margin-top:-11px;
+	margin-left:12px;
+	color:#e6e5e5;
+	width:580px;
+}
+#stationdetail_station_properties_title img
+{
+	float:right;
+}
+#stationdetail_station_properties_title span
+{
+	font: normal normal 26px "Gill Sans PSA", arial, helvetica, verdana, sans-serif;
+	color:#e6e5e5;
+}
+
+#stationdetail_station_name
+{
+	margin-top: 1px;
+	width: 500px;
+	height: 35px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	display:inline-block;
+	font: normal normal 26px "Gill Sans PSA", arial, helvetica, verdana, sans-serif;	
+}
+
+#stationdetail_station_prices_title.price_header #stationdetail_station_name
+{
+	width:475px;
+}
+
+#stationdetail_station_prices_title.price_header
+{
+	margin-top: -11px;
+	width: 520px;
+	height: 35px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	display:inline-block;
+	font: normal normal 26px "Gill Sans PSA", arial, helvetica, verdana, sans-serif;	
+}
+
+#stationdetail_station_properties_content
+{
+	display: none;
+}
+#stationdetail_station_properties_content_buttons
+{
+	margin-top:9px;
+}
+#stationdetail_station_gpsgo
+{
+	margin-left:6px;
+	width:194px;
+	height:136px;
+	background-image: url("./images/stationdetail_station_gasinfo_bg_gray.png");
+	background-repeat: no-repeat;
+	float:left;
+	text-align:center;
+	overflow:hidden;
+}
+#stationdetail_station_gpsgo_distance
+{
+	text-align:left;
+	font: normal normal 22px "Gill Sans PSA", arial, helvetica, verdana, sans-serif;
+	color:#ffffff;
+	margin-top:7px;
+	margin-left:5px;
+}
+#stationdetail_station_gpsgo_title
+{
+	font: normal normal 26px "Gill Sans PSA", arial, helvetica, verdana, sans-serif;
+	color:#ffffff;
+	text-shadow: 2px 2px 2px #000;
+	margin-left:5px;
+	margin-right:5px;
+	margin-top:-5px;
+	width:182px;
+	height:50px;
+	display:table;
+	text-align:center;
+}
+#stationdetail_station_gpsgo_title div
+{
+	vertical-align:middle;
+	display:table-cell;	
+}
+
+#stationdetail_station_gpsgo_logo img
+{
+	margin-top:2px;
+	margin-bottom:10px;
+}
+#stationdetail_station_call
+{
+	margin-left:7px;
+	width:194px;
+	height:136px;
+	background-image: url("./images/stationdetail_station_gasinfo_bg_gray.png");
+	background-repeat: no-repeat;
+	float:left;
+	text-align:center;
+	overflow:hidden;
+}
+#stationdetail_station_call_title
+{
+	font: normal normal 26px "Gill Sans PSA", arial, helvetica, verdana, sans-serif;
+	color:#ffffff;	
+	text-shadow: 2px 2px 2px #000;
+	margin-left:5px;
+	margin-right:5px;
+	margin-top:-3px;
+	width:182px;
+	height:50px;
+	display:table;
+	text-align:center;
+}
+#stationdetail_station_call_title div
+{
+	vertical-align:middle;
+	display:table-cell;	
+}
+
+#stationdetail_station_call_logo img
+{
+	margin-top:34px;
+	margin-bottom:6px;
+}
+#stationdetail_station_gasinfo
+{	
+	width:192px;
+	height:135px;
+	float:left;
+	margin-left:7px;
+	text-align: center;
+}
+#stationdetail_station_gasinfo.red
+{
+	background-image: url("./images/stationdetail_station_gasinfo_bg_red.png");
+	background-repeat: no-repeat;
+}
+#stationdetail_station_gasinfo.green
+{
+	background-image: url("./images/stationdetail_station_gasinfo_bg_green.png");
+	background-repeat: no-repeat;
+}
+#stationdetail_station_gasinfo.orange
+{
+	background-image: url("./images/stationdetail_station_gasinfo_bg_orange.png");
+	background-repeat: no-repeat;
+}
+#stationdetail_station_gasinfo.gray
+{
+	background-image: url("./images/stationdetail_station_gasinfo_bg_gray.png");
+	background-repeat: no-repeat;
+}
+#stationdetail_station_gasinfo_days
+{
+	margin-top:7px;
+	margin-left:9px;
+	text-align:left;
+	font: normal normal 22px "Gill Sans PSA", arial, helvetica, verdana, sans-serif;
+	color:#ffffff;
+	clear:both;
+}
+#stationdetail_station_gasinfo_gasname
+{
+	float:left;
+	width:120px;
+	overflow:hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+#stationdetail_station_gasinfo_nrdays
+{
+	float:right;
+	margin-right:10px;
+}
+
+#stationdetail_station_gasinfo_price
+{
+	margin-top:-2px;
+	font: normal normal 26px "Gill Sans PSA", arial, helvetica, verdana, sans-serif;
+	color:#ffffff;	
+}
+#stationdetail_station_properties_services
+{
+	margin-top:4px;
+	text-align:center;
+}
+.stationdetail_station_properties_services_icons
+{
+	float:left;
+	margin-left:6px;
+	margin-right:6px;
+}
+.car_repair
+{		
+	background-image:url('./images/srv_car_repair.png');
+	display: none;
+	width:63px;
+	height: 63px;	
+}
+.tyre_pressure
+{
+	background-image:url('./images/srv_tyre_pressure.png');
+	display: none;
+	width:63px;
+	height: 63px;
+}
+.washing_station
+{
+	background-image:url('./images/srv_washing_station.png');
+	display: none;
+	width:63px;
+	height: 63px;
+}
+.camping_car_area
+{
+	background-image:url('./images/srv_camping_car_area.png');
+	display: none;
+	width:63px;
+	height: 63px;
+}
+.baby_room
+{
+	background-image:url('./images/srv_baby_room.png');
+	display: none;
+	width:63px;
+	height: 63px;
+}
+.atm
+{
+	background-image:url('./images/srv_atm.png');
+	display: none;
+	width:63px;
+	height: 63px;
+}
+.open_7
+{
+	background-image:url('./images/srv_open_7.png');
+	display: none;
+	width:63px;
+	height: 63px;
+}
+.open_24
+{
+	background-image:url('./images/srv_open_24.png');
+	display: none;
+	width:63px;
+	height: 63px;
+}
+
+#stationdetail_station_info_content
+{
+	display:none;
+	width:100%;
+	height:100%;
+}
+#stationdetail_station_prices_content
+{
+	display:none;
+	width:100%;
+	height:100%;
+}
+
+#stationdetail_station_price_vertical_scroll
+{
+	float:left;
+	width:60px;
+	height:260px;
+	margin-top:-19px;
+	background: url('./images/content_list_scroller_right_margin.png') no-repeat right;
+	z-index:1;
+	position: relative;
+}
+
+#stationdetail_station_info_title
+{
+	margin-top:-11px;
+	margin-left:12px;
+	color:#e6e5e5;
+	width:580px;
+}
+#stationdetail_station_info_title span
+{
+	font: normal normal 26px "Gill Sans PSA", arial, helvetica, verdana, sans-serif;
+	color:#e6e5e5;
+}
+
+.stationdetail_station_properties_favorit
+{
+	float:right;
+	width:42px;
+	height:41px;
+	background-image: url('./images/logo_favorite.png');
+}
+.stationdetail_station_properties_favorit.on
+{
+	background-position:bottom;
+}
+.stationdetail_station_properties_favorit.off
+{
+	background-position:top;
+}
+
+#stationdetail_station_info_address
+{
+	text-align:center;	
+	margin-top: 65px;
+	margin-left:5px;
+	height:55px;
+	width:590px;
+	font: normal normal 26px "Gill Sans PSA", arial, helvetica, verdana, sans-serif;
+	color:#ffffff;
+}
+.stationdetail_station_address_infos
+{
+	margin-top:34px;
+	font: normal normal 26px "Gill Sans PSA", arial, helvetica, verdana, sans-serif;
+	color:#ffffff;
+}
+#stationdetail_station_info_phonenumber
+{
+	float:left;
+	margin-left:52px;
+}
+#stationdetail_station_info_schedule
+{
+	float:right;
+	margin-right:20px;
+}
+
+#stationdetail_station_info_schedule img
+{
+	float:left;
+	margin-right:9px;
+	margin-top:6px;
+}
+
+#stationdetail_station_prices_title
+{
+	margin-top:-11px;
+	margin-left:12px;
+	color:#e6e5e5;
+	width:580px;	
+}
+#stationdetail_station_prices_title span
+{
+	font: normal normal 26px "Gill Sans PSA", arial, helvetica, verdana, sans-serif;
+	color:#e6e5e5;
+}
+#stationdetail_station_prices_title img
+{
+	float:right;
+}
+.stationdetail_station_prices_info
+{
+	float:left;
+	font: normal normal 22px "Gill Sans PSA", arial, helvetica, verdana, sans-serif;
+	color:#ffffff;
+	margin:30px 0px 0px 0px;
+	width:540px;
+	height:185px;
+}
+
+.stationdetail_station_prices_info_line
+{
+	float:left;
+	width:490px;
+	height:38px;
+}
+.stationdetail_station_prices_info_gasname
+{
+	margin-left:20px;
+	width: 280px;
+	height: 35px;
+	text-align: left;
+	float: left;
+	overflow: hidden; 
+	text-overflow: ellipsis; 
+	white-space: nowrap;
+}
+.stationdetail_station_prices_info_age
+{
+	width: 60px;
+	height: 35px;
+	text-align: right;
+	float: left;
+	margin-left:10px;
+}
+.stationdetail_station_prices_info_price
+{
+	margin-left:10px;
+	width: 110px;
+	height: 35px;
+	text-align: right;
+	float: left;
+}
+
+/*gas price modification screen*/
+#stationdetail_gas_price_modification
+{
+	width:616px;
+	height: 335px;
+	display: none;
+}
+#stationdetail_gas_price_modification_left_corner
+{
+	float:left;
+	width: 28px;
+	height: 246px;
+	background-image: url("./images/stationdetail_gas_price_modification_left_corner.png");
+}
+#stationdetail_gas_price_modification_right_corner
+{
+	float:right;
+	width: 28px;
+	height: 246px;
+	background-image: url("./images/stationdetail_gas_price_modification_right_corner.png");	
+}
+#stationdetail_gas_price_modification_center_content
+{
+	float:left;
+	width: 560px; 
+	height: 246px;
+	background-image: url("./images/stationdetail_gas_price_modification_center_content.png");
+	background-repeat: repeat-x;
+	text-align:center;		
+}
+.stationdetail_gas_price_modification_center_content_title
+{
+	margin-top:19px;
+	font: normal normal 30px "Gill Sans PSA", arial, helvetica, verdana, sans-serif;
+	color:#9a9a9a;	
+}
+#stationdetail_gas_price_modification_title_info
+{
+	margin-top:30px;
+	font: normal normal 26px "Gill Sans PSA", arial, helvetica, verdana, sans-serif;	
+	color:#ffffff;
+}
+#stationdetail_gas_price_modification_buttom_buttons
+{
+	width:616px;
+	height: 89px;
+	background-image: url("./images/stationdetail_gas_price_modification_bottom_buttons_bg.png");
+	background-repeat: no-repeat;
+	color:#fff;
+}
+.stationdetail_gas_price_modification_ok_cancel_buttons
+{
+	float:right;
+	margin-top:4px;
+}
+.stationdetail_gas_price_modification_ok_button_off
+{
+	float:left;
+	margin-top:30px;
+	margin-right:3px;	
+	width:171px;
+	height: 56px;
+	background: url('./images/search_btn_ok.png') no-repeat bottom;
+}
+.stationdetail_gas_price_modification_ok_button_on
+{
+	float:left;
+	margin-top:30px;
+	margin-right:3px;	
+	width:171px;
+	height: 56px;
+	background: url('./images/search_btn_ok.png') no-repeat top;	
+}
+.stationdetail_gas_price_modification_ok_button_title
+{
+	padding-top:15px;
+	margin-left:20px;
+	text-align:center;
+	font: normal normal 22px "Gill Sans PSA", arial, helvetica, verdana, sans-serif;
+	color:#fff;
+}
+.stationdetail_gas_price_modification_cancel_button_off
+{
+	float:left;
+	margin-top:14px;	
+	width:152px;
+	height: 72px;
+	background: url('./images/search_btn_cancel.png') no-repeat bottom;	
+}
+.stationdetail_gas_price_modification_cancel_button_on
+{
+	float:left;
+	margin-top:14px;	
+	width:152px;
+	height: 72px;
+	background: url('./images/search_btn_cancel.png') no-repeat top;	
+}
+.stationdetail_gas_price_modification_cancel_button_title
+{
+	padding-top:31px;	
+	text-align:center;	
+	font: normal normal 22px "Gill Sans PSA", arial, helvetica, verdana, sans-serif;
+	color:#fff;
+}
+#stationdetail_gas_price_modification_all_buttons
+{
+	width:480px;
+	height:70px;
+	margin-left:40px;
+	margin-top: 19px;	
+}
+#stationdetail_gas_price_modification_decrease_button
+{
+	float:left;
+	margin-right:22px;
+}
+#stationdetail_logo_decrease
+{
+	width: 70px;
+	height: 69px;
+	background: url('./images/stationdetail_logo_decrease.png') no-repeat;
+	background-position: 0 0;
+}
+#stationdetail_logo_decrease.pressed
+{
+	width: 70px;
+	height: 69px;
+	background: url('./images/stationdetail_logo_decrease.png') no-repeat;
+	background-position: 0 -70px;
+}
+#stationdetail_gas_price_modification_price_value
+{
+	width: 290px;
+	float:left;	
+	text-align: center;	
+	font: normal normal 67px "Gill Sans PSA", arial, helvetica, verdana, sans-serif;
+	color:#ffffff;	
+}
+#stationdetail_gas_price_modification_increase_button
+{
+	margin-left:26px;
+	float:left;
+}
+#stationdetail_logo_increase
+{
+	width: 70px;
+	height: 69px;
+	background: url('./images/stationdetail_logo_increase.png') no-repeat;
+	background-position: 0 0;
+}
+#stationdetail_logo_increase.pressed
+{
+	width: 70px;
+	height: 69px;
+	background: url('./images/stationdetail_logo_increase.png') no-repeat;
+	background-position: 0 -70px;
+}
+/* SC3A BIS START */
+#stationinfo_call_content
+{
+	width:616px;
+	height: 335px;
+	display: none;
+}
+
+#stationinfo_call_left_corner
+{
+	float:left;
+	width: 8px;
+	height: 267px;
+	background-image: url("./images/settings_choose_make_left_corner.png");
+}
+
+#stationinfo_call_center_content
+{
+	float:left;
+	width: 600px; 
+	height: 267px;
+	background-image: url("./images/settings_choose_make_center_bg.png");
+	background-repeat: repeat-x;
+	text-align:center;
+	position:relative;
+}
+
+#stationinfo_call_right_corner
+{
+	float:right;
+	width: 8px;
+	height: 267px;
+	background-image: url("./images/settings_choose_make_right_corner.png");
+}
+
+.stationinfo_call_back
+{
+	float:left;
+	width:52px;
+	height:53px;
+	background-image: url("./images/back_button.png");
+	background-repeat:no-repeat;
+	background-position: center;
+	position: absolute;
+	top:20;
+	left:13;
+}
+
+.stationinfo_call_telephone
+{
+	float:left;
+	width:66px;
+	height:49px;
+	background-image: url("./images/stationdetail_logo_call.png");
+	background-repeat:no-repeat;
+	background-position: center;
+	position: absolute;
+	top:37;
+	left:271;
+}
+
+.stationinfo_call_container_text
+{
+	position:absolute;
+	width:100%;
+	text-align:center;
+	top:125;
+}
+
+.stationinfo_call_all_call_title
+{
+	font-family: "Gill Sans PSA", arial, helvetica, verdana, sans-serif;
+	font-size:36px;
+	color:#e6e5e5;
+}
+
+.stationinfo_call_all_call_phone
+{
+	margin-top:11px;
+	font-family: "Gill Sans PSA", arial, helvetica, verdana, sans-serif;
+	font-size:26px;
+	color:#e6e5e5;	
+}
+
+#stationinfo_call_buttom_buttons
+{
+	width:616px;
+	height: 67px;
+	background-image: url("./images/back_only_ok.png");
+	background-repeat: no-repeat;
+}
+
+.stationinfo_call_ok_cancel_buttons
+{
+	float:right;
+	margin-top:5px;	
+}
+
+.stationinfo_call_ok_button_off
+{
+	margin-right:0px;
+	float:left;
+	margin-top:6px;	
+	width:171px;
+	height: 56px;
+	background: url("./images/search_btn_ok.png") no-repeat bottom;
+}
+
+.stationinfo_call_ok_button_on
+{
+	margin-right:0px;
+	float:left;
+	margin-top:6px;	
+	width:171px;
+	height: 56px;
+	background: url("./images/search_btn_ok.png") no-repeat top;	
+}
+
+.stationinfo_call_ok_button_title
+{
+	padding-top:15px;
+	padding-left:80px;
+	text-align:left;	
+	font: normal normal 22px "Gill Sans PSA", arial, helvetica, verdana, sans-serif;
+	color:#fff;
+}
+
+.stationinfo_call_cancel_button_off
+{
+	float:left;
+	margin-top:6px;	
+	width:152px;
+	height: 56px;
+	background: url("./images/search_btn_cancel2.png") no-repeat bottom;	
+}
+
+.stationinfo_call_cancel_button_on
+{
+	float:left;
+	margin-top:6px;	
+	width:152px;
+	height: 56px;
+	background: url("./images/search_btn_cancel2.png") no-repeat top;
+}
+
+.stationinfo_call_cancel_button_title
+{
+	padding-top:15px;	
+	text-align:center;	
+	font: normal normal 22px "Gill Sans PSA", arial, helvetica, verdana, sans-serif;
+	color:#fff;
+}
+
+#stationdetail_station_info_schedule_openinghours
+{
+	white-space: nowrap;
+	width:180px;
+	overflow:hidden;
+	text-overflow: ellipsis;
+	display:inline-block;
+}

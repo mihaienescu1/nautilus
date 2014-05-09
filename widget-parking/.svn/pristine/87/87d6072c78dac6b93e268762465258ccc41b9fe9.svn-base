@@ -1,0 +1,13 @@
+
+body { margin:0; color:white; font: normal normal 12px "Gill Sans PSA", arial, helvetica, verdana, sans-serif; -webkit-user-select: none;}
+
+/* Global Zoning : Header */
+header {	display:block; height:45px; overflow:hidden; text-align:right; }
+header h1 { float:right; display:block; height:45px; margin:0px 10px 0px 0px; padding:0px 0px 0px 0px; background:url(./images/tiny-icon.png) center right no-repeat; }
+header h1 span { float:right; display:block; margin:7px 0 0 0; padding:0px 50px 0 0px; font-family:"Gill Sans PSA"; text-align:right; }
+
+/* Global Zoning : Main Section */
+section#main { display:block; height:335px; overflow:hidden; background-color: #000;}
+
+/* Global Zoning : Footer */
+footer { display:block; height:45px; overflow:hidden; text-align:right; }

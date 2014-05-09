@@ -1,0 +1,8 @@
+#parking_splash_screen
+{
+	background-image:url('./images/parkinginfo_splash.jpg');
+	background-repeat:no-repeat;
+	width:614px;
+	height:335px;
+	display:none;
+}

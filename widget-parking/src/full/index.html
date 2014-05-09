@@ -1,0 +1,509 @@
+<html lang="${lang.code}">
+<head>
+	<meta charset="utf-8"/>
+	<title>${widget.name}</title>
+</head>
+
+<body>
+
+<!-- Header Section -->
+<header>	
+	<h1><span id="application_icon">${widget.name}</span></h1>
+</header>
+<!-- End Header Section -->
+
+<!-- Main Section -->
+<section id="main">
+
+	<div id="parking_splash_screen">
+	</div>
+	
+	<!--  start parkinginfo screens -->
+	<div id="parking_info_module">
+	
+		<!-- SC1 start  -->			
+		<div id="list_content">
+			<div class="list_header">
+				<div id="list_btn_distance" class="list_btn_distance_off">
+					<div class="list_btn_distance_title policy_sort_buttons">${sc1_distance}</div>
+				</div>
+				<div id="list_btn_status" class="list_btn_status_off">
+					<div class="list_btn_status_title policy_sort_buttons">${sc1_status}</div>
+				</div>			
+				<div id="list_btn_favorites" class="list_btn_favorites_off"></div>
+				<div id="list_btn_search" class="list_btn_search_off"></div>				
+			</div>
+			<div class="list_middle_container">
+				<div class="list_left_margin"></div>
+				<div class="list_middle">			
+					<div id="list_vertical_scroll"></div>				
+					<div id="list_all_park_makes"></div>
+					<div class="search_select_clear"></div>
+				</div>
+				<div class="list_right_margin"></div>
+			</div>
+			<div class="list_bottom"></div>
+		</div>
+		<!-- SC1 end -->
+		
+		<!-- SC2 start -->
+		
+		<div id="favorite_list_content"> 
+			<div id="favorite_list_left_corner"></div>
+			
+			<div id="favorite_list_center_content">
+				<div id="favorite_list_center_head">
+					<div class="list_title_text policy_screen_title">${sc2_title}</div>
+				</div>
+				<div id="favorite_list_center_bottom">
+					<div id="favorite_list_scroll">								
+					</div>
+					<div id="favorite_list_all_destinations">
+					</div>
+				</div>
+			</div>
+			
+			<div id="favorite_list_right_corner"></div>
+		</div>
+		<!-- SC2 end -->
+		
+		<!--  SC3 screens start -->
+		<div id="parkinginfo_content_panels">
+			<div id="parkinginfo_header_buttons" class="parkinginfo_select_button">
+				<div tab="parkinginfo_menu_button_details" class="icons parkinginfo_menu_button_details">
+					<img class="parking_logo_info_page" src="">
+				</div>
+				<div tab="parkinginfo_menu_button_address" class="icons parkinginfo_menu_button_address">
+					<img src="./images/parkinginfo_icon_address.png" />
+				</div>
+				<div tab="parkinginfo_menu_button_info" class="icons parkinginfo_menu_button_address">
+					<img src="./images/parkinginfo_icon_info.png" />
+				</div>
+				<div tab="parkinginfo_menu_button_euro" class="icons parkinginfo_menu_button_address parkinginfo_menu_button_content_euro" >
+					<img class="parkinginfo_detail_price_logo" src="./images/parkinginfo_icon_euro.png" />
+				</div>
+			</div>
+			
+			<div id="parkinginfo_header_3_buttons_info" class="parkinginfo_select_button">
+				<div tab="parkinginfo_menu_button_details" class="icons parkinginfo_menu_button_details">
+					<img class="parking_logo_info_page" src="">
+				</div>
+				<div tab="parkinginfo_menu_button_address" class="icons parkinginfo_menu_button_address">
+					<img src="./images/parkinginfo_icon_address.png" />
+				</div>
+				<div tab="parkinginfo_menu_button_info" class="icons parkinginfo_menu_button_address">
+					<img src="./images/parkinginfo_icon_info.png" />
+				</div>				
+			</div>
+			
+			<div id="parkinginfo_header_3_buttons_price" class="parkinginfo_select_button">
+				<div tab="parkinginfo_menu_button_details" class="icons parkinginfo_menu_button_details">
+					<img class="parking_logo_info_page" src="">
+				</div>
+				<div tab="parkinginfo_menu_button_address" class="icons parkinginfo_menu_button_address">
+					<img src="./images/parkinginfo_icon_address.png" />
+				</div>
+				<div tab="parkinginfo_menu_button_euro" class="icons parkinginfo_menu_button_address parkinginfo_menu_button_content_euro">
+					<img class="parkinginfo_detail_price_logo" src="./images/parkinginfo_icon_euro.png" />
+				</div>
+			</div>
+			<div id="parkinginfo_header_2_buttons" class="parkinginfo_select_button">
+				<div tab="parkinginfo_menu_button_details" class="icons parkinginfo_menu_button_details">
+					<img class="parking_logo_info_page" src="">
+				</div>
+				<div tab="parkinginfo_menu_button_address" class="icons parkinginfo_menu_button_address">
+					<img src="./images/parkinginfo_icon_address.png" />
+				</div>
+				
+			</div>
+			
+			<div class="parkinginfo_details_left_corner"></div>
+			<div class="parkinginfo_details_center_content">
+				<!-- SC3a start -->
+				<div id="parkinginfo_content_panel_details" class="content_panels">			
+					<div id="parkinginfo_panel_one_header" class="parkinginfo_details_title_favorite">
+						<div class="parkinginfo_location_text">
+							<span class="parkinginfo_location_text_span policy_list_name" id="parkinginfo_text_title_details"></span>
+						</div>					
+						<div class="parkinginfo_favorite_button"></div>
+					</div>
+					<div class="parking_clear"></div>
+					<div id="parkinginfo_panel_requests">
+						<div id="parkinginfo_aller_btn" class="panel_buttons">
+							<div id="parkinginfo_aller_distinance" class="small_texts policy_content_list_distance"></div>
+							<div id="parkininfo_aller_btntext" class="big_texts policy_list_name"><div>${sc3_directions}</div></div>
+						</div>
+						<div id="parkinginfo_apeller_btn" class="panel_buttons">
+							<div id="parkinginfo_apeller_btntext" class="big_texts policy_list_name"><div>${sc3_call}</div></div>
+						</div>
+					</div>
+					<div class="parking_clear"></div>	
+					<div id="parkinginfo_icons">
+						<div class="parkinginfo_service_icon electric"></div>
+						
+					    <div class="parkinginfo_service_icon nogpl"></div>			
+					   	
+						<div class="parkinginfo_service_icon invalides"></div>
+						
+					    <div class="parkinginfo_service_icon elevator"></div>
+					
+					    <div class="parkinginfo_service_icon camera"></div>
+					    	
+					    <div class="parkinginfo_service_icon carwash"></div>
+					    
+					    <div class="parkinginfo_service_icon toilet"></div>
+					    	
+					    <div class="parkinginfo_service_icon motor"></div>
+					</div>
+				</div>
+				<!-- SC3a end -->
+			
+				<!--  SC3b start  -->
+				<div id="parkinginfo_content_panel_address" class="content_panels">
+					<div id="parkinginfo_panel_address_header" class="parkinginfo_details_title_favorite">
+						<div class="parkinginfo_location_text">
+							<span class="parkinginfo_location_text_span policy_list_name" id="parkinginfo_text_title_address"></span>
+						</div>					
+						<div class="parkinginfo_favorite_button"></div>
+					</div>
+					<div class="parking_clear"></div>
+					<div class="parkinginfo_infobox">
+						<div id="parkinginfo_box_up_address" class="inner_boxes">
+							<div id="parkinginfo_webpage_text" class="parkinginfo_info_texts"></div>
+						</div>
+						<div id="parkinginfo_box_down_address" class="inner_boxes">
+							<div id="parkinginfo_phone_text" class="policy_content_list_distance">
+								<span id="parkinginfo_phone_no_text"></span>
+								
+								<div id="parkinginfo_opening_wrapper">
+									<div class="parkinginfo_clock_icon"></div>
+									<div id="parkinginfo_horarires_text"></div>
+								</div>
+							</div>
+								
+							<div id="parkinginfo_address_text" class="policy_content_list_distance"></div>
+							<div class="parking_clear"></div>
+						</div>					
+					</div>				
+				</div>
+				<!-- SC3b end  -->
+			
+				<!-- SC3c 3 start -->
+				<div id="parkinginfo_content_panel_info" class="content_panels">
+					<div id="parkinginfo_info_vertical_scroll"></div>
+					<div id="parkinginfo_panel_info_header" class="parkinginfo_details_title_favorite">
+						<div class="parkinginfo_location_text_with_scroller">
+							<span class="parkinginfo_location_text_span policy_list_name" id="parkinginfo_text_title_info"></span>							
+						</div>					
+						<div class="parkinginfo_favorite_button"></div>
+					</div>					
+					<div id="parkinginfo_infobox_list_infos">						
+					</div>
+					<div class="parking_clear"></div>
+				</div>
+				<!-- SC3c end -->
+			
+				<!-- SC3d start -->
+				<div id="parkinginfo_content_panel_euro" class="content_panels">
+					<div id="parkinginfo_panel_euro_header" class="parkinginfo_details_title_favorite">
+						<div class="parkinginfo_location_text">
+							<span class="parkinginfo_location_text_span policy_list_name" id="parkinginfo_text_title_euro"></span>
+						</div>					
+						<div class="parkinginfo_favorite_button"></div>
+					</div>				
+					<div class="parking_clear"></div>
+					
+					<div class="parkinginfo_infobox">
+						<div class="parking_infobox_html_rates"></div>
+					</div>
+				</div>
+				<!-- SC3d end -->
+			</div>
+			<div class="parkinginfo_details_right_corner"></div>
+		</div>
+		<!--  SC3 screens end -->
+		
+		<!-- SC3a bis start -->
+		<div id="call_content">
+			<div id="call_left_corner"></div>
+			
+			<div id="call_center_content">
+				<div class="call_parkinginfo_back" id="call_parkinginfo_back_btn"></div>	
+				<div class="call_parkinginfo_telephone"></div>	
+					
+				<div class="call_container_text">
+					<div class="call_all_call_title policy_content_list_name">${sc3abis_call_parking_text}</div>
+					<div id="call_all_call_phone" class="call_all_call_phone policy_sort_buttons"></div>
+				</div>
+			</div>
+			
+			<div id="call_right_corner"></div>			
+			<div class="parking_clear"></div>
+			
+			<div id="call_buttom_buttons">
+				<div class="call_ok_cancel_buttons">
+					<div id="call_ok_button" class="call_ok_button_off">
+						<div class="call_ok_button_title policy_choice_buttons">
+							${sc3abis_ok_button_text}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- SC3a bis end -->
+		
+		
+	</div>		
+	
+	<!-- search screens -->	
+	<div id="search_module">
+		<!-- SC9 start -->	
+		<div id="search_punctual">
+			<div class="search_punctual_header">
+				<div id="search_punctual_btn_distance" class="search_punctual_btn_distance_off">
+					<div class="search_punctual_btn_distance_title policy_sort_buttons">${sc9_distance}</div>
+				</div>
+				<div id="search_punctual_btn_status" class="search_punctual_btn_status_off">
+					<div class="search_punctual_btn_status_title policy_sort_buttons">${sc9_status}</div>
+				</div>			
+				<div id="search_punctual_btn_close" class="search_punctual_btn_close_off">
+					<div class="search_punctual_btn_close_text policy_sort_buttons">${sc9_exit}</div>
+				</div>
+			</div>
+			<div class="search_punctual_middle_container">
+				<div class="search_punctual_left_margin"></div>
+				
+				<div class="search_punctual_middle">			
+					<div id="search_punctual_vertical_scroll"></div>				
+					<div id="search_punctual_all_park_makes"></div>
+					<div class="search_select_clear"></div>
+				</div>
+				<div class="search_punctual_right_margin"></div>
+			</div>
+			<div class="search_punctual_bottom"></div>
+			
+			<div id="footer_search_details">				
+				<div id="footer_search_details_address"></div>				
+			</div>
+		</div>
+		<!-- SC9 end -->
+		
+		<!-- SC4 start -->
+		<div id="search_select">				
+			<div id="search_select_header">
+				<div id="search_select_title" class="policy_screen_title">${sc4_title}</div>
+			</div>	
+			<div id="search_select_content">
+				<div class="search_select_all_buttons">
+					<div class="search_select_buttons_search_byaddress" id="search_select_search_by_address_button" action="search_select_search_by_address">
+						<div class="search_select_buttons_title policy_action_buttons">${sc4_search_by_address}</div>
+					</div>
+					<div class="search_select_buttons_spacer"></div>
+					<div class="search_select_buttons_search_byaddress" id="search_select_search_criteria_button" action="search_select_search_criteria">
+						<div class="search_select_buttons_title policy_action_buttons">${sc4_more_criteria}</div>
+					</div>								
+				</div>				
+			</div>	
+		</div>
+		<!-- SC4 end -->
+		
+		<!-- SC5 start -->
+		<div id="search_byaddress_content">
+			<div id="search_byaddress_center_content">
+				<div id="search_byaddress_search_text_bg">			
+					<input type="text" value="${sc5_search_text_holder}" name="search_byaddres_search_text" id="search_byaddres_search_text" class="policy_geocoding_text" />
+				</div>			
+				<div id="search_byaddress_all_buttons">	
+					<div class="search_byaddress_choose_button"  action="search_byaddress_history">
+						<div id="search_byaddress_history_button" class="search_byaddress_history_button_off">
+							<div class="search_byaddress_button_title policy_action_buttons">${sc5_history}</div>
+						</div>
+					</div>
+				</div>
+				<div class="search_byaddress_ok_button">
+					<div class="search_byaddress_ok_button_off" id="search_byaddress_ok_button">
+						<div class="search_byaddress_ok_text policy_choice_buttons">
+							${ok}
+						</div>
+					</div>				
+				</div>
+			</div>
+		</div>
+		<!-- SC5 end -->
+		
+		<!-- SC5b START -->
+		<div id="search_services_gps_address">
+			<div class="search_services_gps_address_left_corner"></div>
+			<div class="search_services_gps_address_center_content">
+				<div class="search_services_gps_address_all_buttons">
+					<div class="search_services_gps_address_all_buttons_margin"></div>
+					<div id="search_choice_gps_address_gps" class="search_select_buttons_search_byaddress">
+						<div class="search_select_buttons_title policy_action_buttons">${sc5b_around_me}</div>
+					</div>
+					<div class="search_services_gps_address_all_buttons_margin"></div>
+					<div id="search_choice_gps_address_address" class="search_select_buttons_search_byaddress">
+						<div class="search_select_buttons_title policy_action_buttons">${sc5b_address}</div>
+					</div>
+				</div>
+			</div>
+			<div class="search_services_gps_address_right_corner"></div>			
+		</div>
+		<!-- SC5b END -->
+		
+		<!-- SC7 start -->
+		<div id="search_byaddress_history_content">
+			<div id="search_byaddress_history_left_corner"></div>
+				<div class="search_favorite_list_center_head">
+					<div class="list_title_text policy_screen_title">${sc7_title}</div>
+				</div>
+				<div id="search_byaddress_history_center_content">
+				<div id="search_byaddress_history_scroll"></div>
+				<div class="short_bottom_scroll_line"></div>	
+				
+				<div id="search_byaddress_history_all_history">
+				</div>
+				<div id="search_byaddress_history_delete_all">
+					<div id="search_byaddress_history_delete_all_button" class="search_delete_all_button_off">
+						<div class="search_byaddress_history_delete_all_button_title policy_choice_buttons">
+							${sc7_delete_all}
+						</div>					
+					</div>
+				</div>
+			</div>
+			<div id="search_byaddress_history_right_corner"></div>
+		</div>
+
+		<!-- SC7 end -->
+		
+		<!-- SC8 start -->
+		<div id="search_choose_service_content">
+			<div id="search_choose_service_left_corner"></div>
+			<div class="search_favorite_list_center_head">
+				<div class="list_title_text policy_screen_title">${sc8_title}</div>
+			</div>
+			<div id="search_choose_service_center_content">
+				<!-- begin scroll -->
+				<div id=search_choose_service_scroll></div>			
+				<!-- end scroll -->			
+				<div id="search_choose_service_all_services"></div>				
+			</div>
+			<div id="search_choose_service_right_corner"></div>
+			<div class="search_select_clear"></div>		
+			<div id="search_choose_service_buttom_buttons">
+				<div id="search_choose_service_select_all" class="search_choose_service_select_all_off">
+					<div class="search_choose_service_select_all_title policy_choice_buttons" id="search_choose_service_select_all_title_services">${sc8_select_all}</div>
+				</div>
+				<div class="search_choose_service_ok_cancel_buttons">
+					<div id="search_choose_service_ok_button" class="search_choose_service_ok_button_off">
+						<div class="search_choose_service_ok_button_title policy_choice_buttons">${sc8_ok}</div>
+					</div>						
+				</div>
+			</div>				
+		</div>
+		<!-- SC8 end -->
+		
+	</div>
+	<!-- parameters screens -->
+	<!-- SC10 start -->
+	<div id="parameters_module">
+		<div id="parameters_choose_parameters_content">
+			<div class="parameters_center_head">
+						<div class="list_title_text policy_screen_title">${sc10_title}</div>
+			</div>
+			<div class="parameters_panel">
+				<div id="parameters_choose_parameters_all_buttons" class="parameters_choose_parameters_all_buttons">
+					<div id="parameters_choose_parameters_button_zone" class="parameters_choose_parameters_button_off">
+						<div class="parameters_choose_parameters_button_title_zone policy_action_buttons">
+							${sc10_search_range}
+							<div id="parameters_choose_parameters_zone_distance" class="parameters_choose_parameters_zone_distance policy_action_buttons"></div>
+						</div>					 
+					</div>
+					<div class="parameters_choose_parameters_margin_buttons"></div>
+					<div id="parameters_choose_parameters_button_gpsuse" class="parameters_choose_parameters_button_off">
+						<div class="parameters_choose_parameters_button_title policy_action_buttons">${sc10_autorize_gps}</div>
+					</div>	
+					<div class="parameters_choose_parameters_margin_buttons"></div>
+					<div id="parameters_choose_parameters_button_help" class="parameters_choose_parameters_button_off">
+						<div class="parameters_choose_parameters_button_title policy_action_buttons">${sc10_help}</div>
+					</div>	
+							
+				</div>	
+			</div>	
+		</div>
+	</div>
+	<!-- SC10 end -->
+		
+	<!-- SC11 start -->
+	<div id="parameters_choose_zone_content">
+		<div class="search_favorite_list_center_head">
+			<div class="list_title_text policy_screen_title">${sc11_title}</div>
+		</div>
+		<div class="parameters_choose_zone_left_corner"></div>
+		<div class="parameters_choose_zone_center_content">
+			<div id="parameters_vertical_scroll" class="parameters_vertical_scroll"></div>
+			<div id="parameters_choose_zone_all_zones"></div>
+		</div>
+		<div class="parameters_choose_zone_right_corner"></div>
+		<div class="parameters_choose_zone_right_corner"></div>
+	</div>
+	<!-- SC11 end -->
+	
+	<!-- SC12 start -->
+	<div id="help_select">				
+		<div id="help_select_header">
+			<div id="help_select_title" class="policy_screen_title">${sc10_help}</div>
+		</div>	
+		<div id="help_select_content">
+			<div class="search_select_all_buttons">
+				<div class="search_select_buttons_search_byaddress" id="help_choice_legende" action="search_select_search_by_address">
+					<div class="search_select_buttons_title policy_action_buttons">${sc10_title_legende}</div>
+				</div>
+				<div class="search_select_buttons_spacer"></div>
+				<div class="search_select_buttons_search_byaddress" id="help_choice_notice" action="search_select_search_criteria">
+					<div class="search_select_buttons_title policy_action_buttons">${sc10_title_notice}</div>
+				</div>								
+			</div>				
+		</div>	
+	</div>
+	<!-- SC12 end -->
+	<!-- SC12a start -->
+	<div id="parameters_choose_help_content">
+		<div class="search_favorite_list_center_head">
+			<div class="list_title_text policy_screen_title">${sc10_title_legende}</div>
+		</div>
+		<div class="parameters_choose_zone_left_corner"></div>
+		<div class="parameters_choose_zone_center_content">
+			<!--  scroller -->
+			<div id="parameters_help_vertical_scroll" class="parameters_vertical_scroll"></div>			
+			<div id="parameters_choose_help_all_helps"></div>
+		</div>
+		<div class="parameters_choose_zone_right_corner"></div>
+	</div>
+	<!-- SC12a end -->
+	
+	<!-- SC12b start -->
+	<div id="parameters_choose_notice_content">
+		<div class="search_favorite_list_center_head">
+			<div class="list_title_text policy_screen_title">${sc10_title_notice}</div>
+		</div>
+		<div class="parameters_choose_zone_left_corner"></div>
+		<div class="parameters_choose_zone_center_content">
+			<!--  scroller -->
+			<div id="parameters_notice_vertical_scroll" class="parameters_vertical_scroll"></div>			
+			<div id="parameters_choose_notice_all_helps"></div>
+		</div>
+		<div class="parameters_choose_zone_right_corner"></div>
+	</div>
+	<!-- SC12b end -->
+	
+</section>
+<!-- End Main Section -->
+				
+
+<!-- Footer Section -->
+<footer>
+</footer>
+<!-- End Footer Section -->
+
+</body>
+</html>

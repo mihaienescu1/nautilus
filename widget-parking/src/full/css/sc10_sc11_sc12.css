@@ -1,0 +1,476 @@
+#parameters_module
+{
+	display:none;
+}
+.parameters_clear
+{
+	clear:both;
+}
+
+/*css for parameters choose screen SC10*/
+.parameters_panel
+{
+	background-image: url("./images/parameters_panel.png");
+	width:616px;
+	height:278px;
+	position:absolute;
+	bottom:0;
+}
+.parameters_center_head
+{
+	width:616px;
+	height:53px;
+	position:absolute;
+	top:1;
+}
+.list_title_text
+{
+	font: normal normal 22px "Gill Sans PSA", arial, helvetica, verdana, sans-serif;	
+	margin: 0 auto; 
+	text-align: center;
+	margin-top:10px;
+	color:#FFFFFF;	
+}
+#parameters_choose_parameters_content
+{
+	width:616px;
+	height: 335px;
+	display: none;
+	position:relative;
+}
+
+.parameters_choose_parameters_left_corner
+{
+	float:left;
+	width: 29px;
+	height: 335px;
+	background-image: url("./images/settings_left_corner.png");
+}
+.parameters_choose_parameters_center_content
+{
+	float:left;
+	width: 558px; 
+	height: 335px;
+	background-image: url("./images/settings_center_bg.png");
+	background-repeat: repeat-x;
+	text-align:center;	
+}
+.parameters_choose_parameters_right_corner
+{
+	float:right;
+	width: 29px;
+	height: 335px;
+	background-image: url("./images/settings_right_corner.png");
+	margin-top:0px;
+}
+.parameters_choose_parameters_all_buttons
+{
+	text-align:center;	
+	margin-top: 20px;
+	margin-left: 35px;	
+	color:#FFFFFF;	
+}
+.parameters_choose_parameters_button_off
+{
+	text-align:center;
+	width:554px;
+	height:78px;		
+	background: url("./images/search_select_bg.png") no-repeat;	
+	background-position:0 0;	
+	display: table;	
+}
+.parameters_choose_parameters_button_on
+{
+	text-align:center;
+	width:554px;
+	height:78px;
+	background: url("./images/search_select_bg.png") no-repeat;	
+	background-position:0 -78;
+	display: table;	
+}
+.parameters_choose_parameters_margin_buttons
+{
+	margin-top:5px;
+}
+.parameters_choose_parameters_button_title
+{
+	padding-bottom:1px;
+	display: table-cell;
+	vertical-align: middle;
+	font: normal normal 26px "Gill Sans PSA", arial, helvetica, verdana, sans-serif;
+	color:#fff;
+}
+.parameters_choose_parameters_button_title_zone
+{
+	padding-bottom:1px;
+	display:table-cell;
+	vertical-align: middle;
+	font: normal normal 26px "Gill Sans PSA", arial, helvetica, verdana, sans-serif;
+	color:#fff;	
+}
+.parameters_choose_parameters_zone_distance
+{
+	font: normal normal 22px "Gill Sans PSA", arial, helvetica, verdana, sans-serif;
+	color:#FFFFFF;
+	margin-top:-6px;
+}
+
+/*css for choose range SC11*/
+#parameters_choose_zone_content
+{
+	width:616px;
+	height: 335px;
+	display:none;
+	position:relative;
+}
+.parameters_choose_zone_left_corner
+{
+	float:left;
+	width: 6px;
+	height: 335px;
+	background-image: url("./images/settings_choose_carburants_left_corner.png");
+}
+.parameters_choose_zone_center_content
+{
+	float:left;
+	width: 604px; 
+	height: 335px;
+	background-image: url("./images/settings_choose_carburants_center_bg.png");
+	background-repeat: repeat-x;
+	text-align:center;
+	position:relative;
+}
+.parameters_choose_zone_right_corner
+{
+	float:right;
+	width: 6px;
+	height: 335px;
+	background-image: url("./images/settings_choose_carburants_right_corner.png");
+}
+.parameters_vertical_scroll
+{
+	float:left;
+	margin-top:6px;
+	width: 70px;
+	height: 260px;
+	text-align: center;
+	position:absolute;
+	bottom:5;	
+}
+.parameters_vertical_srooll_content
+{
+	float:left;
+	width:60px;
+	height:322px;
+	position:absolute;	
+	bottom:3;
+}
+.parameters_vertical_scroll_right_line
+{
+	float:right;
+	width:10px;
+	height: 321px;
+	background-image: url("./images/settings_choose_carburants_vertical_line.png");
+	background-repeat: repeat-y;
+}
+.parameters_scroll_pager
+{
+	vertical-align: middle;
+	margin-left:22px;
+	width: 15px;
+	height:257px;	
+}
+.parameters_chose_zone_pager_bullet_spacer
+{
+	height:10px;
+}
+#parameters_choose_zone_all_zones
+{
+	float:right;
+	width: 540px;
+	height: 270px;
+	position:absolute;	
+	bottom:5;
+	right:0;
+}
+.parameters_choose_zone_single
+{
+	width: 539px;
+	height: 66px;
+	background-image: -webkit-gradient(linear,0% 0%, 0% 100%,from(#9b9a9a),color-stop(0.55,#7b7b7b),to(#5b5b5b));
+	border-bottom: 1px solid #000000;
+}
+.parameters_choose_zone_single_title
+{
+	float:left;
+	padding-top:11px;
+	padding-left: 22px;
+	text-align:left;
+	font: normal normal 36px "Gill Sans PSA", arial, helvetica, verdana, sans-serif;
+	color:#ffffff;
+}
+.parameters_choose_zone_single_line
+{
+	height:1px;
+	width: 539px;
+	background-color: #000000;		
+}
+.parameters_choose_zone_selected
+{
+	margin-right:11px;
+	margin-top:5px;
+	float:right;
+	width:52px;
+	height:52px;
+	background-repeat: no-repeat;
+}
+.parameters_choose_zone_selected.on
+{
+	background-image: url("./images/selected_unselected.png");
+	background-position: top;
+}
+.parameters_choose_zone_selected.off
+{
+	background-image: url("./images/selected_unselected.png");
+	background-position: bottom;
+}
+
+/*css for choose help SC12*/
+#help_select
+{	
+	width:616px;
+	height: 335px;
+	display: none;
+}
+
+#help_select_header
+{
+	width:606px;
+	height:60px;
+	text-align:center;
+}
+#help_select_title
+{
+	color:#fff;
+	font: normal normal 22px "Gill Sans PSA", arial, helvetica, verdana, sans-serif;	
+	padding-top:15px;
+	text-align: center;
+}
+
+#help_select_content
+{
+	width:616px;
+	height:275px;
+	background-image:url('./images/search_type_choose_bg.png');
+	position:relative;
+}
+#parameters_choose_help_content
+{
+	width:616px;
+	height: 335px;
+	display:none;
+	position: relative;
+}
+
+#parameters_help_vertical_scroll
+{
+	position: absolute;
+	bottom:10;
+	background: url('./images/content_list_scroller_right_margin.png') repeat-y right;
+}
+.parameters_help_single
+{
+	width:500px;
+	color: white;
+	position:relative;
+}
+#parameters_choose_help_all_helps
+{
+	float:right;
+	margin-top:15px;
+	width: 539px;
+	height: 263px;
+	position: absolute;
+	bottom: 10;
+	right: 0;
+}
+.parameters_choose_help_info
+{
+	margin-left: 23px;
+}
+.parameters_choose_help_services_info
+{
+	margin-left: 10px;
+	width:520px;
+	height:64px;
+	position:relative;
+}
+.parameters_choose_help_img_green
+{
+	float:left;
+	background-image: url("./images/parameters_help_bullet_green.png");
+	background-repeat: no-repeat;
+	width: 38px;
+	height: 38px;	
+}
+.parameters_choose_help_img_orange
+{
+	float:left;
+	background-image: url("./images/parameters_help_bullet_orange.png");
+	background-repeat: no-repeat;
+	width: 38px;
+	height: 38px;	
+}
+.parameters_choose_help_img_red
+{
+	float:left;
+	background-image: url("./images/parameters_help_bullet_red.png");
+	background-repeat: no-repeat;
+	width: 38px;
+	height: 38px;	
+}
+.parameters_choose_help_img_black
+{
+	float:left;
+	background-image: url("./images/parameters_help_bullet_black.png");
+	background-repeat: no-repeat;
+	width: 38px;
+	height: 38px;	
+}
+
+.parameters_choose_help_img
+{
+	float:left;
+	background-repeat: no-repeat;
+	width: 55px;
+	height: 55px;	
+}
+
+.parameters_choose_help_img_electric
+{
+	background-image: url("./images/srv_electric_recharge.png");
+}
+.parameters_choose_help_img_no_gpl
+{
+	background-image: url("./images/srv_no_Acc_GPL.png");
+}
+
+.parameters_choose_help_img_handicapates
+{
+	background-image: url("./images/srv_disabled_person_assistance.png");
+}
+
+.parameters_choose_help_img_ascenseur
+{
+	background-image: url("./images/srv_elevator.png");
+}
+
+.parameters_choose_help_img_video
+{
+	background-image: url("./images/srv_video_surveillance.png");
+}
+
+.parameters_choose_help_img_carwash
+{
+	background-image: url("./images/srv_car_wash.png");
+}
+
+.parameters_choose_help_img_wc
+{
+	background-image: url("./images/srv_wc.png");
+}
+
+.parameters_choose_help_img_moto
+{
+	background-image: url("./images/srv_motorcycle_parking.png");
+}
+
+.parameters_help_bottom_info
+{
+	width:530px;
+	padding-left:10px;
+}
+
+.help_icons_def
+{
+	float:left;
+	background-repeat: no-repeat;
+	width: 65px;
+	height: 64px;
+	margin-left:23px;
+}
+
+.help_left
+{
+	font: normal bold 22px "Gill Sans PSA", arial, helvetica, verdana, sans-serif;
+	text-align: left;
+	padding-left:15px;
+	padding-right:10px;
+}
+
+.help_right
+{
+	font: normal normal 22px "Gill Sans PSA", arial, helvetica, verdana, sans-serif;
+}
+
+.parameters_choose_help_text
+{
+	float:left;
+	font: normal normal 26px "Gill Sans PSA", arial, helvetica, verdana, sans-serif;
+	color:#ffffff;
+	margin-left:25px;
+	margin-top:1px;
+	padding-top:5px;
+}
+
+.parameters_choose_help_table
+{
+	float:left;
+	margin-left:14px;
+	height: 64px;
+	width: 380px;
+	display:table;
+}
+
+.parameters_choose_help_services_text
+{
+	font: normal normal 26px "Gill Sans PSA", arial, helvetica, verdana, sans-serif;
+	color:#ffffff;
+	text-align:left;
+	display:table-cell;
+	vertical-align:middle;
+}
+
+.legende_list_space
+{
+	clear:both;
+	height:11px;
+}
+.parameters_choose_help_spacer
+{
+	clear:both;
+	height:9px;
+}
+/*SC12b start*/
+#parameters_choose_notice_content
+{
+	width:616px;
+	height: 335px;
+	display:none;
+	position: relative;
+}
+
+#parameters_notice_vertical_scroll
+{
+	position: absolute;
+	bottom:10;
+	background: url('./images/content_list_scroller_right_margin.png') repeat-y right;
+}
+#parameters_choose_notice_all_helps
+{
+	float:right;
+	top:75;
+	width: 500px;
+	position: absolute;
+	right: 35;
+}

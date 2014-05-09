@@ -1,0 +1,218 @@
+widget.name = Yak&#305;t
+widget.version = 1.2.10
+
+language_code = 122
+language_code_string = tr
+
+
+ok = Tamam
+cancel = Iptal
+
+
+sc1_distance = Mesafe
+sc1_price = Fiyat
+
+sc2_favorite_stations = S&#305;k kulland&#305;klar&#305;m
+sc2_no_favorite = Hen&#252;z bir istasyon se&#231;ilmedi
+sc2_limit_reached = Tercih edilen istasyon i&#231;in maksimum seviyeye eri&#351;tiniz!
+
+sc3_directions = Y&#246;nlendir
+sc3_call = Ara
+sc3abis_call_station_text = Ara?
+sc3abis_ok_button_text = Tamam
+
+sc3d_modify_price = Onayla / Fiyati de&#287;i&#351;tir
+sc3d_modify_price_for = &#304;stasyonda ## de&#287;eri:
+sc3d_ok = Tamam
+sc3d_cancel = Iptal
+sc3_price_change_notification = Te&#351;ekk&#252;r ederiz. Bu bilgi k&#305;sa s&#252;re i&#231;inde g&#252;ncellenecektir.
+
+sc4_title = Noktasal arama
+sc4_search_by_address = Bir adresin yak&#305;n&#305;nda
+sc4_more_criteria = Daha fazla kr&#305;ter
+
+sc5_search_text_holder = Adres, posta kodu...
+sc5_favorite_destinations = Sik gidilen yerler
+sc5_history = Arama ge&#231;mi&#351;i
+sc5_limit_reached = Arama ge&#231;mi&#351;inde maksimum seviyeye eri&#351;tiniz!
+
+sc5b_services = Hizmetler
+sc5b_around_me = Yak&#305;n&#305;nda
+sc5b_address = Bir adresin yak&#305;n&#305;nda
+
+sc6_title = S&#305;k gidilen yerler
+
+sc7_title = Arama ge&#231;mi&#351;i
+sc7_delete_all = Hepsini sil
+
+sc8_title = Hizmetler
+sc8_select_all = Hepsini se&#231;
+sc8_deselect_all = Se&#231;imlerin tamam&#305;n&#305; b&#305;rak
+sc8_ok = Tamam
+sc8_cancel = Iptal
+
+sc9_distance = Mesafe
+sc9_price = Fiyat
+sc9_exit = Aramay&#305; kapat
+sc9_around_me = Yak&#305;n&#305;nda
+
+sc10_preferences = Parametreler
+sc10_my_budget = B&#252;t&#231;em
+sc10_help = Bilgi
+sc10_autorize_gps = Lokalizasyona yetki ver
+sc10_refuse_gps = Lokalizasyonu reddet
+
+sc11_fuel = Yakit
+sc11_brand = Marka
+sc11_search_area = Arama alan&#305;
+sc11_fuel_language = Yakit adi terc&#252;mesi
+
+sc12_title = Yak&#305;t
+
+sc13_select_all = Hepsini se&#231;
+sc13_deselect_all = Se&#231;imlerin tamam&#305;n&#305; b&#305;rak
+sc13_ok = Tamam
+sc13_cancel = Iptal
+
+sc14_title = Arama alan&#305;
+
+sc15_title = Yak&#305;t ad&#305; terc&#252;mesi
+sc15_fuel_translation_be = Bel&#231;ika
+sc15_fuel_translation_lu = L&#252;ksemburg
+sc15_fuel_translation_nl = Hollanda
+sc15_fuel_translation_pt = Portekiz
+sc15_fuel_translation_at = Avusturya
+sc15_fuel_translation_ch = &#304;svi&#231;re
+sc15_fuel_translation_pl = Polonya
+sc15_fuel_translation_dk = Danimarka
+sc15_fuel_translation_fi = Finlandiya
+sc15_fuel_translation_no = Norve&#231;
+sc15_fuel_translation_se = &#304;sve&#231;
+sc15_fuel_translation_tr = T&#252;rkiye
+sc15_fuel_translation_en = &#304;ngiltere
+sc15_fuel_translation_es = &#304;spanya
+sc15_fuel_translation_it = &#304;talya
+sc15_fuel_translation_de = Almanya
+sc15_fuel_translation_fr = Fransa
+
+sc17_message = E-posta adresinizi girerek internet b&#252;t&#231;eniz ile ile ilgili bilgileri tekrar bulabileceksiniz.
+sc17_ok = Tamam
+sc17_later = Sonra
+
+sc18_no_data = Deponuzu her dolduru&#351;ta, benzin b&#252;t&#231;enizi takip edebilmek i&#231;in gerekli bilgileri girin.
+
+sc19_date = Tarih
+sc19_fuel_type = Yak&#305;t tipi
+sc19_total = Toplam fiyat
+sc19_ok = Tamam
+sc19_cancel = Iptal
+
+sc20_title = Bilgi
+sc20_title_legende = Semboller
+sc20_title_notice = Hakk&#305;nda
+sc20_green_flag = B&#246;lgede ucuz yak&#305;t fiyat&#305;
+sc20_orange_flag = B&#246;lgede ortalama yak&#305;t fiyat&#305;
+sc20_red_flag = B&#246;lgede y&#252;ksek yak&#305;t fiyat&#305;
+sc20_grey_flag = Kullan&#305;labilir bilgi yok
+sc20_legal_preambul_title = Pr&#233;ambule et Mentions L&#233;gales
+sc20_legal_preambul_text1 = La soci&#233;t&#233; Navx exploite des services &#224; valeur ajout&#233;e pour les syst&#232;mes de navigation GPS consistant en la transmission et la reproduction d&#8217;un ou plusieurs fichiers num&#233;riques int&#233;grant les contenus qu&#8217;il a choisis. Les conditions g&#233;n&#233;rales d&#8217;Utilisation expos&#233;es ci-apr&#232;s sont disponibles uniquement en langue fran&#231;aise.
+sc20_legal_preambul_text2 = Le pr&#233;sent service est &#233;dit&#233; par la soci&#233;t&#233; NAVX, SA au capital de 192 121 euros, inscrite au registre du commerce et des soci&#233;t&#233;s de Paris sous le num&#233;ro 487 586 265 et dont l&#8217;adresse est situ&#233;e 120, rue Jean Jaur&#232;s 92300 Levallois Perret - France. Il a fait l&#8217;objet d&#8217;une d&#233;claration aupr&#232;s de la Commission Nationale de l&#8217;Informatique et des Libert&#233;s le 29 Mars 2006, sous le num&#233;ro de d&#233;claration 1159692.
+sc20_legal_preambul_text3 = NAVX a pour num&#233;ro individuel d&#8217;identification &#224; la TVA le FR 68 487 586 265 et pour num&#233;ro SIRET : 487 586 265 000 42. NAVX est &#233;tablie au 120, rue Jean Jaur&#232;s 92300 Levallois Perret - France (email : contact@navx.com). Le Directeur de la publication est Monsieur Florent BOUTELLIER, en sa qualit&#233; de repr&#233;sentant l&#233;gal de NAVX.
+sc20_legal_definition_title = D&#233;finitions
+sc20_legal_definition_text1 = Les pr&#233;sentes conditions g&#233;n&#233;rales d&#8217;Utilisation comportent les d&#233;finitions suivantes:<br/>&#34;Informations Nominatives&#34;: informations relatives &#224; l&#8217;Utilisateur.<br/>&#34;Utilisateur&#34;: Personne utilisant le Service,<br/>&#34;Compte&#34;:&#160;Informations Nominatives de l&#8217;Utilisateur, accessibles sur identifiants de l&#8217;Utilisateur,
+sc20_legal_definition_text2 = &#34;Contenu&#34;&#160;: Ensemble des &#233;l&#233;ments cr&#233;&#233;s et modifi&#233;s par l&#8217;Utilisateur, &#224; savoir Position G&#233;ographique, Trace, Route, Itin&#233;raire, Contact, Aire G&#233;ographique, Commentaires, Description, Tag, Collection.<br/>&#34;Services&#34;: L&#8217;acc&#232;s aux fonctionnalit&#233;s et &#224; la mise &#224; disposition du Contenu.
+sc20_legal_article1_title = Article 1 - Objet
+sc20_legal_article1_text1 = Les pr&#233;sentes constituent, au 24 Novembre 2011, les Conditions G&#233;n&#233;rales d&#8217;Utilisation des Services propos&#233;s par NAVX. Elles s&#39;appliquent &#224; l&#39;exclusion de toutes autres conditions. Elles peuvent toutefois faire l&#39;objet de modifications. Les conditions applicables sont alors celles en vigueur lors de son Utilisation. En cons&#233;quence, l&#8217;Utilisateur est invit&#233; &#224; venir consulter r&#233;guli&#232;rement afin de se tenir inform&#233; des &#233;volutions
+sc20_legal_article1_text2 = les plus r&#233;centes.
+sc20_legal_article2_title = Article 2 - Protection du Service
+sc20_legal_article2_text1 = Toute d&#233;t&#233;rioration, ainsi que, en l&#39;absence d&#39;autorisation, toute repr&#233;sentation, reproduction, modification, utilisation commerciale, totale ou partielle, des diff&#233;rents &#233;l&#233;ments du Service est interdite et expose son (ou ses) auteur(s) &#224; des poursuites. Les pr&#233;sentes Conditions G&#233;n&#233;rales 
+sc20_legal_article2_text2 = d&#8217;Utilisation n&#39;emportent nullement autorisation de repr&#233;senter, reproduire, modifier ou utiliser commercialement les diff&#233;rents &#233;l&#233;ments du Site.
+sc20_legal_article3_title = Article 3 - Modification des Services
+sc20_legal_article3_text1 = NAVX se r&#233;serve le droit d&#39;apporter &#224; ses Services toutes les modifications et am&#233;liorations qu&#39;elle jugera n&#233;cessaires ou utiles et ne sera pas responsable des dommages de toute nature pouvant survenir de ce 
+sc20_legal_article3_text2 = fait. Par ailleurs, NAVX se r&#233;serve le droit, sans pr&#233;avis ni indemnit&#233;, d&#39;arr&#234;ter d&#233;finitivement un Service propos&#233;s par elle et ne sera pas responsable des dommages de toute nature pouvant survenir de ce fait.
+sc20_legal_article4_title = Article 4 - Disponibilit&#233; des Services
+sc20_legal_article4_text1 = Les Services sont normalement accessibles par l&#8217;utilisateur 24 heures sur 24, 7 jours sur 7 et toute
+sc20_legal_article4_text2 = l&#39;ann&#233;e. NAVX se r&#233;serve n&#233;anmoins le droit, sans pr&#233;avis ni indemnit&#233;, d&#39;en fermer temporairement l&#39;acc&#232;s et ne sera pas responsable des dommages de toute nature pouvant survenir de ce fait.
+sc20_legal_article5_title = Article 5 - Utilisateurs Vis&#233;s
+sc20_legal_article5_text1 = Les Services propos&#233;s par NAVX sont r&#233;serv&#233;s aux personnes majeures.
+sc20_legal_article6_title = Article 6 - Acc&#232;s au Service
+sc20_legal_article6_text1 = L&#8217;Utilisateur sera seul responsable des cons&#233;quences de l&#39;utilisation du Service, et ce jusqu&#39;&#224; la d&#233;sactivation de celui-ci. Une fois qu&#39;il a entre pour la premi&#232;re fois dans le Service, l&#8217;Utilisateur accepte les pr&#233;sentes Conditions G&#233;n&#233;rales d&#8217;Utilisation dans la rubrique (Information puis Mentions L&#233;gales).  
+sc20_legal_article7_title = Article 7 - Dur&#233;e et R&#233;siliation de l&#8217;Abonnement au Service
+sc20_legal_article7_text1 = La souscription, le paiement et la r&#233;siliation de l&#8217;acc&#232;s au Service sont enti&#232;rement g&#233;r&#233;s par la Soci&#233;t&#233; Bouygues Telecom. Le Service n&#8217;est pas ouvert aux utilisateurs n&#8217;ayant pas souscris.
+sc20_legal_article8_title = Article 8 - Utilisation des Enregistrements T&#233;l&#233;charg&#233;s
+sc20_legal_article8_text1 = L&#8217;Utilisateur est inform&#233;s que NAVX n&#39;acquiert aucun droit de propri&#233;t&#233; sur le Contenu cr&#233;e par l&#39;Utilisateur (Modifications des Prix) et qui est int&#233;gr&#233; &#224; la base de donn&#233;e NAVX. L&#39;Utilisateur doit veiller au strict respect des clauses de l&#39;article 9 des pr&#233;sentes Conditions G&#233;n&#233;rales d&#8217;Utilisation et notamment il garantit que tous les &#233;l&#233;ments constitutifs du Contenu 
+sc20_legal_article8_text2 = lui appartiennent ou sont libres de droit. En outre, pendant la dur&#233;e de l&#39;h&#233;bergement de Votre Contenu et dans le strict cadre des fonctionnalit&#233;s permettant de rendre accessible le Contenu, il est convenu que vous nous autorisez &#224; reproduire, repr&#233;senter, c&#233;der &#224; titre gratuit ou commercial, mettre &#224; disposition de tiers, ce Contenu et, en tant que de besoin.
+sc20_legal_article9_title = Article 9 - Informations Nominatives
+sc20_legal_article9_text1 = Les informations collect&#233;es sur l&#8217;Utilisateur lors de l&#8217;utilisation du Service sont exclusivement destin&#233;es &#224; NAVX. Elles sont n&#233;cessaires &#224; la gestion de la relation commerciale entre l&#8217;Utilisateur et NAVX. L&#8217;Utilisateur ne pourra pas utiliser le Service s&#39;il refuse de fournir les informations sollicit&#233;es &#224; ce stade. Si l&#8217;Utilisateur s&#39;oppose &#224; ce que les donn&#233;es relatives &#224; utilisation soient conserv&#233;es, pour pouvoir 
+sc20_legal_article9_text2 = donner suite &#224; sa demande, NAVX sera contrainte de d&#233;sactiver son Compte.Conform&#233;ment &#224; la Loi Informatique et Libert&#233;s du 6 janvier 1978 modifi&#233;e, l&#8217;Utilisateur dispose, &#224; tout moment, d&#39;un droit d&#39;acc&#232;s aux informations le concernant, d&#39;un droit de les faire rectifier ou compl&#233;ter si elles sont inexactes ou incompl&#232;tes, d&#39;un droit de s&#39;opposer &#224; leur transmission &#224; des tiers, d&#39;un droit de s&#39;opposer sans frais &#224; ce qu&#39;elles soient utilis&#233;es pour lui 
+sc20_legal_article9_text3 = adresser des sollicitations commerciales et, plus g&#233;n&#233;ralement, d&#39;un droit de s&#39;opposer &#224; toute forme de traitement tel que d&#233;fini &#224; l&#39;alin&#233;a 3 de l&#39;article 2 de ladite loi. Pour cela, il suffit d&#39;en faire la demande &#233;crite &#224; NAVX &#8211; 120, rue Jean Jaur&#232;s 92300 Levallois Perret &#8211; France.
+sc20_legal_article10_title = Article 10 - Responsabilit&#233;
+sc20_legal_article10_text1 = L&#8217;Utilisateur reconna&#238;t avoir connaissance des 
+sc20_legal_article10_text2 = contraintes et limites des r&#233;seaux internet (fixes et mobiles). Dans ces conditions, NAVX ne pourra en aucun cas &#234;tre tenue responsable des vitesses d&#39;acc&#232;s au Service, des vitesses d&#39;ouverture et de consultation, de ralentissements externes, de la suspension ou de l&#39;inaccessibilit&#233; de ses services, de l&#39;utilisation frauduleuse par des tiers de toutes les informations mises &#224; disposition sur le Service. L&#8217;Utilisateur reconna&#238;t avoir connaissance 
+sc20_legal_article10_text3 = des contraintes li&#233;es &#224; la constitution par Navx du Contenu, et notamment son caract&#232;re Communautaire. Dans ces conditions, Navx ne pourra en aucun cas &#234;tre tenue responsable des inexactitudes du Contenu (exhaustivit&#233; et fraicheur notamment). <br/><br/>La responsabilit&#233; de NAVX pour d&#233;faillance dans l&#39;ex&#233;cution de son obligation de d&#233;livrance des 
+sc20_legal_article10_text4 = informations sera limit&#233;e au prix d&#8217;acc&#232;s au Service propos&#233; par NAVX. <br/><br/>L&#8217;Utilisateur est le seul responsable de l&#39;utilisation qu&#39;il fait du service et ne saurait tenir responsable NAVX pour toute r&#233;clamation et/ou proc&#233;dure faite &#224; son encontre. Il s&#39;engage &#224; faire son affaire personnelle de toute r&#233;clamation et/ou proc&#233;dure form&#233;e contre NAVX et qui se rattacherait &#224; son utilisation 
+sc20_legal_article10_text5 = de ses services. Navx rappelle que l&#8217;utilisation des Services doit &#234;tre r&#233;alis&#233;e v&#233;hicule &#224; l&#8217;arr&#234;t, en mode Non Roulant. Navx rappelle &#224; l&#8217;Utilisateur de respecter scrupuleusement les l&#233;gislations en vigueur et notamment le code de la route de chaque pays. 
+sc20_legal_article11_title = Article 11 - D&#233;sactivation du Compte Utilisateur
+sc20_legal_article11_text1 = Navx se r&#233;serve la facult&#233; de d&#233;sactiver de plein droit, sans pr&#233;avis ni indemnit&#233;, le Compte de l&#8217;Utilisateur 
+sc20_legal_article11_text2 = dans les cas suivants: <br/><ul><li>Non-respect par l&#8217;Utilisateur des conditions g&#233;n&#233;rales de vente et des conditions d&#39;utilisation,</li> <li>Modification des Contenus avec insertions d&#8217;erreurs manifestes,</li> <li>Agissements contraires aux int&#233;r&#234;ts de NAVX.</li></ul>
+sc20_legal_article12_title = Article 12 - Loi applicable - Litiges
+sc20_legal_article12_text1 = Les pr&#233;sentes conditions g&#233;n&#233;rales sont soumises &#224; la loi fran&#231;aise. En cas de litige et apr&#232;s une tentative de recherche de solution amiable, les tribunaux de Paris seront seuls comp&#233;tents.
+
+sc20_srv_atm = Bankamatik
+sc20_srv_baby_room = Bebek bak&#305;m odas&#305;
+sc20_srv_camping_car_area = Karavan alan&#305;
+sc20_srv_car_repair = Ara&#231; onar&#305;m seti kiralamas&#305;
+sc20_srv_open_24 = 24/24 a&#231;&#305;k
+sc20_srv_open_7 = 7/7 a&#231;&#305;k
+sc20_srv_tyre_pressure = Lastik bas&#305;n&#231; kontrol&#252;
+sc20_srv_washing_station = Araba y&#305;kama istasyonu
+
+
+days_symbol = g
+currency_euro = &#8364;
+
+
+srv_atm = Bankamatik
+srv_baby_room = Bebek bak&#305;m odas&#305;
+srv_camping_car_area = Karavan alan&#305;
+srv_car_repair = Ara&#231; onar&#305;m seti kiralamas&#305;
+srv_open_24 = 24/24 a&#231;&#305;k
+srv_open_7 = 7/7 a&#231;&#305;k
+srv_tyre_pressure = Lastik bas&#305;n&#231; kontrol&#252;
+srv_washing_station = Araba y&#305;kama istasyonu
+
+
+warning_no_network_gps = Bu uygulama bir GSM ba&#287;lant&#305;s&#305; ve ge&#231;erli bir GPS pozisyonu gerektirir
+warning_no_gps = Bu uygulama ge&#231;erli bir GPS pozisyonu gerektirir
+warning_no_network = Bu uygulama bir GSM ba&#287;lant&#305;s&#305; gerektirir
+warning_no_results_found = Se&#231;ili parametrelere g&#246;re herhangi bir sonu&#231; bulunamad&#305;
+
+month_0 = Ocak
+month_1 = &#350;ub.
+month_2 = Mart
+month_3 = Nis.
+month_4 = May.
+month_5 = Haz.
+month_6 = Tem.
+month_7 = A&#287;u.
+month_8 = Eyl.
+month_9 = Ekim
+month_10 = Kas.
+month_11 = Ara.
+
+widget_warning_message = Hareket halindeyken s&#305;n&#305;rl&#305; eri&#351;im
+
+gps_confirmation_message = Yak&#305;t uygulamas&#305;n&#305;n GPS konumunuza eri&#351;imine izin verilsin mi?
+gps_confirmation_cancel_button_message = Eri&#351;im izni yok. Bu sayfaya ula&#351;mak i&#231;in parametrelerde GPS konumunuza eri&#351;im izni veriniz.
+widget_confirmation_ok = Tamam
+widget_confirmation_cancel = Iptal
+
+warning_geocoding_error = Adres bulunamadi. L&#252;tfen yeni bir arama ile tekrar deneyin
+widget_notification_ok = Tamam
+
+gps_authorization_accept = Tamam
+gps_authorization_not_accept = Reddet
+
+maximum_list_refresh_times_reached = G&#252;nl&#252;k maksimum g&#252;ncelleme say&#305;s&#305;na eri&#351;ti&#287;inizden dolay&#305; listeyi g&#252;ncelleyemezsiniz.
+
+notification_invalid_input = Ge&#231;ersiz giri&#351;

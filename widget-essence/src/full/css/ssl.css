@@ -1,0 +1,9 @@
+/* SSL */
+div#intro_page
+{
+	width:616px;
+	height:335px;
+	/* background-image:url('./images/intro_page_image.jpg'); */
+	background: transparent;
+	display:none;
+}

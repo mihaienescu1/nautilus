@@ -1,0 +1,65 @@
+/* Scroller Widget Section  - START */
+
+.widget_scroller_direction
+{
+	float:left;
+	width:63px;
+}
+
+.widget_scroller_pages
+{
+	float:left;
+	width:63px;
+	height:auto;
+	display:table;
+}
+
+.widget_scroller_pages_container
+{
+	display:table-cell;
+	vertical-align:middle;	
+	text-align:center;
+	font-size:22px;
+}
+
+.widget_scroller_direction_up
+{
+	float:left;
+	width:63px;
+	height:71px;
+	background: url('./images/widget_scroller_arrows.png') no-repeat;
+	background-position: 0 0;	
+}
+.widget_scroller_direction_up.pressed
+{
+	width:63px;
+	height:71px;
+	background: url('./images/widget_scroller_arrows.png') no-repeat;
+	background-position: 0 -71px;	
+}
+
+.widget_scroller_direction_down
+{
+	float:left;
+	width:63px;
+	height:71px;
+	background: url('./images/widget_scroller_arrows.png') no-repeat;
+	background-position: 0 -142px;	
+}
+.widget_scroller_direction_down.pressed
+{
+	width:63px;
+	height:71px;
+	background: url('./images/widget_scroller_arrows.png') no-repeat;
+	background-position: 0 -213px;	
+}
+
+.widget_scroller_direction_none
+{
+	float:left;
+	width:63px;
+	height:71px;
+	background: none;	
+}
+
+/* Scroller Widget Section - END */

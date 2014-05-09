@@ -1,0 +1,693 @@
+Application.Budget = function(app)
+{    
+	this.app = app;	
+	this.historyMode = "";
+	this.checkBuildHistoryObject = true;
+	this.isRegistered = false;
+		
+	this.listData = [];
+	this.historyGraphData = [];
+	
+	/* flag to mark if the storage loading in the class initialization is completed */ 
+	this.intialStorageLoadCompleted = false;
+		
+	/* SC17 start */
+	this.ShowEmailScreen = function ()
+	{	
+		if (this.isRegistered)
+		{
+			this.historyMode = "graph";
+			this.ShowHistoryScreen();
+		}
+		else
+		{
+			$("#budget_moduls").show();
+			$("#budget_email").show();
+						
+			//ok button    	
+	    	$("#budget_email_ok").bind('mousedown', function ()
+	    	{    		
+	    		$("#budget_email_ok").attr('class','budget_email_ok_on');
+	    	}).bind('mouseout', function ()
+	    	{    		
+	    		$("#budget_email_ok").attr('class','budget_email_ok_off');
+	    	}).bind('mouseup', function ()
+	    	{    		
+	    		$("#budget_email_ok").attr('class','budget_email_ok_off');
+	    	}).bind('click', proxy(this.HandleOkEmail, this));
+	    	
+	    	// cancel button
+	    	$("#budget_email_cancel").bind('mousedown', function ()
+	    	{    		
+	    		$("#budget_email_cancel").attr('class','budget_email_cancel_on');
+	    	}).bind('mouseout', function ()
+	    	{    		
+	    		$("#budget_email_cancel").attr('class','budget_email_cancel_off');
+	    	}).bind('mouseup', function ()
+	    	{    		
+	    		$("#budget_email_cancel").attr('class','budget_email_cancel_off');
+	    	}).bind('click', proxy(this.HandleCancelEmail, this));
+			
+	    	this.app.SetIconBeforeAction(proxy(this.CloseEmailScreen, this));
+			this.app.SetParametersBeforeAction(null);
+	    	this.app.SetBackAction(proxy(this.CloseEmailScreenWithBack, this));
+	    	
+	    	warningWidget = new Application.WarningWidget("#budget_moduls", proxy(this.CloseEmailScreenWithBack, this));
+	    }
+	};
+	
+	this.HandleOkEmail = function ()
+	{
+		//check if there is network connection
+		if(this.app.networkStatus == false)
+    	{
+			new Application.NotificationWidget("#budget_moduls", function(){}, "${warning_no_network}");
+			
+			return false;
+    	}
+		
+		var client = Framework.GetWsClient(Framework.CONSTANTS.WS_CONTENT_REGISTER_NAUTILUS_DEVICE);		
+		var email = $("#budget_email_input_text").val();
+		var IMEI = this.app.GetStationInfoModule().IMEI;
+				
+		client.data.email = email;
+		client.data.device_id = IMEI;
+			    	
+		client.SetResponseOkCallBack(proxy(this.HandleRegisterEmailWSResponseOk, this));		
+		client.SetResponseErrorCallBack(proxy(this.HandleRegisterEmailWSResponseError, this));		
+		this.app.ShowLoading();
+		
+		client.Send();			
+				
+	};
+	
+	this.HandleRegisterEmailWSResponseOk = function (data)
+	{
+		this.isRegistered = true;
+		this.StorageBudgetDataSave();
+				
+		this.CloseEmailScreen();
+		this.historyMode = "graph";
+		this.ShowHistoryScreen();
+		
+		this.app.HideLoading();
+	}
+	this.HandleRegisterEmailWSResponseError = function (data)
+	{		
+    	this.app.HideLoading();    	
+	}
+	
+	this.HandleCancelEmail = function ()
+	{
+		this.CloseEmailScreen();
+		this.historyMode = "graph";
+		this.ShowHistoryScreen();		
+	};
+	
+	this.CloseEmailScreen = function ()
+	{
+		$("#budget_moduls").hide();
+		$("#budget_email").hide();
+		
+		$("#budget_email_ok").unbind();
+		$("#budget_email_cancel").unbind();
+		
+		this.app.SetIconBeforeAction(null);
+		this.app.SetParametersBeforeAction(null);
+		this.app.SetBackAction(null);
+		
+		warningWidget.TerminateWarning();
+	};
+	
+	this.CloseEmailScreenWithBack = function ()
+	{		
+		this.CloseEmailScreen();
+		this.app.GetParametersModule().ShowPreferenceScreen();
+	};
+	/* SC17 end */
+	
+	/* SC18 start*/
+	this.ShowHistoryScreen = function ()
+	{		
+		$("#budget_moduls").show();
+		$("#budget_history").show();
+		
+		warningWidget = new Application.WarningWidget("#budget_moduls", proxy(this.CloseHistoryScreenWithBack, this));
+		
+		//list button
+		$("#budget_history_list").bind('click', proxy(this.HandleListClick, this));
+		
+		//graph button
+		$("#budget_history_graph").bind('click', proxy(this.HandleGraphClick, this));
+		
+		//full tank button
+		$("#budget_history_graph_full_tank_add").bind('mousedown', function ()
+    	{    
+    		$("#budget_history_graph_full_tank_add").attr('class', 'budget_history_graph_full_tank_add_on');
+    	}).bind('mouseout', function ()
+    	{    		
+    		$("#budget_history_graph_full_tank_add").attr('class', 'budget_history_graph_full_tank_add_off');
+    	}).bind('mouseup', function ()
+    	{    		
+    		$("#budget_history_graph_full_tank_add").attr('class', 'budget_history_graph_full_tank_add_off');
+    	}).bind('click', proxy(this.HandleAddTankClick, this));
+		
+		if(this.historyMode == 'list')
+		{
+			$("#budget_history_list").attr('class', 'budget_history_list_on');
+			$("#budget_history_graph").attr('class', 'budget_history_graph_off');
+			this.ShowHistoryListScreen();
+		}
+		else if(this.historyMode == 'graph')
+		{
+			$("#budget_history_graph").attr('class', 'budget_history_graph_on');
+			$("#budget_history_list").attr('class', 'budget_history_list_off');
+			this.ShowHistoryGraphScreen();
+		}
+		
+		this.app.SetIconBeforeAction(proxy(this.CloseHistoryScreen, this));
+		this.app.SetParametersBeforeAction(null);
+    	this.app.SetBackAction(proxy(this.CloseHistoryScreenWithBack, this));
+	};
+	
+	this.HandleListClick = function ()
+	{
+		if(this.historyMode == 'list')
+			return true;
+		else
+		{
+			$("#budget_history_list").attr('class', 'budget_history_list_on');
+			$("#budget_history_graph").attr('class', 'budget_history_graph_off');
+			this.historyMode = 'list';
+			this.ShowHistoryListScreen();
+		}
+	};
+	
+	this.HandleGraphClick = function ()
+	{	
+		if(this.historyMode == 'graph')
+			return true;
+		else
+		{
+			$("#budget_history_graph").attr('class', 'budget_history_graph_on');
+			$("#budget_history_list").attr('class', 'budget_history_list_off');
+			this.historyMode = 'graph';
+			this.ShowHistoryGraphScreen();
+		}
+	};
+	
+	this.HandleAddTankClick = function ()
+	{
+		this.CloseHistoryScreen();
+		this.ShowFullTankScreen();
+	};
+	
+	this.CloseHistoryScreen = function ()
+	{
+		$("#budget_moduls").hide();
+		$("#budget_history").hide();
+		
+		$("#budget_history_list").unbind();
+		$("#budget_history_graph").unbind();
+		$("#budget_history_graph_full_tank_add").unbind();
+		
+		this.app.SetIconBeforeAction(null);
+		this.app.SetParametersBeforeAction(null);
+		this.app.SetBackAction(null);
+		
+		warningWidget.TerminateWarning();
+	};
+	
+	this.CloseHistoryScreenWithBack = function ()
+	{		
+		this.CloseHistoryScreen();
+		this.app.GetParametersModule().ShowPreferenceScreen();
+	};
+	/* SC18 end*/
+	
+	/* SC18a start */
+	this.ShowHistoryGraphScreen = function ()
+	{		
+		this.CloseHistoryListScreen();
+		$(".budget_history_graph_picture").html("");
+		if (this.checkBuildHistoryObject)
+		{					
+			this.CreateHistoryGraphObject();
+		}		
+		
+		$("#budget_history_graph_content").show();
+		if (this.listData.length > 0)
+		{
+			$("#budget_history_graph_empty").hide();
+			$(".budget_history_graph_picture").show();
+			this.CreateHistoryGraph();			
+		}
+		else 
+		{
+			$(".budget_history_graph_picture").hide();
+			$("#budget_history_graph_empty").show();
+			var itm = '<div style="width:100%;height:100%;display:table;"><div style="margin:auto; display:table-cell; vertical-align:middle;text-align:center;" class="list_warning policy_notification">${sc18_no_data}</div></div>';
+			$("#budget_history_graph_empty").html(itm);
+		}
+		
+		this.app.SetIconBeforeAction(proxy(this.CloseHistoryScreen, this));
+		this.app.SetParametersBeforeAction(null);
+    	this.app.SetBackAction(proxy(this.CloseHistoryScreenWithBack, this));
+	};
+	
+	this.CreateHistoryGraphObject = function ()	
+	{
+		this.historyGraphData.length = 0;		
+		var month;		
+		var group_total = {};
+		var group_fuels = {};		
+		var max = 0;
+		var value;
+		
+		for (var i = this.listData.length; --i >= 0;)
+		{
+			month = this.listData[i].date.split(" ");
+		    value = month[1];
+		    
+		    fuel_type_group = this.listData[i].fuel;
+		    
+		    group_total[value] = (group_total[value] || 0) + parseFloat(this.listData[i].value);
+		    if (group_fuels[value]) group_fuels[value] = group_fuels[value]+ " "+ this.listData[i].fuel+":"+this.listData[i].value+"";
+		    else group_fuels[value] = this.listData[i].fuel+":"+this.listData[i].value+"";
+		}
+		
+		var id_x=0;				
+		for (key_total in group_total)
+		{			
+			var fuelsObject = {};
+			var aux_fuels = new Array();
+			aux_fuels = group_fuels[key_total].split(" ");
+			
+			for (var i=0; i < aux_fuels.length; i++)
+			{
+				fuels_split = aux_fuels[i].split(":");				
+				fuelsObject[fuels_split[0]] = (fuelsObject[fuels_split[0]] || 0) + parseFloat(fuels_split[1]);
+			}
+			var index_fuels = 0;
+			var all_fuels = new Array();			
+			for (key_fuels in fuelsObject)
+			{
+				all_fuels[index_fuels] = {fuel_name: key_fuels, value: fuelsObject[key_fuels]};				
+				index_fuels++;
+			}			
+			this.historyGraphData[id_x] = {month: key_total, total_value: group_total[key_total], fuels: all_fuels};			
+			id_x++;			
+		}
+		
+		this.checkBuildHistoryObject = false;
+	};	
+	
+	this.CreateHistoryGraph = function ()
+	{
+		var i = 0;
+		var k = 0;
+		var aux = 0;
+		var block = "";
+		var elemID = "";
+		var graphWidth = 563;
+		var graphHeight = 236;
+		var legendTextHeight = 22;
+		var legendTextWidth = 150;
+		var legendTextMarginLeft = 370;
+		var legendTextNextPosition = 10;
+		var colorsArr = [{elemID: 0, color: 1}, {elemID: 0, color: 2}, {elemID: 0, color: 3}, {elemID: 0, color: 4}];
+		var legendItemCount = 0;
+		var oxNextPosition = 80;
+		var columnWidth = 45;
+		var columnHeight = 0;
+		var columnTopBottomHeight = 5;
+		var columnMaxHeight = 150;
+		var maxValue = 0;
+		var oyNextPosition = 200;
+		var graphMonths = 0;
+			
+		if (this.historyGraphData.length > 6) graphMonths = 6;
+		else graphMonths = this.historyGraphData.length;
+						
+		//determine the maximum value
+		for(i = graphMonths; --i >= 0;)
+			if(maxValue < this.historyGraphData[i].total_value) maxValue = this.historyGraphData[i].total_value;		
+		
+		if(maxValue > 0)
+		{
+			//add maxValue to graph
+			block = "<div class='budget_history_graph_step' style='width: 85px; margin-left:-30px; margin-top: "+(oyNextPosition - columnMaxHeight - 10)+"px; text-align:right;'>" + maxValue + " " + this.app.GetCurrencyByCountry(this.app.subscriptionCountry,'html_code')+"</div>";
+			$("#xoy").append(block);
+			
+			
+			for(i = graphMonths; --i >= 0;)
+			{
+				// set OX step
+				block = "<div class='budget_history_graph_step' style='text-align:left; width: "+columnWidth+"px; margin-top: 210px; margin-left: "+oxNextPosition+"px;'>";
+				block += this.historyGraphData[i].month;
+				block += "</div>";
+				$("#xoy").append(block);
+				
+				//set de distance from top
+				//it will be decreassing
+				oyNextPosition = 200;
+				
+				// display values				
+				for(k = 0; k < this.historyGraphData[i].fuels.length; k++)
+				{
+					elemID = "graph_legend_text_" + this.historyGraphData[i].fuels[k].fuel_name;
+					
+					// add element in legend
+					if($("#xoy").children().index("#"+elemID) == -1)
+					{
+						// Add legend text
+						block = "<div id='"+elemID+"' class='budget_history_graph_legend_text' style='width: "+legendTextWidth+"px; height: "+legendTextHeight+"px; margin-left: "+legendTextMarginLeft+"px; margin-top: "+legendTextNextPosition+"px;'>";
+						block += this.historyGraphData[i].fuels[k].fuel_name;
+						block += "</div>";
+						$("#xoy").append(block);
+						
+						//Add legend color
+						colorsArr[legendItemCount].elemID = k;
+						block = "<div class='budget_history_graph_column_"+colorsArr[legendItemCount].color+"_top' style='width: "+columnWidth+"px; height: "+columnTopBottomHeight+"px; margin-left: "+(legendTextMarginLeft + legendTextWidth + 10)+"px; margin-top: "+legendTextNextPosition+"px; '></div>";
+						legendTextNextPosition += columnTopBottomHeight;
+						block += "<div id='"+elemID+"_color' class='budget_history_graph_column_"+colorsArr[legendItemCount].color+"' style='width: "+columnWidth+"px; height: "+(legendTextHeight - 2* columnTopBottomHeight)+"px; margin-left: "+(legendTextMarginLeft + legendTextWidth + 10)+"px; margin-top: "+legendTextNextPosition+"px; '></div>";
+						legendTextNextPosition += (legendTextHeight - 2* columnTopBottomHeight);
+						block += "<div class='budget_history_graph_column_"+colorsArr[legendItemCount].color+"_bottom' style='width: "+columnWidth+"px; height: "+columnTopBottomHeight+"px; margin-left: "+(legendTextMarginLeft + legendTextWidth + 10)+"px; margin-top: "+legendTextNextPosition+"px; '></div>";
+						legendTextNextPosition += columnTopBottomHeight;
+						$("#xoy").append(block);
+						
+						legendTextNextPosition += 10;
+						legendItemCount++;
+					}
+					
+					// add value in graph
+					columnHeight = Math.floor((this.historyGraphData[i].fuels[k].value * columnMaxHeight)/maxValue);
+					//add bottom
+					oyNextPosition -= columnTopBottomHeight;
+					block = "<div class='"+$("#"+elemID+"_color").attr("class")+"_bottom' style='width:"+columnWidth+"px; height:"+columnTopBottomHeight+"px; margin-top:"+oyNextPosition+"px; margin-left:"+oxNextPosition+"px;'></div>";					
+					if(columnHeight > (2 * columnTopBottomHeight))
+					{
+						columnHeight -= (2 * columnTopBottomHeight);
+						//add middle
+						oyNextPosition -= columnHeight;
+						block += "<div class='"+$("#"+elemID+"_color").attr("class")+"' style='width:"+columnWidth+"px; height:"+columnHeight+"px; margin-top:"+oyNextPosition+"px; margin-left:"+oxNextPosition+"px; '></div>";						
+					}
+					//add top
+					oyNextPosition -= columnTopBottomHeight;
+					block += "<div class='"+$("#"+elemID+"_color").attr("class")+"_top' style='width:"+columnWidth+"px; height:"+columnTopBottomHeight+"px; margin-top:"+oyNextPosition+"px; margin-left:"+oxNextPosition+"px; '></div>";					
+					$("#xoy").append(block);					
+				}
+				
+				oxNextPosition += columnWidth + 5;
+			}
+		}				
+	};
+	
+	this.CloseHistoryGraphScreen = function ()
+	{
+		$("#budget_history_graph_content").hide();
+		
+		this.app.SetIconBeforeAction(null);
+		this.app.SetParametersBeforeAction(null);
+		this.app.SetBackAction(null);
+	};
+	/* SC18a end */
+	
+	/* SC18b start */
+	this.ShowHistoryListScreen = function ()
+	{	
+		this.CloseHistoryGraphScreen();
+		$("#budget_history_list_content").show();
+		
+		if(this.listData.length > 0)
+		{
+			this.scroller = new Application.ScrollerWidget('#budget_history_list_scroller', '#budget_history_list_list', 3, this.listData, this.BudgetListItemConstructorCallback);
+		}
+		else
+		{
+			var itm = '<div style="width:100%;height:100%;display:table;"><div style="margin:auto; display:table-cell; vertical-align:middle;text-align:center;" class="list_warning policy_notification">${sc18_no_data}</div></div>';
+			$("#budget_history_list_list").html(itm);
+			$("#budget_history_list_scroller").html('');
+		}
+		
+		
+		$("#budget_history_list_list").delegate(".budget_history_list_delete_logo", "click", proxy(this.HandleDeleteHistoryFuel, this));
+		$("#budget_history_list_list").delegate(".budget_history_list_delete_logo", 'mousedown', function ()
+		{
+			$(this).addClass('budget_history_list_delete_logo_on');
+		});
+		$("#budget_history_list_list").delegate(".budget_history_list_delete_logo", 'mouseout', function ()
+		{
+			$(this).removeClass('budget_history_list_delete_logo_on');
+		});
+		$("#budget_history_list_list").delegate(".budget_history_list_delete_logo", 'mouseup', function ()
+		{
+			$(this).removeClass('budget_history_list_delete_logo_on');
+		});
+		
+		this.app.SetIconBeforeAction(proxy(this.CloseHistoryScreen, this));
+		this.app.SetParametersBeforeAction(null);
+    	this.app.SetBackAction(proxy(this.CloseHistoryScreenWithBack, this));
+	};
+	
+	this.BudgetListItemConstructorCallback = function (itemData)
+	{
+		var html = '<div class="content_list_item gray">';
+				html += '<div class="budget_history_list_date policy_list_name">'+itemData.date+'</div>';
+				html += '<div class="budget_history_list_price policy_list_name">'+itemData.value+''+application.GetCurrencyByCountry(application.subscriptionCountry,'html_code')+'</div>';
+				html += '<div class="budget_history_list_type policy_list_name">'+itemData.fuel+'</div>';
+				html += '<div class="budget_history_list_delete_logo"></div>';
+			html += '</div>';
+	
+		return html;	
+	};
+	
+	this.HandleDeleteHistoryFuel = function (ev)
+	{
+		var currentPage = this.scroller.GetCurrentPage();
+	
+		item_idx = $(".budget_history_list_delete_logo").index($(ev.currentTarget)) + (currentPage - 1) * this.scroller.GetPageSize();
+		
+		//$("#budget_list_item_"+this.listData[item_idx]).remove();
+		this.listData.splice(item_idx, 1);
+		this.StorageBudgetDataSave();		
+		
+		this.CloseHistoryListScreen();
+		this.ShowHistoryListScreen();	
+		
+		//scroll to page
+		while(currentPage != this.scroller.GetCurrentPage() && this.scroller.maxPages > this.scroller.GetCurrentPage())
+			this.scroller.HandleMoveDown();
+		this.checkBuildHistoryObject = true;		
+	};
+	
+	
+	this.CloseHistoryListScreen = function ()
+	{
+		$("#budget_history_list_list").undelegate();
+		$("#budget_history_list_content").hide();
+		
+		this.app.SetIconBeforeAction(null);
+		this.app.SetParametersBeforeAction(null);
+		this.app.SetBackAction(null);
+	};
+	
+	/* SC18b end */
+	
+	/* SC19 start */
+	this.ShowFullTankScreen = function ()
+	{
+		$("#budget_moduls").show();
+		$("#budget_full_tank").show();
+		$("#budget_full_tank_price_logo").css("background-image", "url("+this.app.GetCurrencyByCountry(this.app.subscriptionCountry,"image22")+")");
+		
+		warningWidget = new Application.WarningWidget("#budget_moduls", proxy(this.CloseFullTankScreenFromWarning, this));
+		
+		var currentTime  = new Date();
+		var currentDay = currentTime.getDate();
+		var currentMonth = "month_"+currentTime.getMonth();
+		var currentYear = currentTime.getFullYear();
+		
+		
+		var fuel = this.app.GetParametersModule().gasListData;
+		var currentFuel = "";
+		for (var i = 0; i < fuel.length; i++)
+		{
+			if (fuel[i].selected) currentFuel = fuel[i].fuel_code;
+		}
+		
+		switch(currentMonth)
+		{
+			case "month_0":
+				$("#budget_full_tank_date_input_text").html(currentDay+" ${month_0} "+currentYear);
+				break;
+			case "month_1":
+				$("#budget_full_tank_date_input_text").html(currentDay+" ${month_1} "+currentYear);
+				break;
+			case "month_2":
+				$("#budget_full_tank_date_input_text").html(currentDay+" ${month_2} "+currentYear);
+				break;
+			case "month_3":
+				$("#budget_full_tank_date_input_text").html(currentDay+" ${month_3} "+currentYear);
+				break;
+			case "month_4":
+				$("#budget_full_tank_date_input_text").html(currentDay+" ${month_4} "+currentYear);
+				break;
+			case "month_5":
+				$("#budget_full_tank_date_input_text").html(currentDay+" ${month_5} "+currentYear);
+				break;
+			case "month_6":
+				$("#budget_full_tank_date_input_text").html(currentDay+" ${month_6} "+currentYear);
+				break;
+			case "month_7":
+				$("#budget_full_tank_date_input_text").html(currentDay+" ${month_7} "+currentYear);
+				break;
+			case "month_8":
+				$("#budget_full_tank_date_input_text").html(currentDay+" ${month_8} "+currentYear);
+				break;
+			case "month_9":
+				$("#budget_full_tank_date_input_text").html(currentDay+" ${month_9} "+currentYear);
+				break;
+			case "month_10":
+				$("#budget_full_tank_date_input_text").html(currentDay+" ${month_10} "+currentYear);
+				break;
+			case "month_11":
+				$("#budget_full_tank_date_input_text").html(currentDay+" ${month_11} "+currentYear);
+				break;
+			case "month_12":
+				$("#budget_full_tank_date_input_text").html(currentDay+" ${month_12} "+currentYear);
+				break;			
+		}		
+		$('#budget_full_tank_type_input_text').html(currentFuel);		
+		
+		//ok button    	
+    	$("#budget_full_tank_ok").bind('mousedown', function ()
+    	{    		
+    		$("#budget_full_tank_ok").attr('class','budget_email_ok_on');
+    	}).bind('mouseout', function ()
+    	{    		
+    		$("#budget_full_tank_ok").attr('class','budget_email_ok_off');
+    	}).bind('mouseup', function ()
+    	{    		
+    		$("#budget_full_tank_ok").attr('class','budget_email_ok_off');
+    	}).bind('click', proxy(this.HandleOkFullTank, this));
+    	
+    	// cancel button
+    	$("#budget_full_tank_cancel").bind('mousedown', function ()
+    	{    		
+    		$("#budget_full_tank_cancel").attr('class','budget_email_cancel_on');
+    	}).bind('mouseout', function ()
+    	{    		
+    		$("#budget_full_tank_cancel").attr('class','budget_email_cancel_off');
+    	}).bind('mouseup', function ()
+    	{    		
+    		$("#budget_full_tank_cancel").attr('class','budget_email_cancel_off');
+    	}).bind('click', proxy(this.HandleCancelFullTank, this));
+		
+    	this.app.SetIconBeforeAction(proxy(this.CloseFullTankScreen, this));
+		this.app.SetParametersBeforeAction(null);
+    	this.app.SetBackAction(proxy(this.CloseFullTankScreenWithBack, this));
+	};
+	
+	this.HandleOkFullTank = function ()
+	{
+		var date_val = null;
+		var fuel_val = null;
+		var value_val = null;
+		
+		date_val = $('#budget_full_tank_date_input_text').html();
+		fuel_val = $('#budget_full_tank_type_input_text').html();
+		value_val = parseInt($('#budget_full_tank_price_input_text').val());
+		
+		if(isNaN(value_val) || value_val <= 0)
+		{
+			new Application.NotificationWidget("#budget_full_tank", function(){}, "${notification_invalid_input}");
+			$('#budget_full_tank_price_input_text').val('');
+			return;
+		}
+		
+		$('#budget_full_tank_price_input_text').val('');
+		this.checkBuildHistoryObject = true;
+		this.listData.push({date: date_val, value: value_val, fuel: fuel_val});
+		this.StorageBudgetDataSave();
+		 
+		this.CloseFullTankScreen();
+		this.historyMode = "graph";
+		this.ShowHistoryScreen();
+	};
+	
+	this.HandleCancelFullTank = function ()
+	{
+		this.CloseFullTankScreen();
+		this.historyMode = "graph";
+		this.ShowHistoryScreen();		
+	};
+	
+	this.CloseFullTankScreen = function ()
+	{		
+		$("#budget_moduls").hide();
+		$("#budget_full_tank").hide();
+
+		$("#budget_full_tank_ok").unbind();
+		$("#budget_full_tank_cancel").unbind();		
+		
+		this.app.SetIconBeforeAction(null);
+		this.app.SetParametersBeforeAction(null);
+		this.app.SetBackAction(null);
+		
+		warningWidget.TerminateWarning();
+	};
+	
+	this.CloseFullTankScreenWithBack = function ()
+	{
+		this.CloseFullTankScreen();
+		this.historyMode = "graph";
+		this.ShowHistoryScreen();
+	};
+	
+	this.CloseFullTankScreenFromWarning = function ()
+	{
+		this.CloseFullTankScreen();
+		this.historyMode = "graph";
+		this.app.GetParametersModule().ShowPreferenceScreen();
+	}
+	/* SC19 end */
+	
+	// Storage handle and save START	
+	this.StorageBudgetDataSave = function ()
+	{
+		data = {budget_register	: this.isRegistered,
+				gas_tanks		: this.listData
+		};
+		
+		PORTAL.storage.put(Application.CONSTANTS.STORAGE_PREFIX+Application.CONSTANTS.STORAGE_BUDGET, data, false, function(){  }, function(){});
+	};
+	this.HandleStorageBudget = function(data)
+	{
+		if (data != null)
+		{
+			if (data.budget_register != null)
+			{
+				this.isRegistered = data.budget_register;
+			}
+			if (data.gas_tanks != null && data.gas_tanks.length != null && data.gas_tanks.length > 0)
+			{
+				this.listData = data.gas_tanks;
+			}
+		}
+		this.intialStorageLoadCompleted = true;
+	};
+	this.HandleStorageBudgetError = function()
+	{
+		this.intialStorageLoadCompleted = true;
+	};
+	// Storage handle and save END
+	
+	/*function to init*/
+    this.Init = function()
+    {
+    	PORTAL.storage.get(Application.CONSTANTS.STORAGE_PREFIX+Application.CONSTANTS.STORAGE_BUDGET, proxy(this.HandleStorageBudget, this), proxy(this.HandleStorageBudgetError, this));
+    };
+    
+    this.Init();
+};
